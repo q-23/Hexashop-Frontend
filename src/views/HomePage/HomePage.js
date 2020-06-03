@@ -1,11 +1,12 @@
 import React from "react";
-
-const HomePage = () => {
+import WithWidth from "../../components/WithWidth/WithWidth";
+const HomePage = (props) => {
 	return(
 		<div>
+			{console.log(props)}
 			<h1>Home Page</h1>
 		</div>
 	)
 };
 
-export default HomePage;
+export default WithWidth(HomePage);
