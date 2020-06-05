@@ -5,6 +5,7 @@ const FlexContainer = styled.div`
 	display: flex;
 	${({ m_auto }) => m_auto && 'margin: auto;'};
 	justify-content: flex-start;
+	${({ styles }) => !!styles && styles}
 `;
 
 export default FlexContainer;

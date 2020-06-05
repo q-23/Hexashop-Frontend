@@ -4,7 +4,7 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom'
-import './tailwind.generated.css';
+// import './tailwind.generated.css';
 
 ReactDOM.render(
   <React.StrictMode>

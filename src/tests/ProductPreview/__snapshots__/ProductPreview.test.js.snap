@@ -1,79 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[HEADER] Should render component 1`] = `
+exports[`[PRODUCT PREVIEW] Should render component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <header>
-        <div
-          class="sc-AxjAm gdiGZV"
-        >
-          <div
-            class="sc-AxirZ hXEYqv"
-          >
-            <i
-              class="sc-AxhCb kAEEit fa fa-github"
-            />
-          </div>
-          <div
-            class="sc-AxirZ jvoGon"
-          >
-            <img
-              alt="logo"
-              class="sc-AxiKw jZUnlP"
-              src="logo.png"
-            />
-          </div>
-          <div
-            class="sc-AxirZ hXEYqv"
-          >
-            <i
-              class="sc-AxhCb hBThRh fa fa-shopping-bag"
-            />
-            <i
-              class="sc-AxhCb kAEEit fa fa-search"
-            />
-          </div>
-        </div>
-        <hr />
-      </header>
-    </div>
-  </body>,
-  "container": <div>
-    <header>
       <div
-        class="sc-AxjAm gdiGZV"
+        class="sc-AxjAm bFRgsZ"
       >
+        <img
+          class="sc-AxiKw kmGyjU"
+        />
         <div
-          class="sc-AxirZ hXEYqv"
+          class="sc-AxhCb bgMrhQ"
         >
-          <i
-            class="sc-AxhCb kAEEit fa fa-github"
+          <p
+            class="sc-AxirZ beSDKg"
           />
-        </div>
-        <div
-          class="sc-AxirZ jvoGon"
-        >
-          <img
-            alt="logo"
-            class="sc-AxiKw jZUnlP"
-            src="logo.png"
-          />
-        </div>
-        <div
-          class="sc-AxirZ hXEYqv"
-        >
-          <i
-            class="sc-AxhCb hBThRh fa fa-shopping-bag"
-          />
-          <i
-            class="sc-AxhCb kAEEit fa fa-search"
+          <p
+            class="sc-AxirZ dFBGPG"
           />
         </div>
       </div>
-      <hr />
-    </header>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-AxjAm bFRgsZ"
+    >
+      <img
+        class="sc-AxiKw kmGyjU"
+      />
+      <div
+        class="sc-AxhCb bgMrhQ"
+      >
+        <p
+          class="sc-AxirZ beSDKg"
+        />
+        <p
+          class="sc-AxirZ dFBGPG"
+        />
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -12,14 +12,14 @@ const Header = () => {
 		<header>
 			<FlexContainer>
 				<FlexItem m_auto>
-					<Icon className="fa fa-github" size={'2.25rem'}/>
+					<Icon className="fa fa-github" size={'2em'}/>
 				</FlexItem>
 				<FlexItem>
-					<Image src={logo} alt={'logo'} styles={'margin: 0 auto'}/>
+					<Image src={logo} alt={'logo'} styles={'margin: 0 auto; height: 10em;'}/>
 				</FlexItem>
 				<FlexItem m_auto>
-					<Icon className="fa fa-shopping-bag" size={'2.25rem'} padding={'0 20px'}/>
-					<Icon className="fa fa-search" size={'2.25rem'}/>
+					<Icon className="fa fa-shopping-bag" size={'2em'} padding={'0 20px'}/>
+					<Icon className="fa fa-search" size={'2em'}/>
 				</FlexItem>
 			</FlexContainer>
 			<hr/>

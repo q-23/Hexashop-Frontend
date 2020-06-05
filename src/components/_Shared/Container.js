@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
 	width: 100%;
+	${({styles}) => !!styles && styles}
 	${({ main }) => main && `
 		@media (min-width: 640px) {
 				max-width: 640px;

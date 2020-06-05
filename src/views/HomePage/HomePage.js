@@ -1,8 +1,11 @@
 import React from "react";
+import Typography from "../../components/_Shared/Typography";
+import FlexContainer from "../../components/_Shared/FlexContainer";
 const HomePage = () => {
 	return(
-		<div>
-		</div>
+		<FlexContainer>
+			<Typography>Some text...</Typography>
+		</FlexContainer>
 	)
 };
 

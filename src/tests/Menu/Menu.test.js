@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import Menu from './Menu';
+import Menu from '../../components/Menu';
 import { MemoryRouter as Router } from 'react-router-dom';
 import { MOCK_CATEGORIES } from "./Menu.mock.data";
 

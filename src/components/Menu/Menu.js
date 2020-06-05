@@ -13,7 +13,7 @@ const Menu = ({ categories = [], location }) => {
 				{
 					categories.map(el =>
 						<List key={`${el.to} - ${el.label}`}>
-							<Link to={el.to} activelink={pathname === el.to}>{el.label}</Link>
+							<Link to={el.to} activelink={pathname === el.to ? 1 : 0}>{el.label}</Link>
 						</List>)
 				}
 			</ul>
