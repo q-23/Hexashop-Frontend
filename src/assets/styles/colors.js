@@ -1,0 +1,11 @@
+const LIGHT_BROWN = '#F2AF58';
+const DARK_BROWN = '#5E0000';
+const DARK_GRAY = '#42474B';
+const LIGHT_GRAY = '#A5A5A5';
+
+export {
+	LIGHT_BROWN,
+	DARK_BROWN,
+	DARK_GRAY,
+	LIGHT_GRAY
+}

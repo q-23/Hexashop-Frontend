@@ -1,21 +1,27 @@
 import React from "react";
+
+import FlexContainer from "../_Shared/FlexContainer";
+import FlexItem from "../_Shared/FlexItem";
 import logo from '../../assets/logo.png';
+import Image from "../_Shared/Image";
+import Icon from "../_Shared/Icon";
 
 const Header = () => {
+
 	return (
-		<header className={'mb-6'}>
-			<div className={'flex'}>
-				<div className={'w-1/3 m-auto'}>
-					<i className="fa fa-github m-4 text-3xl" aria-hidden="true"/>
-				</div>
-				<div className={'w-1/3'}>
-					<img src={logo} className={'m-auto'} alt={'logo'}/>
-				</div>
-				<div className={'w-1/3 m-auto'}>
-					<i className="fa fa-shopping-bag float-right m-4 text-2xl" aria-hidden="true"/>
-					<i className="fa fa-search float-right  mt-4 text-2xl" aria-hidden="true"/>
-				</div>
-			</div>
+		<header>
+			<FlexContainer>
+				<FlexItem m_auto>
+					<Icon className="fa fa-github" size={'2.25rem'}/>
+				</FlexItem>
+				<FlexItem>
+					<Image src={logo} alt={'logo'} styles={'margin: 0 auto'}/>
+				</FlexItem>
+				<FlexItem m_auto>
+					<Icon className="fa fa-shopping-bag" size={'2.25rem'} padding={'0 20px'}/>
+					<Icon className="fa fa-search" size={'2.25rem'}/>
+				</FlexItem>
+			</FlexContainer>
 			<hr/>
 		</header>
 	)
