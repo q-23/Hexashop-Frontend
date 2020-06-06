@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="sc-fzpans dVjRmj"
+      >
+        <button
+          class="sc-fzoLsD dplRMU"
+        >
+          <i
+            class="sc-fzplWN dGxEnk fa fa-bars"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-fzoLsD dplRMU"
+        >
+          <i
+            class="sc-fzplWN dGxEnk fa fa-github"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-fzoLsD dNoGyS"
+        >
+          <i
+            class="sc-fzplWN dGxEnk fa fa-user"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-fzoLsD kSUrjt"
+        >
+          <i
+            class="sc-fzplWN dGxEnk fa fa-shopping-basket"
+            color="#FFF"
+          />
+        </button>
+      </nav>
+      <header
+        class="sc-AxiKw kPZMXK"
+      >
+        <div
+          class="sc-AxirZ vvfkj"
+        >
+          <div
+            class="sc-AxhCb hOzsFl"
+          >
+            <img
+              alt="logo"
+              class="sc-AxhUy jvmxQu"
+              src="logo.png"
+            />
+          </div>
+        </div>
+      </header>
+      <nav
+        class="sc-Axmtr eLAzru"
+      >
+        <ul>
+          <ul
+            class="sc-AxheI gbCYma"
+          >
+            <a
+              activelink="1"
+              class="sc-AxgMl dkBrHg"
+              href="/"
+            >
+              Start
+            </a>
+          </ul>
+          <ul
+            class="sc-AxheI gbCYma"
+          >
+            <a
+              activelink="0"
+              class="sc-AxgMl binMjQ"
+              href="/all"
+            >
+              All
+            </a>
+          </ul>
+          <ul
+            class="sc-AxheI gbCYma"
+          >
+            <a
+              activelink="0"
+              class="sc-AxgMl binMjQ"
+              href="/shoes"
+            >
+              Shoes
+            </a>
+          </ul>
+          <ul
+            class="sc-AxheI gbCYma"
+          >
+            <a
+              activelink="0"
+              class="sc-AxgMl binMjQ"
+              href="/jackets"
+            >
+              Jackets
+            </a>
+          </ul>
+          <ul
+            class="sc-AxheI gbCYma"
+          >
+            <a
+              activelink="0"
+              class="sc-AxgMl binMjQ"
+              href="/pants"
+            >
+              Pants
+            </a>
+          </ul>
+          <ul
+            class="sc-AxheI gbCYma"
+          >
+            <a
+              activelink="0"
+              class="sc-AxgMl binMjQ"
+              href="/caps"
+            >
+              Caps
+            </a>
+          </ul>
+        </ul>
+      </nav>
+      <div
+        class="sc-AxmLO cubXBl"
+      />
+      <div
+        class="sc-AxjAm lgwkGM"
+      >
+        <div
+          class="sc-AxirZ ezBLaA"
+        >
+          <div
+            class="sc-AxirZ ekzUhe"
+          >
+            <p
+              class="sc-fzozJi eHgyUg"
+            >
+              Some text...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="sc-fzpans dVjRmj"
+    >
+      <button
+        class="sc-fzoLsD dplRMU"
+      >
+        <i
+          class="sc-fzplWN dGxEnk fa fa-bars"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-fzoLsD dplRMU"
+      >
+        <i
+          class="sc-fzplWN dGxEnk fa fa-github"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-fzoLsD dNoGyS"
+      >
+        <i
+          class="sc-fzplWN dGxEnk fa fa-user"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-fzoLsD kSUrjt"
+      >
+        <i
+          class="sc-fzplWN dGxEnk fa fa-shopping-basket"
+          color="#FFF"
+        />
+      </button>
+    </nav>
+    <header
+      class="sc-AxiKw kPZMXK"
+    >
+      <div
+        class="sc-AxirZ vvfkj"
+      >
+        <div
+          class="sc-AxhCb hOzsFl"
+        >
+          <img
+            alt="logo"
+            class="sc-AxhUy jvmxQu"
+            src="logo.png"
+          />
+        </div>
+      </div>
+    </header>
+    <nav
+      class="sc-Axmtr eLAzru"
+    >
+      <ul>
+        <ul
+          class="sc-AxheI gbCYma"
+        >
+          <a
+            activelink="1"
+            class="sc-AxgMl dkBrHg"
+            href="/"
+          >
+            Start
+          </a>
+        </ul>
+        <ul
+          class="sc-AxheI gbCYma"
+        >
+          <a
+            activelink="0"
+            class="sc-AxgMl binMjQ"
+            href="/all"
+          >
+            All
+          </a>
+        </ul>
+        <ul
+          class="sc-AxheI gbCYma"
+        >
+          <a
+            activelink="0"
+            class="sc-AxgMl binMjQ"
+            href="/shoes"
+          >
+            Shoes
+          </a>
+        </ul>
+        <ul
+          class="sc-AxheI gbCYma"
+        >
+          <a
+            activelink="0"
+            class="sc-AxgMl binMjQ"
+            href="/jackets"
+          >
+            Jackets
+          </a>
+        </ul>
+        <ul
+          class="sc-AxheI gbCYma"
+        >
+          <a
+            activelink="0"
+            class="sc-AxgMl binMjQ"
+            href="/pants"
+          >
+            Pants
+          </a>
+        </ul>
+        <ul
+          class="sc-AxheI gbCYma"
+        >
+          <a
+            activelink="0"
+            class="sc-AxgMl binMjQ"
+            href="/caps"
+          >
+            Caps
+          </a>
+        </ul>
+      </ul>
+    </nav>
+    <div
+      class="sc-AxmLO cubXBl"
+    />
+    <div
+      class="sc-AxjAm lgwkGM"
+    >
+      <div
+        class="sc-AxirZ ezBLaA"
+      >
+        <div
+          class="sc-AxirZ ekzUhe"
+        >
+          <p
+            class="sc-fzozJi eHgyUg"
+          >
+            Some text...
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

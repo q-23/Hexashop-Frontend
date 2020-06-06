@@ -3,8 +3,12 @@ import styled from 'styled-components';
 const FlexContainer = styled.div`
 	width: 100%;
 	display: flex;
+	${({ main_container }) => main_container && `
+		margin-top: -3.95em;
+		background-color: white;
+		box-shadow: 0px 0px 31px -6px rgba(0,0,0,0.62);
+	`};
 	${({ m_auto }) => m_auto && 'margin: auto;'};
-	justify-content: flex-start;
 	${({ styles }) => !!styles && styles}
 `;
 

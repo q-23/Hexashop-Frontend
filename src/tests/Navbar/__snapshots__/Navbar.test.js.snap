@@ -1,29 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[MENU] Should not render list without data given 1`] = `
+exports[`[NAVBAR] Should  1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxiKw eXcIew"
+        class="sc-AxjAm cKTuKw"
       >
-        <ul />
+        <button
+          class="sc-AxirZ ExBPc"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-bars"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ ExBPc"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-github"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ hmsNGS"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-user"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ cDMgGh"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-shopping-basket"
+            color="#FFF"
+          />
+        </button>
       </nav>
-      <div
-        class="sc-AxhCb cKnulu"
-      />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxiKw eXcIew"
+      class="sc-AxjAm cKTuKw"
     >
-      <ul />
+      <button
+        class="sc-AxirZ ExBPc"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-bars"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ ExBPc"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-github"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ hmsNGS"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-user"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ cDMgGh"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-shopping-basket"
+          color="#FFF"
+        />
+      </button>
     </nav>
-    <div
-      class="sc-AxhCb cKnulu"
-    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -79,164 +135,86 @@ Object {
 }
 `;
 
-exports[`[MENU] Should render lists of links 1`] = `
+exports[`[NAVBAR] Should open the menu after clicking proper button 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxiKw eXcIew"
+        class="sc-AxjAm cKTuKw"
       >
-        <ul>
-          <ul
-            class="sc-AxirZ iLhocn"
-          >
-            <a
-              activelink="1"
-              class="sc-AxjAm kXjbg"
-              href="/"
-            >
-              Start
-            </a>
-          </ul>
-          <ul
-            class="sc-AxirZ iLhocn"
-          >
-            <a
-              activelink="0"
-              class="sc-AxjAm gVqQUM"
-              href="/all"
-            >
-              All
-            </a>
-          </ul>
-          <ul
-            class="sc-AxirZ iLhocn"
-          >
-            <a
-              activelink="0"
-              class="sc-AxjAm gVqQUM"
-              href="/shoes"
-            >
-              Shoes
-            </a>
-          </ul>
-          <ul
-            class="sc-AxirZ iLhocn"
-          >
-            <a
-              activelink="0"
-              class="sc-AxjAm gVqQUM"
-              href="/jackets"
-            >
-              Jackets
-            </a>
-          </ul>
-          <ul
-            class="sc-AxirZ iLhocn"
-          >
-            <a
-              activelink="0"
-              class="sc-AxjAm gVqQUM"
-              href="/pants"
-            >
-              Pants
-            </a>
-          </ul>
-          <ul
-            class="sc-AxirZ iLhocn"
-          >
-            <a
-              activelink="0"
-              class="sc-AxjAm gVqQUM"
-              href="/caps"
-            >
-              Caps
-            </a>
-          </ul>
-        </ul>
+        <button
+          class="sc-AxirZ ExBPc"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-bars"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ ExBPc"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-github"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ hmsNGS"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-user"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ cDMgGh"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-shopping-basket"
+            color="#FFF"
+          />
+        </button>
       </nav>
-      <div
-        class="sc-AxhCb cKnulu"
-      />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxiKw eXcIew"
+      class="sc-AxjAm cKTuKw"
     >
-      <ul>
-        <ul
-          class="sc-AxirZ iLhocn"
-        >
-          <a
-            activelink="1"
-            class="sc-AxjAm kXjbg"
-            href="/"
-          >
-            Start
-          </a>
-        </ul>
-        <ul
-          class="sc-AxirZ iLhocn"
-        >
-          <a
-            activelink="0"
-            class="sc-AxjAm gVqQUM"
-            href="/all"
-          >
-            All
-          </a>
-        </ul>
-        <ul
-          class="sc-AxirZ iLhocn"
-        >
-          <a
-            activelink="0"
-            class="sc-AxjAm gVqQUM"
-            href="/shoes"
-          >
-            Shoes
-          </a>
-        </ul>
-        <ul
-          class="sc-AxirZ iLhocn"
-        >
-          <a
-            activelink="0"
-            class="sc-AxjAm gVqQUM"
-            href="/jackets"
-          >
-            Jackets
-          </a>
-        </ul>
-        <ul
-          class="sc-AxirZ iLhocn"
-        >
-          <a
-            activelink="0"
-            class="sc-AxjAm gVqQUM"
-            href="/pants"
-          >
-            Pants
-          </a>
-        </ul>
-        <ul
-          class="sc-AxirZ iLhocn"
-        >
-          <a
-            activelink="0"
-            class="sc-AxjAm gVqQUM"
-            href="/caps"
-          >
-            Caps
-          </a>
-        </ul>
-      </ul>
+      <button
+        class="sc-AxirZ ExBPc"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-bars"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ ExBPc"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-github"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ hmsNGS"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-user"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ cDMgGh"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-shopping-basket"
+          color="#FFF"
+        />
+      </button>
     </nav>
-    <div
-      class="sc-AxhCb cKnulu"
-    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -292,30 +270,86 @@ Object {
 }
 `;
 
-exports[`[MENU] Should render without failing with empty data 1`] = `
+exports[`[NAVBAR] Should render component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxiKw eXcIew"
+        class="sc-AxjAm cKTuKw"
       >
-        <ul />
+        <button
+          class="sc-AxirZ ExBPc"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-bars"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ ExBPc"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-github"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ hmsNGS"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-user"
+            color="#FFF"
+          />
+        </button>
+        <button
+          class="sc-AxirZ cDMgGh"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-shopping-basket"
+            color="#FFF"
+          />
+        </button>
       </nav>
-      <div
-        class="sc-AxhCb cKnulu"
-      />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxiKw eXcIew"
+      class="sc-AxjAm cKTuKw"
     >
-      <ul />
+      <button
+        class="sc-AxirZ ExBPc"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-bars"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ ExBPc"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-github"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ hmsNGS"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-user"
+          color="#FFF"
+        />
+      </button>
+      <button
+        class="sc-AxirZ cDMgGh"
+      >
+        <i
+          class="sc-AxiKw sMAqB fa fa-shopping-basket"
+          color="#FFF"
+        />
+      </button>
     </nav>
-    <div
-      class="sc-AxhCb cKnulu"
-    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

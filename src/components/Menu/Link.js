@@ -3,21 +3,18 @@ import styled from 'styled-components';
 import * as palette from '../../assets/css_variables/colors';
 
 const Link = styled(RouterLink)`
-		${({activelink}) => activelink && `
-			text-decoration: line-through;
-    	color: black;
+		${({activelink}) => activelink ? `
+			text-decoration: underline;
+    	color: white;
+		` : `
+			text-decoration: none;
 		`};
 		font-family: 'Lato', sans-serif;
-    text-decoration-color: black;
-    text-decoration: none;
+    text-decoration-color: ${palette.LIGHT_PURPLE};
     text-transform: uppercase;
-    font-size: 1.45em;
-    font-weight: 300;
-    color: ${palette.DARK_GRAY};
-
-    &:hover {
-			text-decoration: line-through;
-		}
+    font-size: 1.2em;
+    color: white;
+    font-weight: 700;
 `;
 
 export default Link;

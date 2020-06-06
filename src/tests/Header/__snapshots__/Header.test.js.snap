@@ -5,74 +5,42 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <header>
+      <header
+        class="sc-AxjAm fhMfpV"
+      >
         <div
-          class="sc-AxjAm kZchBJ"
+          class="sc-AxirZ vvfkj"
         >
           <div
-            class="sc-AxirZ epPnJN"
-          >
-            <i
-              class="sc-AxhCb hngnui fa fa-github"
-            />
-          </div>
-          <div
-            class="sc-AxirZ ciXOmt"
+            class="sc-AxiKw fIQOsd"
           >
             <img
               alt="logo"
-              class="sc-AxiKw jYvqyz"
+              class="sc-AxhCb dBDaOb"
               src="logo.png"
             />
           </div>
-          <div
-            class="sc-AxirZ epPnJN"
-          >
-            <i
-              class="sc-AxhCb eEupzK fa fa-shopping-bag"
-            />
-            <i
-              class="sc-AxhCb hngnui fa fa-search"
-            />
-          </div>
         </div>
-        <hr />
       </header>
     </div>
   </body>,
   "container": <div>
-    <header>
+    <header
+      class="sc-AxjAm fhMfpV"
+    >
       <div
-        class="sc-AxjAm kZchBJ"
+        class="sc-AxirZ vvfkj"
       >
         <div
-          class="sc-AxirZ epPnJN"
-        >
-          <i
-            class="sc-AxhCb hngnui fa fa-github"
-          />
-        </div>
-        <div
-          class="sc-AxirZ ciXOmt"
+          class="sc-AxiKw fIQOsd"
         >
           <img
             alt="logo"
-            class="sc-AxiKw jYvqyz"
+            class="sc-AxhCb dBDaOb"
             src="logo.png"
           />
         </div>
-        <div
-          class="sc-AxirZ epPnJN"
-        >
-          <i
-            class="sc-AxhCb eEupzK fa fa-shopping-bag"
-          />
-          <i
-            class="sc-AxhCb hngnui fa fa-search"
-          />
-        </div>
       </div>
-      <hr />
     </header>
   </div>,
   "debug": [Function],

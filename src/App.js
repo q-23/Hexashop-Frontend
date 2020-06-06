@@ -7,26 +7,27 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import { routes } from "./routes";
 import {MOCK_CATEGORIES as mockCategories} from "./tests/Menu/Menu.mock.data";
-
+import Navbar from "./components/Navbar";
 
 function App() {
 
   return (
-    <Container main mx_auto>
+    <>
+      <Navbar/>
       <Header/>
-      <FlexContainer>
-        <Menu categories={mockCategories}/>
-        <Container styles={'padding-left: 25px'}>
-          <Switch>
-            {
-              routes.map((route, idx) =>
-                <Route exact={route.exact} path={route.path} component={route.component} key={route.path + idx}/>
-              )
-            }
-          </Switch>
-        </Container>
-      </FlexContainer>
-    </Container>
+      <Menu categories={mockCategories}/>
+      <Container main mx_auto>
+        <FlexContainer main_container>
+            <Switch>
+              {
+                routes.map((route, idx) =>
+                  <Route exact={route.exact} path={route.path} component={route.component} key={route.path + idx}/>
+                )
+              }
+            </Switch>
+        </FlexContainer>
+      </Container>
+    </>
   );
 }
 

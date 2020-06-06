@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from "react";
 import FlexContainer from "../../components/_Shared/FlexContainer";
 import ProductPreview from "../../components/ProductPreview";
-import {MOCK_PRODUCT_ARR} from "../../tests/ProductPreview/ProductPreview.mock.data";
 
 const AllProducts = () => {
 	const [productsData, setProductsData] = useState([]);
 
 	useEffect(() => {
 		async function fetchData() {
-			const res = await fetch(`http://localhost:3000/product`, {
+			const res = await fetch(`http://localhost:3000/product?sortBy=price:desc`, {
 				headers : {
 					'Content-Type': 'application/json',
 					'Accept': 'application/json'
@@ -20,7 +19,7 @@ const AllProducts = () => {
 		fetchData();
 	}, [])
 	return(
-		<FlexContainer>
+		<FlexContainer styles={'flex-wrap: wrap; justify-content: space-evenly;'}>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} width={'25'} product={product}/>)}
 		</FlexContainer>
 	)

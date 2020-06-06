@@ -1,38 +1,15 @@
 import styled from 'styled-components';
+import * as palette from '../../assets/css_variables/colors';
 
 const HeaderWrapper = styled.header`
-	{
-		width: 100%;
-	}
-	${({ main }) => main && `
-		@media (min-width: 640px) {
-			{
-				max-width: 640px;
-			}
-		}
-		
-		@media (min-width: 768px) {
-			{
-				max-width: 768px;
-			}
-		}
-		
-		@media (min-width: 1024px) {
-			{
-				max-width: 1024px;
-			}
-		}
-		
-		@media (min-width: 1280px) {
-			{
-				max-width: 1280px;
-			}
-		}
-	`}
+	width: 100%;
+	padding: 2em 0;
 	${({ mx_auto }) => mx_auto && `
 		margin-left: auto;
 		margin-right: auto;
-	`}
+	`};
+	background: ${palette.BLUE};
+	box-shadow: inset 0px 11px 9px -2px rgba(0,0,0,0.2);
 `;
 
-export default Container;
+export default HeaderWrapper;

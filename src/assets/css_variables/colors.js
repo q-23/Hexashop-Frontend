@@ -1,11 +1,18 @@
-const LIGHT_BROWN = '#F2AF58';
-const DARK_BROWN = '#5E0000';
+const DARK_BLUE_ACCENT = '#134179';
+const LIGHT_PURPLE = '#D19FE4';
+const LIGHT_BLUE = '#EDF6FF';
 const DARK_GRAY = '#42474B';
-const LIGHT_GRAY = '#A5A5A5';
+const DARK_BLUE = '#437FC7';
+const WHITE = '#FFFFFF';
+const BROWN = '#B9732F';
+const BLUE = '#3750CF';
 
 export {
-	LIGHT_BROWN,
-	DARK_BROWN,
+	LIGHT_PURPLE,
+	LIGHT_BLUE,
+	DARK_BLUE,
 	DARK_GRAY,
-	LIGHT_GRAY
+	WHITE,
+	BROWN,
+	BLUE
 }

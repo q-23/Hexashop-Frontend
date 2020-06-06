@@ -6,40 +6,64 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-AxjAm bFRgsZ"
+        class="sc-AxjAm lhYgDc"
       >
         <img
-          class="sc-AxiKw kmGyjU"
+          class="sc-AxiKw eTOJxC"
         />
         <div
-          class="sc-AxhCb bgMrhQ"
+          class="sc-AxhCb fkHEEa"
         >
           <p
-            class="sc-AxirZ beSDKg"
+            class="sc-AxirZ jpBNwn"
           />
           <p
-            class="sc-AxirZ dFBGPG"
-          />
+            class="sc-AxirZ ejNgpD"
+            color="gray"
+          >
+            $
+          </p>
+          <a
+            href="/product/undefined"
+          >
+            <button
+              class="sc-AxhUy krWDTZ"
+            >
+              Add to cart
+            </button>
+          </a>
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-AxjAm bFRgsZ"
+      class="sc-AxjAm lhYgDc"
     >
       <img
-        class="sc-AxiKw kmGyjU"
+        class="sc-AxiKw eTOJxC"
       />
       <div
-        class="sc-AxhCb bgMrhQ"
+        class="sc-AxhCb fkHEEa"
       >
         <p
-          class="sc-AxirZ beSDKg"
+          class="sc-AxirZ jpBNwn"
         />
         <p
-          class="sc-AxirZ dFBGPG"
-        />
+          class="sc-AxirZ ejNgpD"
+          color="gray"
+        >
+          $
+        </p>
+        <a
+          href="/product/undefined"
+        >
+          <button
+            class="sc-AxhUy krWDTZ"
+          >
+            Add to cart
+          </button>
+        </a>
       </div>
     </div>
   </div>,
