@@ -9,12 +9,12 @@ const Link = styled(RouterLink)`
 		` : `
 			text-decoration: none;
 		`};
-		font-family: 'Lato', sans-serif;
     text-decoration-color: ${palette.LIGHT_PURPLE};
+		font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-size: 1.2em;
-    color: white;
     font-weight: 700;
+		color: white;
 `;
 
 export default Link;

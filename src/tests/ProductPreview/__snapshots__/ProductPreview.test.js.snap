@@ -6,64 +6,84 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-AxjAm lhYgDc"
+        class="sc-AxiKw fExOlD"
+        width="md"
       >
-        <img
-          class="sc-AxiKw eTOJxC"
-        />
         <div
-          class="sc-AxhCb fkHEEa"
+          class="sc-AxgMl fQBKcB"
         >
-          <p
-            class="sc-AxirZ jpBNwn"
-          />
-          <p
-            class="sc-AxirZ ejNgpD"
-            color="gray"
-          >
-            $
-          </p>
           <a
             href="/product/undefined"
           >
+            <img
+              class="sc-AxhUy jGTwbv"
+            />
+          </a>
+          <div
+            class="sc-AxirZ eugqIO"
+          >
+            <a
+              href="/product/undefined"
+            >
+              <p
+                class="sc-AxjAm lkoRYA"
+              />
+            </a>
+            <p
+              class="sc-AxjAm eLQBs"
+              color="gray"
+            >
+              $
+            </p>
             <button
-              class="sc-AxhUy krWDTZ"
+              class="sc-AxhCb ijslLw"
+              style="bottom: 0px;"
             >
               Add to cart
             </button>
-          </a>
+          </div>
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-AxjAm lhYgDc"
+      class="sc-AxiKw fExOlD"
+      width="md"
     >
-      <img
-        class="sc-AxiKw eTOJxC"
-      />
       <div
-        class="sc-AxhCb fkHEEa"
+        class="sc-AxgMl fQBKcB"
       >
-        <p
-          class="sc-AxirZ jpBNwn"
-        />
-        <p
-          class="sc-AxirZ ejNgpD"
-          color="gray"
-        >
-          $
-        </p>
         <a
           href="/product/undefined"
         >
+          <img
+            class="sc-AxhUy jGTwbv"
+          />
+        </a>
+        <div
+          class="sc-AxirZ eugqIO"
+        >
+          <a
+            href="/product/undefined"
+          >
+            <p
+              class="sc-AxjAm lkoRYA"
+            />
+          </a>
+          <p
+            class="sc-AxjAm eLQBs"
+            color="gray"
+          >
+            $
+          </p>
           <button
-            class="sc-AxhUy krWDTZ"
+            class="sc-AxhCb ijslLw"
+            style="bottom: 0px;"
           >
             Add to cart
           </button>
-        </a>
+        </div>
       </div>
     </div>
   </div>,

@@ -6,13 +6,14 @@ Object {
   "baseElement": <body>
     <div>
       <header
-        class="sc-AxjAm fhMfpV"
+        class="sc-AxirZ gRKmTO"
       >
         <div
-          class="sc-AxirZ vvfkj"
+          class="sc-AxjAm fMxdlc"
         >
           <div
-            class="sc-AxiKw fIQOsd"
+            class="sc-AxiKw foOnqv"
+            width="md"
           >
             <img
               alt="logo"
@@ -26,13 +27,14 @@ Object {
   </body>,
   "container": <div>
     <header
-      class="sc-AxjAm fhMfpV"
+      class="sc-AxirZ gRKmTO"
     >
       <div
-        class="sc-AxirZ vvfkj"
+        class="sc-AxjAm fMxdlc"
       >
         <div
-          class="sc-AxiKw fIQOsd"
+          class="sc-AxiKw foOnqv"
+          width="md"
         >
           <img
             alt="logo"

@@ -6,23 +6,25 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxiKw eXcIew"
+        class="sc-AxirZ hcCGDm"
+        width="md"
       >
         <ul />
       </nav>
       <div
-        class="sc-AxhCb cKnulu"
+        class="sc-AxjAm fzxbWp"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxiKw eXcIew"
+      class="sc-AxirZ hcCGDm"
+      width="md"
     >
       <ul />
     </nav>
     <div
-      class="sc-AxhCb cKnulu"
+      class="sc-AxjAm fzxbWp"
     />
   </div>,
   "debug": [Function],
@@ -85,70 +87,71 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxiKw eXcIew"
+        class="sc-AxirZ hcCGDm"
+        width="md"
       >
         <ul>
           <ul
-            class="sc-AxirZ iLhocn"
+            class="sc-AxhCb jXVLqT"
           >
             <a
               activelink="1"
-              class="sc-AxjAm kXjbg"
+              class="sc-AxiKw iycYXf"
               href="/"
             >
               Start
             </a>
           </ul>
           <ul
-            class="sc-AxirZ iLhocn"
+            class="sc-AxhCb jXVLqT"
           >
             <a
               activelink="0"
-              class="sc-AxjAm gVqQUM"
+              class="sc-AxiKw jWgvwf"
               href="/all"
             >
               All
             </a>
           </ul>
           <ul
-            class="sc-AxirZ iLhocn"
+            class="sc-AxhCb jXVLqT"
           >
             <a
               activelink="0"
-              class="sc-AxjAm gVqQUM"
+              class="sc-AxiKw jWgvwf"
               href="/shoes"
             >
               Shoes
             </a>
           </ul>
           <ul
-            class="sc-AxirZ iLhocn"
+            class="sc-AxhCb jXVLqT"
           >
             <a
               activelink="0"
-              class="sc-AxjAm gVqQUM"
+              class="sc-AxiKw jWgvwf"
               href="/jackets"
             >
               Jackets
             </a>
           </ul>
           <ul
-            class="sc-AxirZ iLhocn"
+            class="sc-AxhCb jXVLqT"
           >
             <a
               activelink="0"
-              class="sc-AxjAm gVqQUM"
+              class="sc-AxiKw jWgvwf"
               href="/pants"
             >
               Pants
             </a>
           </ul>
           <ul
-            class="sc-AxirZ iLhocn"
+            class="sc-AxhCb jXVLqT"
           >
             <a
               activelink="0"
-              class="sc-AxjAm gVqQUM"
+              class="sc-AxiKw jWgvwf"
               href="/caps"
             >
               Caps
@@ -157,76 +160,77 @@ Object {
         </ul>
       </nav>
       <div
-        class="sc-AxhCb cKnulu"
+        class="sc-AxjAm fzxbWp"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxiKw eXcIew"
+      class="sc-AxirZ hcCGDm"
+      width="md"
     >
       <ul>
         <ul
-          class="sc-AxirZ iLhocn"
+          class="sc-AxhCb jXVLqT"
         >
           <a
             activelink="1"
-            class="sc-AxjAm kXjbg"
+            class="sc-AxiKw iycYXf"
             href="/"
           >
             Start
           </a>
         </ul>
         <ul
-          class="sc-AxirZ iLhocn"
+          class="sc-AxhCb jXVLqT"
         >
           <a
             activelink="0"
-            class="sc-AxjAm gVqQUM"
+            class="sc-AxiKw jWgvwf"
             href="/all"
           >
             All
           </a>
         </ul>
         <ul
-          class="sc-AxirZ iLhocn"
+          class="sc-AxhCb jXVLqT"
         >
           <a
             activelink="0"
-            class="sc-AxjAm gVqQUM"
+            class="sc-AxiKw jWgvwf"
             href="/shoes"
           >
             Shoes
           </a>
         </ul>
         <ul
-          class="sc-AxirZ iLhocn"
+          class="sc-AxhCb jXVLqT"
         >
           <a
             activelink="0"
-            class="sc-AxjAm gVqQUM"
+            class="sc-AxiKw jWgvwf"
             href="/jackets"
           >
             Jackets
           </a>
         </ul>
         <ul
-          class="sc-AxirZ iLhocn"
+          class="sc-AxhCb jXVLqT"
         >
           <a
             activelink="0"
-            class="sc-AxjAm gVqQUM"
+            class="sc-AxiKw jWgvwf"
             href="/pants"
           >
             Pants
           </a>
         </ul>
         <ul
-          class="sc-AxirZ iLhocn"
+          class="sc-AxhCb jXVLqT"
         >
           <a
             activelink="0"
-            class="sc-AxjAm gVqQUM"
+            class="sc-AxiKw jWgvwf"
             href="/caps"
           >
             Caps
@@ -235,7 +239,7 @@ Object {
       </ul>
     </nav>
     <div
-      class="sc-AxhCb cKnulu"
+      class="sc-AxjAm fzxbWp"
     />
   </div>,
   "debug": [Function],
@@ -298,23 +302,25 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxiKw eXcIew"
+        class="sc-AxirZ hcCGDm"
+        width="md"
       >
         <ul />
       </nav>
       <div
-        class="sc-AxhCb cKnulu"
+        class="sc-AxjAm fzxbWp"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxiKw eXcIew"
+      class="sc-AxirZ hcCGDm"
+      width="md"
     >
       <ul />
     </nav>
     <div
-      class="sc-AxhCb cKnulu"
+      class="sc-AxjAm fzxbWp"
     />
   </div>,
   "debug": [Function],

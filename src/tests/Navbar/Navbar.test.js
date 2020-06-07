@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
+
 import { render, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
-import Navbar from "../../components/Navbar/Navbar";
-import { renderWithRouter } from "../utils";
 import {MenuContext} from "../../contexts/reducers/menu";
+import '@testing-library/jest-dom/extend-expect'
+import { renderWithRouter } from "../utils";
+
+import Navbar from "../../components/Navbar/Navbar";
 
 const TestComponent = () => {
 	const { menuOpen } = useContext(MenuContext);

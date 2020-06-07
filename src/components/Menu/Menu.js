@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 
 import { withRouter } from 'react-router-dom';
+
+import MenuOverlay from "./MenuOverlay";
+import MenuWrapper from "./MenuWrapper";
 import Link from "./Link";
 import List from "./List";
-import MenuWrapper from "./MenuWrapper";
+
 import { MenuContext } from '../../contexts/reducers/menu';
-import MenuOverlay from "./MenuOverlay";
+
 const Menu = ({ categories = [], location }) => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);
 

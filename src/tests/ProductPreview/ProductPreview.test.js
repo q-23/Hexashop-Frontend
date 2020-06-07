@@ -1,9 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
+
 import ProductPreview from '../../components/ProductPreview';
-import { MOCK_PRODUCT } from "./ProductPreview.mock.data";
+import '@testing-library/jest-dom/extend-expect'
+import { render } from '@testing-library/react'
 import { renderWithRouter } from "../utils";
+
+import { MOCK_PRODUCT } from "./ProductPreview.mock.data";
 
 describe('[PRODUCT PREVIEW]', () => {
 	test('Should render component', () => {

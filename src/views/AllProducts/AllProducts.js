@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+
 import FlexContainer from "../../components/_Shared/FlexContainer";
 import ProductPreview from "../../components/ProductPreview";
 
@@ -7,7 +8,7 @@ const AllProducts = () => {
 
 	useEffect(() => {
 		async function fetchData() {
-			const res = await fetch(`http://localhost:3000/product?sortBy=price:desc`, {
+			const res = await fetch(`${process.env.REACT_APP_API_URL}/product?sortBy=price:desc`, {
 				headers : {
 					'Content-Type': 'application/json',
 					'Accept': 'application/json'
@@ -19,8 +20,8 @@ const AllProducts = () => {
 		fetchData();
 	}, [])
 	return(
-		<FlexContainer styles={'flex-wrap: wrap; justify-content: space-evenly;'}>
-			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} width={'25'} product={product}/>)}
+		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
+			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
 		</FlexContainer>
 	)
 };

@@ -1,10 +1,11 @@
 import React from "react";
 
-import HeaderWrapper from "./HeaderWrapper";
 import FlexContainer from "../_Shared/FlexContainer";
+import HeaderWrapper from "./HeaderWrapper";
 import FlexItem from "../_Shared/FlexItem";
-import logo from '../../assets/images/logo.png';
 import Image from "../_Shared/Image";
+
+import logo from '../../assets/images/logo.png';
 
 const Header = () => {
 

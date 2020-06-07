@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-fzpans dVjRmj"
+        class="sc-fzpans ijMRjf"
       >
         <button
           class="sc-fzoLsD dplRMU"
@@ -45,10 +45,11 @@ Object {
         class="sc-AxiKw kPZMXK"
       >
         <div
-          class="sc-AxirZ vvfkj"
+          class="sc-AxirZ bUDepD"
         >
           <div
-            class="sc-AxhCb hOzsFl"
+            class="sc-AxhCb bLeCyz"
+            width="md"
           >
             <img
               alt="logo"
@@ -59,70 +60,71 @@ Object {
         </div>
       </header>
       <nav
-        class="sc-Axmtr eLAzru"
+        class="sc-AxheI hgOBOL"
+        width="md"
       >
         <ul>
           <ul
-            class="sc-AxheI gbCYma"
+            class="sc-AxmLO iMoysY"
           >
             <a
               activelink="1"
-              class="sc-AxgMl dkBrHg"
+              class="sc-Axmtr iHrQgV"
               href="/"
             >
               Start
             </a>
           </ul>
           <ul
-            class="sc-AxheI gbCYma"
+            class="sc-AxmLO iMoysY"
           >
             <a
               activelink="0"
-              class="sc-AxgMl binMjQ"
+              class="sc-Axmtr dPUNEl"
               href="/all"
             >
               All
             </a>
           </ul>
           <ul
-            class="sc-AxheI gbCYma"
+            class="sc-AxmLO iMoysY"
           >
             <a
               activelink="0"
-              class="sc-AxgMl binMjQ"
+              class="sc-Axmtr dPUNEl"
               href="/shoes"
             >
               Shoes
             </a>
           </ul>
           <ul
-            class="sc-AxheI gbCYma"
+            class="sc-AxmLO iMoysY"
           >
             <a
               activelink="0"
-              class="sc-AxgMl binMjQ"
+              class="sc-Axmtr dPUNEl"
               href="/jackets"
             >
               Jackets
             </a>
           </ul>
           <ul
-            class="sc-AxheI gbCYma"
+            class="sc-AxmLO iMoysY"
           >
             <a
               activelink="0"
-              class="sc-AxgMl binMjQ"
+              class="sc-Axmtr dPUNEl"
               href="/pants"
             >
               Pants
             </a>
           </ul>
           <ul
-            class="sc-AxheI gbCYma"
+            class="sc-AxmLO iMoysY"
           >
             <a
               activelink="0"
-              class="sc-AxgMl binMjQ"
+              class="sc-Axmtr dPUNEl"
               href="/caps"
             >
               Caps
@@ -131,16 +133,16 @@ Object {
         </ul>
       </nav>
       <div
-        class="sc-AxmLO cubXBl"
+        class="sc-AxgMl bUOnbB"
       />
       <div
         class="sc-AxjAm lgwkGM"
       >
         <div
-          class="sc-AxirZ ezBLaA"
+          class="sc-AxirZ hfzQjU"
         >
           <div
-            class="sc-AxirZ ekzUhe"
+            class="sc-AxirZ kQchoq"
           >
             <p
               class="sc-fzozJi eHgyUg"
@@ -154,7 +156,7 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-fzpans dVjRmj"
+      class="sc-fzpans ijMRjf"
     >
       <button
         class="sc-fzoLsD dplRMU"
@@ -193,10 +195,11 @@ Object {
       class="sc-AxiKw kPZMXK"
     >
       <div
-        class="sc-AxirZ vvfkj"
+        class="sc-AxirZ bUDepD"
       >
         <div
-          class="sc-AxhCb hOzsFl"
+          class="sc-AxhCb bLeCyz"
+          width="md"
         >
           <img
             alt="logo"
@@ -207,70 +210,71 @@ Object {
       </div>
     </header>
     <nav
-      class="sc-Axmtr eLAzru"
+      class="sc-AxheI hgOBOL"
+      width="md"
     >
       <ul>
         <ul
-          class="sc-AxheI gbCYma"
+          class="sc-AxmLO iMoysY"
         >
           <a
             activelink="1"
-            class="sc-AxgMl dkBrHg"
+            class="sc-Axmtr iHrQgV"
             href="/"
           >
             Start
           </a>
         </ul>
         <ul
-          class="sc-AxheI gbCYma"
+          class="sc-AxmLO iMoysY"
         >
           <a
             activelink="0"
-            class="sc-AxgMl binMjQ"
+            class="sc-Axmtr dPUNEl"
             href="/all"
           >
             All
           </a>
         </ul>
         <ul
-          class="sc-AxheI gbCYma"
+          class="sc-AxmLO iMoysY"
         >
           <a
             activelink="0"
-            class="sc-AxgMl binMjQ"
+            class="sc-Axmtr dPUNEl"
             href="/shoes"
           >
             Shoes
           </a>
         </ul>
         <ul
-          class="sc-AxheI gbCYma"
+          class="sc-AxmLO iMoysY"
         >
           <a
             activelink="0"
-            class="sc-AxgMl binMjQ"
+            class="sc-Axmtr dPUNEl"
             href="/jackets"
           >
             Jackets
           </a>
         </ul>
         <ul
-          class="sc-AxheI gbCYma"
+          class="sc-AxmLO iMoysY"
         >
           <a
             activelink="0"
-            class="sc-AxgMl binMjQ"
+            class="sc-Axmtr dPUNEl"
             href="/pants"
           >
             Pants
           </a>
         </ul>
         <ul
-          class="sc-AxheI gbCYma"
+          class="sc-AxmLO iMoysY"
         >
           <a
             activelink="0"
-            class="sc-AxgMl binMjQ"
+            class="sc-Axmtr dPUNEl"
             href="/caps"
           >
             Caps
@@ -279,16 +283,16 @@ Object {
       </ul>
     </nav>
     <div
-      class="sc-AxmLO cubXBl"
+      class="sc-AxgMl bUOnbB"
     />
     <div
       class="sc-AxjAm lgwkGM"
     >
       <div
-        class="sc-AxirZ ezBLaA"
+        class="sc-AxirZ hfzQjU"
       >
         <div
-          class="sc-AxirZ ekzUhe"
+          class="sc-AxirZ kQchoq"
         >
           <p
             class="sc-fzozJi eHgyUg"

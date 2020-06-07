@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 const MenuOverlay = styled.div`
-  width: 100vw;
-  height: 100vh;
 	backdrop-filter: blur(5px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 89;
-  overflow: hidden;
   visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 89;
+  left: 0;
+  top: 0;
   
 	${({ visible }) => visible && `
 	visibility: visible;

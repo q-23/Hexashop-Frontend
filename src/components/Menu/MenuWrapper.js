@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import * as palette from '../../assets/css_variables/colors';
 
+import WithWidth from "../WithWidth";
+
 const MenuWrapper = styled.nav`
-  width: 25vw;
+  width: ${({ width }) => width === 'xs' ? '100vw' : '25vw'};
   height: 100vh;
   background: ${palette.BLUE};
   position: fixed;
@@ -12,8 +14,8 @@ const MenuWrapper = styled.nav`
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
   overflow: scroll;
   padding-top: 3.5em;
-  transform: translate3d(-26vw, 0, 0);
-	box-shadow: 10px 2px 23px -1px rgba(0,0,0,0.62);
+  transform: translate3d(${({ width }) => width === 'xs' ? '-100vw' : '-25vw'}, 0, 0);
+	box-shadow: ${({ visible }) => visible ? '10px 2px 23px -1px rgba(0,0,0,0.62)' : 'none'};
 	${({ visible }) => visible && `
 	  transform: translate3d(0vw, 0, 0);
 	  overflow: auto;
@@ -32,4 +34,4 @@ const MenuWrapper = styled.nav`
 	`};
 `;
 
-export default MenuWrapper;
+export default WithWidth(MenuWrapper);
