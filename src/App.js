@@ -11,7 +11,7 @@ import Menu from "./components/Menu";
 import { routes } from "./routes";
 
 function App() {
-  const [categoriesData, setCategoriesData] = useState([]);
+  const [categoriesData, setCategoriesData] = useState([{ category_path: '/all', category_name: 'All products', showInMenu: true }]);
   const ContainerWithLoader = WithLoader(FlexContainer);
 
 
@@ -24,13 +24,15 @@ function App() {
         }
       });
       const categoriesResolved = await categoriesBuffer.json();
-      setCategoriesData(categoriesResolved.map(e => ({ showInMenu: true, ...e })));
+      const categoriesWithShowInMenu = categoriesResolved.map(e => ({ showInMenu: true, ...e }))
+      setCategoriesData([...categoriesData, ...categoriesWithShowInMenu]);
     }
     fetchCategories();
   }, [])
 
   return (
     <>
+      {console.log(categoriesData)}
       <Navbar/>
       <Header/>
       <Menu categories={categoriesData}/>

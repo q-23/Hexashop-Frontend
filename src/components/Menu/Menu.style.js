@@ -5,16 +5,15 @@ import WithWidth from "components/_HOC/WithWidth";
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
-  width: ${({ width }) => width === 'xs' ? '100vw' : '25vw'};
   height: 100vh;
   background: ${palette.BLUE};
+  padding: 3.5em 2em 0 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 90;
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
   overflow: scroll;
-  padding-top: 3.5em;
   transform: translate3d(${({ width }) => width === 'xs' ? '-100vw' : '-25vw'}, 0, 0);
 	box-shadow: ${({ visible }) => visible ? '10px 2px 23px -1px rgba(0,0,0,0.62)' : 'none'};
 	${({ visible }) => visible && `
@@ -54,7 +53,7 @@ const MenuOverlay = styled.div`
 
 const List = styled.ul`
 		margin: 10px 0;
-		width: 7.5em;
+		width: 100%;
 		padding: 0;
 `;
 

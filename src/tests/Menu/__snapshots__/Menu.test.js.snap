@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxjAm goNyZB"
+        class="sc-AxjAm kdbTIa"
         width="md"
       >
         <ul />
@@ -18,7 +18,7 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-AxjAm goNyZB"
+      class="sc-AxjAm kdbTIa"
       width="md"
     >
       <ul />
@@ -87,12 +87,12 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxjAm goNyZB"
+        class="sc-AxjAm kdbTIa"
         width="md"
       >
         <ul>
           <ul
-            class="sc-AxiKw bigAOH"
+            class="sc-AxiKw gSZvgP"
           >
             <a
               activelink="0"
@@ -111,12 +111,12 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-AxjAm goNyZB"
+      class="sc-AxjAm kdbTIa"
       width="md"
     >
       <ul>
         <ul
-          class="sc-AxiKw bigAOH"
+          class="sc-AxiKw gSZvgP"
         >
           <a
             activelink="0"
@@ -192,7 +192,7 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxjAm goNyZB"
+        class="sc-AxjAm kdbTIa"
         width="md"
       >
         <ul />
@@ -204,7 +204,7 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-AxjAm goNyZB"
+      class="sc-AxjAm kdbTIa"
       width="md"
     >
       <ul />

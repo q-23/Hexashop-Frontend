@@ -60,10 +60,22 @@ Object {
         </div>
       </header>
       <nav
-        class="sc-fzoLsD jCfqXS"
+        class="sc-fzoLsD kMDlcx"
         width="md"
       >
-        <ul />
+        <ul>
+          <ul
+            class="sc-fzplWN eaJxNO"
+          >
+            <a
+              activelink="0"
+              class="sc-fznyAO ctOSvG"
+              href="/all"
+            >
+              All products
+            </a>
+          </ul>
+        </ul>
       </nav>
       <div
         class="sc-fzpans jQlRmq"
@@ -143,10 +155,22 @@ Object {
       </div>
     </header>
     <nav
-      class="sc-fzoLsD jCfqXS"
+      class="sc-fzoLsD kMDlcx"
       width="md"
     >
-      <ul />
+      <ul>
+        <ul
+          class="sc-fzplWN eaJxNO"
+        >
+          <a
+            activelink="0"
+            class="sc-fznyAO ctOSvG"
+            href="/all"
+          >
+            All products
+          </a>
+        </ul>
+      </ul>
     </nav>
     <div
       class="sc-fzpans jQlRmq"
