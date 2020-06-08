@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
-import FlexContainer from "../../components/_Shared/FlexContainer";
-import ProductPreview from "../../components/ProductPreview";
+import FlexContainer from "components/_Shared/FlexContainer";
+import ProductPreview from "components/ProductPreview";
 
 const AllProducts = () => {
 	const [productsData, setProductsData] = useState([]);

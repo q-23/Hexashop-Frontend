@@ -6,25 +6,25 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxirZ hcCGDm"
+        class="sc-AxjAm goNyZB"
         width="md"
       >
         <ul />
       </nav>
       <div
-        class="sc-AxjAm fzxbWp"
+        class="sc-AxirZ fYEXoq"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxirZ hcCGDm"
+      class="sc-AxjAm goNyZB"
       width="md"
     >
       <ul />
     </nav>
     <div
-      class="sc-AxjAm fzxbWp"
+      class="sc-AxirZ fYEXoq"
     />
   </div>,
   "debug": [Function],
@@ -87,159 +87,49 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxirZ hcCGDm"
+        class="sc-AxjAm goNyZB"
         width="md"
       >
         <ul>
           <ul
-            class="sc-AxhCb jXVLqT"
-          >
-            <a
-              activelink="1"
-              class="sc-AxiKw iycYXf"
-              href="/"
-            >
-              Start
-            </a>
-          </ul>
-          <ul
-            class="sc-AxhCb jXVLqT"
+            class="sc-AxiKw bigAOH"
           >
             <a
               activelink="0"
-              class="sc-AxiKw jWgvwf"
-              href="/all"
+              class="sc-AxhCb inCRGH"
+              href="/cat1"
             >
-              All
-            </a>
-          </ul>
-          <ul
-            class="sc-AxhCb jXVLqT"
-          >
-            <a
-              activelink="0"
-              class="sc-AxiKw jWgvwf"
-              href="/shoes"
-            >
-              Shoes
-            </a>
-          </ul>
-          <ul
-            class="sc-AxhCb jXVLqT"
-          >
-            <a
-              activelink="0"
-              class="sc-AxiKw jWgvwf"
-              href="/jackets"
-            >
-              Jackets
-            </a>
-          </ul>
-          <ul
-            class="sc-AxhCb jXVLqT"
-          >
-            <a
-              activelink="0"
-              class="sc-AxiKw jWgvwf"
-              href="/pants"
-            >
-              Pants
-            </a>
-          </ul>
-          <ul
-            class="sc-AxhCb jXVLqT"
-          >
-            <a
-              activelink="0"
-              class="sc-AxiKw jWgvwf"
-              href="/caps"
-            >
-              Caps
+              First category
             </a>
           </ul>
         </ul>
       </nav>
       <div
-        class="sc-AxjAm fzxbWp"
+        class="sc-AxirZ fYEXoq"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxirZ hcCGDm"
+      class="sc-AxjAm goNyZB"
       width="md"
     >
       <ul>
         <ul
-          class="sc-AxhCb jXVLqT"
-        >
-          <a
-            activelink="1"
-            class="sc-AxiKw iycYXf"
-            href="/"
-          >
-            Start
-          </a>
-        </ul>
-        <ul
-          class="sc-AxhCb jXVLqT"
+          class="sc-AxiKw bigAOH"
         >
           <a
             activelink="0"
-            class="sc-AxiKw jWgvwf"
-            href="/all"
+            class="sc-AxhCb inCRGH"
+            href="/cat1"
           >
-            All
-          </a>
-        </ul>
-        <ul
-          class="sc-AxhCb jXVLqT"
-        >
-          <a
-            activelink="0"
-            class="sc-AxiKw jWgvwf"
-            href="/shoes"
-          >
-            Shoes
-          </a>
-        </ul>
-        <ul
-          class="sc-AxhCb jXVLqT"
-        >
-          <a
-            activelink="0"
-            class="sc-AxiKw jWgvwf"
-            href="/jackets"
-          >
-            Jackets
-          </a>
-        </ul>
-        <ul
-          class="sc-AxhCb jXVLqT"
-        >
-          <a
-            activelink="0"
-            class="sc-AxiKw jWgvwf"
-            href="/pants"
-          >
-            Pants
-          </a>
-        </ul>
-        <ul
-          class="sc-AxhCb jXVLqT"
-        >
-          <a
-            activelink="0"
-            class="sc-AxiKw jWgvwf"
-            href="/caps"
-          >
-            Caps
+            First category
           </a>
         </ul>
       </ul>
     </nav>
     <div
-      class="sc-AxjAm fzxbWp"
+      class="sc-AxirZ fYEXoq"
     />
   </div>,
   "debug": [Function],
@@ -302,25 +192,25 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxirZ hcCGDm"
+        class="sc-AxjAm goNyZB"
         width="md"
       >
         <ul />
       </nav>
       <div
-        class="sc-AxjAm fzxbWp"
+        class="sc-AxirZ fYEXoq"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxirZ hcCGDm"
+      class="sc-AxjAm goNyZB"
       width="md"
     >
       <ul />
     </nav>
     <div
-      class="sc-AxjAm fzxbWp"
+      class="sc-AxirZ fYEXoq"
     />
   </div>,
   "debug": [Function],

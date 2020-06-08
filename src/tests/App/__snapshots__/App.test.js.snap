@@ -6,146 +6,79 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-fzpans ijMRjf"
+        class="sc-AxhUy hszLNi"
       >
         <button
-          class="sc-fzoLsD dplRMU"
+          class="sc-AxgMl eaxotf"
         >
           <i
-            class="sc-fzplWN dGxEnk fa fa-bars"
+            class="sc-AxheI iYlCMY fa fa-bars"
             color="#FFF"
           />
         </button>
         <button
-          class="sc-fzoLsD dplRMU"
+          class="sc-AxgMl eaxotf"
         >
           <i
-            class="sc-fzplWN dGxEnk fa fa-github"
+            class="sc-AxheI iYlCMY fa fa-github"
             color="#FFF"
           />
         </button>
         <button
-          class="sc-fzoLsD dNoGyS"
+          class="sc-AxgMl cvWGsZ"
         >
           <i
-            class="sc-fzplWN dGxEnk fa fa-user"
+            class="sc-AxheI iYlCMY fa fa-user"
             color="#FFF"
           />
         </button>
         <button
-          class="sc-fzoLsD kSUrjt"
+          class="sc-AxgMl gumKSq"
         >
           <i
-            class="sc-fzplWN dGxEnk fa fa-shopping-basket"
+            class="sc-AxheI iYlCMY fa fa-shopping-basket"
             color="#FFF"
           />
         </button>
       </nav>
       <header
-        class="sc-AxiKw kPZMXK"
+        class="sc-AxmLO gvPdNN"
       >
         <div
-          class="sc-AxirZ bUDepD"
+          class="sc-AxjAm fMxdlc"
         >
           <div
-            class="sc-AxhCb bLeCyz"
+            class="sc-Axmtr jFpjaR"
             width="md"
           >
             <img
               alt="logo"
-              class="sc-AxhUy jvmxQu"
+              class="sc-fzozJi fjzWkt"
               src="logo.png"
             />
           </div>
         </div>
       </header>
       <nav
-        class="sc-AxheI hgOBOL"
+        class="sc-fzoLsD jCfqXS"
         width="md"
       >
-        <ul>
-          <ul
-            class="sc-AxmLO iMoysY"
-          >
-            <a
-              activelink="1"
-              class="sc-Axmtr iHrQgV"
-              href="/"
-            >
-              Start
-            </a>
-          </ul>
-          <ul
-            class="sc-AxmLO iMoysY"
-          >
-            <a
-              activelink="0"
-              class="sc-Axmtr dPUNEl"
-              href="/all"
-            >
-              All
-            </a>
-          </ul>
-          <ul
-            class="sc-AxmLO iMoysY"
-          >
-            <a
-              activelink="0"
-              class="sc-Axmtr dPUNEl"
-              href="/shoes"
-            >
-              Shoes
-            </a>
-          </ul>
-          <ul
-            class="sc-AxmLO iMoysY"
-          >
-            <a
-              activelink="0"
-              class="sc-Axmtr dPUNEl"
-              href="/jackets"
-            >
-              Jackets
-            </a>
-          </ul>
-          <ul
-            class="sc-AxmLO iMoysY"
-          >
-            <a
-              activelink="0"
-              class="sc-Axmtr dPUNEl"
-              href="/pants"
-            >
-              Pants
-            </a>
-          </ul>
-          <ul
-            class="sc-AxmLO iMoysY"
-          >
-            <a
-              activelink="0"
-              class="sc-Axmtr dPUNEl"
-              href="/caps"
-            >
-              Caps
-            </a>
-          </ul>
-        </ul>
+        <ul />
       </nav>
       <div
-        class="sc-AxgMl bUOnbB"
+        class="sc-fzpans jQlRmq"
       />
       <div
-        class="sc-AxjAm lgwkGM"
+        class="sc-AxirZ fYKBAj"
       >
         <div
-          class="sc-AxirZ hfzQjU"
+          class="sc-AxjAm cKqwrr"
         >
           <div
-            class="sc-AxirZ kQchoq"
+            class="sc-AxjAm bXpdfR"
           >
             <p
-              class="sc-fzozJi eHgyUg"
+              class="sc-fznKkj cwPxaC"
             >
               Some text...
             </p>
@@ -156,146 +89,79 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-fzpans ijMRjf"
+      class="sc-AxhUy hszLNi"
     >
       <button
-        class="sc-fzoLsD dplRMU"
+        class="sc-AxgMl eaxotf"
       >
         <i
-          class="sc-fzplWN dGxEnk fa fa-bars"
+          class="sc-AxheI iYlCMY fa fa-bars"
           color="#FFF"
         />
       </button>
       <button
-        class="sc-fzoLsD dplRMU"
+        class="sc-AxgMl eaxotf"
       >
         <i
-          class="sc-fzplWN dGxEnk fa fa-github"
+          class="sc-AxheI iYlCMY fa fa-github"
           color="#FFF"
         />
       </button>
       <button
-        class="sc-fzoLsD dNoGyS"
+        class="sc-AxgMl cvWGsZ"
       >
         <i
-          class="sc-fzplWN dGxEnk fa fa-user"
+          class="sc-AxheI iYlCMY fa fa-user"
           color="#FFF"
         />
       </button>
       <button
-        class="sc-fzoLsD kSUrjt"
+        class="sc-AxgMl gumKSq"
       >
         <i
-          class="sc-fzplWN dGxEnk fa fa-shopping-basket"
+          class="sc-AxheI iYlCMY fa fa-shopping-basket"
           color="#FFF"
         />
       </button>
     </nav>
     <header
-      class="sc-AxiKw kPZMXK"
+      class="sc-AxmLO gvPdNN"
     >
       <div
-        class="sc-AxirZ bUDepD"
+        class="sc-AxjAm fMxdlc"
       >
         <div
-          class="sc-AxhCb bLeCyz"
+          class="sc-Axmtr jFpjaR"
           width="md"
         >
           <img
             alt="logo"
-            class="sc-AxhUy jvmxQu"
+            class="sc-fzozJi fjzWkt"
             src="logo.png"
           />
         </div>
       </div>
     </header>
     <nav
-      class="sc-AxheI hgOBOL"
+      class="sc-fzoLsD jCfqXS"
       width="md"
     >
-      <ul>
-        <ul
-          class="sc-AxmLO iMoysY"
-        >
-          <a
-            activelink="1"
-            class="sc-Axmtr iHrQgV"
-            href="/"
-          >
-            Start
-          </a>
-        </ul>
-        <ul
-          class="sc-AxmLO iMoysY"
-        >
-          <a
-            activelink="0"
-            class="sc-Axmtr dPUNEl"
-            href="/all"
-          >
-            All
-          </a>
-        </ul>
-        <ul
-          class="sc-AxmLO iMoysY"
-        >
-          <a
-            activelink="0"
-            class="sc-Axmtr dPUNEl"
-            href="/shoes"
-          >
-            Shoes
-          </a>
-        </ul>
-        <ul
-          class="sc-AxmLO iMoysY"
-        >
-          <a
-            activelink="0"
-            class="sc-Axmtr dPUNEl"
-            href="/jackets"
-          >
-            Jackets
-          </a>
-        </ul>
-        <ul
-          class="sc-AxmLO iMoysY"
-        >
-          <a
-            activelink="0"
-            class="sc-Axmtr dPUNEl"
-            href="/pants"
-          >
-            Pants
-          </a>
-        </ul>
-        <ul
-          class="sc-AxmLO iMoysY"
-        >
-          <a
-            activelink="0"
-            class="sc-Axmtr dPUNEl"
-            href="/caps"
-          >
-            Caps
-          </a>
-        </ul>
-      </ul>
+      <ul />
     </nav>
     <div
-      class="sc-AxgMl bUOnbB"
+      class="sc-fzpans jQlRmq"
     />
     <div
-      class="sc-AxjAm lgwkGM"
+      class="sc-AxirZ fYKBAj"
     >
       <div
-        class="sc-AxirZ hfzQjU"
+        class="sc-AxjAm cKqwrr"
       >
         <div
-          class="sc-AxirZ kQchoq"
+          class="sc-AxjAm bXpdfR"
         >
           <p
-            class="sc-fzozJi eHgyUg"
+            class="sc-fznKkj cwPxaC"
           >
             Some text...
           </p>

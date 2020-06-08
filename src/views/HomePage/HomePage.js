@@ -1,7 +1,7 @@
 import React from "react";
-import Typography from "../../components/_Shared/Typography";
-import FlexContainer from "../../components/_Shared/FlexContainer";
-import main_image from '../../assets/images/startpage_pic.jpg';
+import Typography from "components/_Shared/Typography";
+import FlexContainer from "components/_Shared/FlexContainer";
+import main_image from 'assets/images/startpage_pic.jpg';
 
 const HomePage = () => {
 	return(

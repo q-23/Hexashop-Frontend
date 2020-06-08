@@ -2,12 +2,9 @@ import React, { useContext } from "react";
 
 import { withRouter } from 'react-router-dom';
 
-import MenuOverlay from "./MenuOverlay";
-import MenuWrapper from "./MenuWrapper";
-import Link from "./Link";
-import List from "./List";
+import { MenuContext } from 'contexts/reducers/menu';
 
-import { MenuContext } from '../../contexts/reducers/menu';
+import {MenuOverlay, MenuWrapper, Link, List} from './Menu.style'
 
 const Menu = ({ categories = [], location }) => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);
@@ -19,14 +16,16 @@ const Menu = ({ categories = [], location }) => {
 			<MenuWrapper visible={menuOpen}>
 				<ul>
 					{
-						categories.map(el =>
-							<List key={`${el.to} - ${el.label}`}>
+						categories
+							.filter(e => !!e.showInMenu)
+							.map(el =>
+							<List key={`${el.category_path} - ${el.category_name}`}>
 								<Link
-									to={el.to}
-									activelink={pathname === el.to ? 1 : 0}
+									to={el.category_path}
+									activelink={pathname === el.category_path ? 1 : 0}
 									onClick={() => setMenuOpen(false)}
 								>
-									{el.label}
+									{el.category_name}
 								</Link>
 							</List>)
 					}

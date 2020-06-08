@@ -13,20 +13,14 @@ A
 :
 
 src/App.js,1/e/1e43fa63aecd2127be034b3fb9d4caa172275714
-@
-src/tailwind.css,d/1/d1ef6ccb260115c9f3a48b68535c9db7487e4ce6
 O
 src/components/Header/Header.js,c/a/caa79197723a9578d728293db3f20893a9c66c89
-?
-src/colors.scss,0/7/07a39a7f532d018986a8356ba494f645df0a0e92
 K
 src/components/Menu/Menu.js,8/0/800084a3cfe832c797fd1f56310913f74a83aa84
 >
 src/index.scss,5/b/5bfd084cc3a318b78f32da1cd49fc9f987fb897f
 L
 src/components/Menu/index.js,9/4/941aad9f0f0fa721ee2f3ca72a1cd4978f7b8828
-W
-'src/assets/css_variables/breakpoints.js,0/7/075cb324aa6163ca5d9baa50e7add47d90bdcc4d
 >
 yarn-error.log,f/3/f3b7336f891b6569b2fd4a67fd391439c7eb76e3
 ^
@@ -41,8 +35,6 @@ N
 .env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-J
-src/tailwind.generated.css,f/3/f3eddeb1eb3ad866a24e5294e5f5edc000813908
 R
 "src/components/_Shared/FlexItem.js,1/2/125545ac3cacf2ef56716b20401312d76f065e2f
 O
@@ -63,16 +55,10 @@ M
 src/contexts/reducers/menu.js,9/3/9300a80f1a79b55691a64d1d033021f8dbe3118b
 V
 &src/components/Header/HeaderWrapper.js,9/4/94e6f624bb509840cd7f3f050506b86514713e53
-R
-"src/components/Menu/MenuOverlay.js,9/b/9bc36e40e458dd588d9fbcd37e4beb1343372bf2
 P
  src/tests/Menu/Menu.mock.data.js,2/0/20f9a9f653c52b61c238ee7961228598d5bc6668
-R
-"src/components/Menu/MenuWrapper.js,b/5/b5e08e62a0310874d875cf661036269f1fec8cf8
 I
 src/tests/App/App.test.js,0/e/0eb9daa41c0183dcba5248218bddb99e117a317d
-K
-src/components/Menu/List.js,7/8/784d669ccd075f64ae8048150bc9f439ac4ffe80
 W
 'src/components/_Shared/FlexContainer.js,c/5/c5be0cd09066e89ae5fe14572d46115498e0d251
 R
@@ -89,12 +75,8 @@ B
 src/tests/utils.js,f/1/f1431b3e0b7e5dc6f9e26445c4789f72caca602c
 d
 4src/tests/ProductPreview/ProductPreview.mock.data.js,c/c/cc751ea02d572e3a696e1f75622d5df42ea77f94
-K
-src/components/Menu/Link.js,7/6/762a4901518c20b9c63f404ec0af2cff0fedac1b
 O
 src/tests/Header/Header.test.js,0/c/0c9560c4295169bcfa89b67f24e5cdbc56fce56a
-Q
-!src/components/WithWidth/index.js,2/f/2f1273b26c410808fac717c7c8d3be8d1cc27bbc
 T
 $src/views/AllProducts/AllProducts.js,b/c/bce25b683c85f344b32aef39707d49ab3291cb68
 _
@@ -103,9 +85,31 @@ U
 %src/tests/WithWidth/WithWidth.test.js,8/a/8a4b7e6eebe9d4caa0d729ffc1fc6cd796154398
 K
 src/tests/Menu/Menu.test.js,8/0/803cac2aba392bdffff408f8cdcfeeab7b40b78e
-U
-%src/components/WithWidth/WithWidth.js,0/3/033c5f806c8615cd290781c998828afac3b284dd
 O
 src/components/Navbar/Navbar.js,d/9/d98f8b3f1cd3ee72ed5f6e403515ab1d1f07a3ae
 O
 src/tests/Navbar/Navbar.test.js,a/a/aa60a4dbea1407c5faab2ed69e78813f611782fc
+N
+src/components/Header/index.js,a/0/a01c03fa6a5c6814a9ecf57c2d406d99386eba3a
+Z
+*src/components/Menu/MenuComponents/Link.js,4/b/4b12a06c4580b19c73b09b7c5b2e81e4353fcc5a
+S
+#src/tests/FlexItem/FlexItem.test.js,b/9/b9f037940ab62493ab00f7284e485d22a46a80e8
+A
+public/robots.txt,d/a/dac799070c2d0c2fa24462b02c1f2dcc3fb3a1e9
+a
+1src/components/Menu/MenuComponents/MenuOverlay.js,3/7/3730ddf91056ff8848e41ee6959b187504f5e63f
+Z
+*src/components/Menu/MenuComponents/List.js,f/6/f6f3861bad2394791f5b6326a74b907f4e7cacf3
+W
+'src/components/_HOC/WithLoader/index.js,0/8/08ab27b7a98f89caa65f6ffcb55ee49648b3ec61
+i
+9src/components/_HOC/WithLoader/LoaderComponents/Loader.js,4/b/4b70581279bd58172ef060b052338703919e6b0d
+a
+1src/components/Menu/MenuComponents/MenuWrapper.js,2/d/2df89e5c0bb6e835646fa0bf89c11f52e4e387fc
+V
+&src/components/_HOC/WithWidth/index.js,9/d/9d53883b2ff633b92007b5354a0a7b30a29a412d
+\
+,src/components/_HOC/WithLoader/WithLoader.js,e/1/e1b32c0366d2c01e8e3a637059d66c5213967b3e
+Z
+*src/components/_HOC/WithWidth/WithWidth.js,e/7/e7a0fda5d162595f223c2ea1b6a5b3da3147b1b7

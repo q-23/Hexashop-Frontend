@@ -3,7 +3,7 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect'
 import { render, fireEvent } from '@testing-library/react'
 
-import FlexItem from "../../components/_Shared/FlexItem";
+import FlexItem from "components/_Shared/FlexItem";
 
 describe('[FLEX ITEM]', () => {
 	test('Should render component', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import WithWidth from "../../components/WithWidth/WithWidth";
+import WithWidth from "components/_HOC/WithWidth";
 
 const RenderWidth = ({ width}) => {
 	return( <p>{width}</p> )

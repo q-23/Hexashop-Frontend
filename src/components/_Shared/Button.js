@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as palette from '../../assets/css_variables/colors';
+import * as palette from 'assets/css_variables/colors';
 const Button = styled.button`
 	font-size: 1.2em;
 	padding: 0.45em 1.2em;

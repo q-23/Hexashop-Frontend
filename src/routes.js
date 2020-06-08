@@ -5,10 +5,12 @@ export const routes = [
 	{
 		path: '/',
 		component: HomePage,
-		exact: true
+		exact: true,
+		showInMenu: false
 	},
 	{
 		path: '/all',
-		component: AllProducts
+		component: AllProducts,
+		showInMenu: true
 	}
 ]

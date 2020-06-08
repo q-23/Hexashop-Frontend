@@ -1,8 +1,7 @@
 export const MOCK_CATEGORIES = [
-	{to: '/', label: 'Start'},
-	{to: '/all', label: 'All'},
-	{to: '/shoes', label: 'Shoes'},
-	{to: '/jackets', label: 'Jackets'},
-	{to: '/pants', label: 'Pants'},
-	{to: '/caps', label: 'Caps'}
+	{category_name: 'First category', category_path: '/cat1', showInMenu: true},
+]
+
+export const MOCK_CATEGORY_NOT_SHOW_IN_MENU = [
+	{category_name: 'Second category', category_path: '/cat2', showInMenu: false}
 ]

@@ -1,23 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
-import Container from "./components/_Shared/Container";
 import FlexContainer from "./components/_Shared/FlexContainer";
+import Container from "./components/_Shared/Container";
+import WithLoader from "components/_HOC/WithLoader";
+import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
+
 import { routes } from "./routes";
-import {MOCK_CATEGORIES as mockCategories} from "./tests/Menu/Menu.mock.data";
-import Navbar from "./components/Navbar";
 
 function App() {
+  const [categoriesData, setCategoriesData] = useState([]);
+  const ContainerWithLoader = WithLoader(FlexContainer);
+
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const categoriesBuffer = await fetch(`${process.env.REACT_APP_API_URL}/category`, {
+        headers : {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
+      const categoriesResolved = await categoriesBuffer.json();
+      setCategoriesData(categoriesResolved.map(e => ({ showInMenu: true, ...e })));
+    }
+    fetchCategories();
+  }, [])
 
   return (
     <>
       <Navbar/>
       <Header/>
-      <Menu categories={mockCategories}/>
+      <Menu categories={categoriesData}/>
       <Container main mx_auto>
-        <FlexContainer main_container>
+        <ContainerWithLoader isLoading={false} main_container>
             <Switch>
               {
                 routes.map((route, idx) =>
@@ -25,10 +43,10 @@ function App() {
                 )
               }
             </Switch>
-        </FlexContainer>
+        </ContainerWithLoader>
       </Container>
     </>
   );
 }
 
-export default App;
+export default WithLoader(App);

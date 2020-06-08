@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ProductPreview from '../../components/ProductPreview';
+import ProductPreview from 'components/ProductPreview';
 import '@testing-library/jest-dom/extend-expect'
 import { render } from '@testing-library/react'
-import { renderWithRouter } from "../utils";
+import { renderWithRouter } from "tests/utils";
 
 import { MOCK_PRODUCT } from "./ProductPreview.mock.data";
 

@@ -2,12 +2,12 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import Typography from "../_Shared/Typography";
-import Container from "../_Shared/Container";
-import Component from "../_Shared/Component";
-import FlexItem from "../_Shared/FlexItem";
-import Button from "../_Shared/Button";
-import Image from "../_Shared/Image";
+import Typography from "components/_Shared/Typography";
+import Container from "components/_Shared/Container";
+import Component from "components/_Shared/Component";
+import FlexItem from "components/_Shared/FlexItem";
+import Button from "components/_Shared/Button";
+import Image from "components/_Shared/Image";
 
 import * as styles from './ProductPreview.styles'
 
@@ -24,7 +24,7 @@ const ProductPreview = ({ product = {}, width = 1 }) => {
 				<Link to={`/product/${_id}`} >
 					<Image styles={styles.IMAGE_STYLES} src={image_thumbnail}/>
 				</Link>
-				<Container>
+				<Container styles={'height: 100%'}>
 					<Link to={`/product/${_id}`} >
 						<Typography styles={styles.PRODUCT_NAME_STYLES}>{name}</Typography>
 					</Link>

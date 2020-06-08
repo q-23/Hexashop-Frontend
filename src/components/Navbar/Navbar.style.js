@@ -1,6 +1,6 @@
-import Component from "../_Shared/Component";
+import Component from "components/_Shared/Component";
 
-const NavigationWrapper = Component('nav')`
+const NavbarStyle = Component('nav')`
 	border-bottom: .1px solid #FFFFFF;
 	background-color: #3750CF;
 	overflow: hidden;
@@ -11,4 +11,4 @@ const NavigationWrapper = Component('nav')`
 	top: 0;
 `;
 
-export default NavigationWrapper;
+export { NavbarStyle };

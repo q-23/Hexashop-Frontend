@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import WithWidth from "../WithWidth";
+import WithWidth from "components/_HOC/WithWidth";
 
 const breakpointsArr = ['xs', 'sm', 'md', 'lg', 'xl'];
 
@@ -24,7 +24,7 @@ const FlexItem = styled.div`
 		Object.keys(props).some(e => breakpointsArr.includes(e)) && 
 		`max-width: ${returnFlexWidth(props)}%;
 			flex-basis: ${returnFlexWidth(props)}%;`
-};
+	};
 `;
 
 export default WithWidth(FlexItem);

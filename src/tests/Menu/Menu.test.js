@@ -2,11 +2,11 @@ import React from 'react';
 
 import '@testing-library/jest-dom/extend-expect'
 import { render } from '@testing-library/react'
-import {renderWithRouter} from "../utils";
+import {renderWithRouter} from "tests/utils";
 
-import Menu from '../../components/Menu';
+import Menu from 'components/Menu';
 
-import { MOCK_CATEGORIES } from "./Menu.mock.data";
+import { MOCK_CATEGORIES, MOCK_CATEGORY_NOT_SHOW_IN_MENU } from "./Menu.mock.data";
 
 describe('[MENU]', () => {
 	test('Should render without failing with empty data', () => {
@@ -27,16 +27,23 @@ describe('[MENU]', () => {
 		const wrapper = render(renderWithRouter(<Menu categories={MOCK_CATEGORIES}/>));
 		const { getByText } = wrapper;
 		MOCK_CATEGORIES.forEach(link => {
-			expect(getByText(link.label)).toBeInTheDocument()
-			expect(getByText(link.label)).toHaveAttribute('href', link.to)
+			console.log(link.category_name)
+			expect(getByText(link.category_name)).toBeInTheDocument()
+			expect(getByText(link.category_name)).toHaveAttribute('href', link.category_path)
 		})
 		expect(wrapper).toMatchSnapshot();
 	});
 
 	test('Should add underline to active links', () => {
-		const wrapper = render(renderWithRouter(<Menu categories={MOCK_CATEGORIES}/>, '/shoes'));
+		const wrapper = render(renderWithRouter(<Menu categories={MOCK_CATEGORIES}/>, MOCK_CATEGORIES[0].category_path));
 		const { getByText } = wrapper;
-		expect(getByText('Shoes')).toHaveStyle(`text-decoration: underline;`)
+		expect(getByText(/First category/)).toHaveStyle(`text-decoration: underline;`)
+	});
+
+	test('Should not render links with falsy showInMenu key', () => {
+		const wrapper = render(renderWithRouter(<Menu categories={MOCK_CATEGORY_NOT_SHOW_IN_MENU}/>, MOCK_CATEGORIES[0].category_path));
+		const { container } = wrapper;
+		expect(container.querySelector('li')).toBeFalsy();
 	});
 
 })
