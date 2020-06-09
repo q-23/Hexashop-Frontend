@@ -3,6 +3,8 @@ import React, {useEffect, useState} from "react";
 import FlexContainer from "components/_Shared/FlexContainer";
 import ProductPreview from "components/ProductPreview";
 
+import { mapImageThumbnails} from "helperFunctions/mapImageUrls";
+
 const AllProducts = () => {
 	const [productsData, setProductsData] = useState([]);
 
@@ -15,7 +17,7 @@ const AllProducts = () => {
 				}
 			});
 			const result = await res.json()
-			setProductsData(result.map(({image_thumbnail, ...el}) => ({ ...el, image_thumbnail: `${process.env.REACT_APP_API_URL}/image/${image_thumbnail}` })))
+			setProductsData(mapImageThumbnails(result))
 		}
 		fetchData();
 	}, [])

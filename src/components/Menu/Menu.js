@@ -6,8 +6,9 @@ import { MenuContext } from 'contexts/reducers/menu';
 
 import {MenuOverlay, MenuWrapper, Link, List} from './Menu.style'
 
-const Menu = ({ categories = [], location }) => {
+const Menu = ({ location }) => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);
+	const { menuCategories, setActiveCategory } = useContext(MenuContext);
 
 	const { pathname } = location;
 
@@ -16,14 +17,17 @@ const Menu = ({ categories = [], location }) => {
 			<MenuWrapper visible={menuOpen}>
 				<ul>
 					{
-						categories
+						menuCategories
 							.filter(e => !!e.showInMenu)
 							.map(el =>
 							<List key={`${el.category_path} - ${el.category_name}`}>
 								<Link
-									to={el.category_path}
+									to={`${el.category_path}`}
 									activelink={pathname === el.category_path ? 1 : 0}
-									onClick={() => setMenuOpen(false)}
+									onClick={() => {
+										setMenuOpen(false)
+										el._id && setActiveCategory(el._id)
+									}}
 								>
 									{el.category_name}
 								</Link>

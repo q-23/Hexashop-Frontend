@@ -49,12 +49,8 @@ N
 src/components/_Shared/Icon.js,8/7/87c081ffbf08eafe2e0856acfc565bf976987c15
 T
 $src/components/_Shared/Typography.js,3/5/357c960ee78e1c54f19c934619172b1619d5e908
-Z
-*src/components/Navbar/NavigationWrapper.js,4/0/405781d12bb4e3221b352da11b7b921b165ca167
 M
 src/contexts/reducers/menu.js,9/3/9300a80f1a79b55691a64d1d033021f8dbe3118b
-V
-&src/components/Header/HeaderWrapper.js,9/4/94e6f624bb509840cd7f3f050506b86514713e53
 P
  src/tests/Menu/Menu.mock.data.js,2/0/20f9a9f653c52b61c238ee7961228598d5bc6668
 I
@@ -91,22 +87,12 @@ O
 src/tests/Navbar/Navbar.test.js,a/a/aa60a4dbea1407c5faab2ed69e78813f611782fc
 N
 src/components/Header/index.js,a/0/a01c03fa6a5c6814a9ecf57c2d406d99386eba3a
-Z
-*src/components/Menu/MenuComponents/Link.js,4/b/4b12a06c4580b19c73b09b7c5b2e81e4353fcc5a
 S
 #src/tests/FlexItem/FlexItem.test.js,b/9/b9f037940ab62493ab00f7284e485d22a46a80e8
 A
 public/robots.txt,d/a/dac799070c2d0c2fa24462b02c1f2dcc3fb3a1e9
-a
-1src/components/Menu/MenuComponents/MenuOverlay.js,3/7/3730ddf91056ff8848e41ee6959b187504f5e63f
-Z
-*src/components/Menu/MenuComponents/List.js,f/6/f6f3861bad2394791f5b6326a74b907f4e7cacf3
 W
 'src/components/_HOC/WithLoader/index.js,0/8/08ab27b7a98f89caa65f6ffcb55ee49648b3ec61
-i
-9src/components/_HOC/WithLoader/LoaderComponents/Loader.js,4/b/4b70581279bd58172ef060b052338703919e6b0d
-a
-1src/components/Menu/MenuComponents/MenuWrapper.js,2/d/2df89e5c0bb6e835646fa0bf89c11f52e4e387fc
 V
 &src/components/_HOC/WithWidth/index.js,9/d/9d53883b2ff633b92007b5354a0a7b30a29a412d
 \

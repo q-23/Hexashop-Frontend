@@ -1,3 +1,3 @@
-import AllProducts from "./AllProducts";
+import AllProducts from "views/AllProducts/AllProducts";
 
 export default AllProducts;

@@ -8,7 +8,6 @@ import Image from "components/_Shared/Image";
 import logo from 'assets/images/logo.png';
 
 const Header = () => {
-
 	return (
 		<HeaderStyle>
 			<FlexContainer>

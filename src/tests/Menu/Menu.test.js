@@ -41,7 +41,7 @@ describe('[MENU]', () => {
 		MOCK_CATEGORIES.forEach(link => {
 			console.log(link.category_name)
 			expect(getByText(link.category_name)).toBeInTheDocument()
-			expect(getByText(link.category_name)).toHaveAttribute('href', link.category_path)
+			expect(getByText(link.category_name)).toHaveAttribute('href', '/category' + link.category_path)
 		})
 		expect(wrapper).toMatchSnapshot();
 	});

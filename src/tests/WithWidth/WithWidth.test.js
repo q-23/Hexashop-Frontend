@@ -14,7 +14,6 @@ describe('[WITH WIDTH]', () => {
 		const wrapper = render(
 			<WidthWithHOC/>
 		);
-		expect(wrapper).toMatchSnapshot();
 		expect(wrapper.getByText(/md/)).toBeInTheDocument();
 	});
 
@@ -24,7 +23,6 @@ describe('[WITH WIDTH]', () => {
 		);
 		window.innerWidth = 500
 		fireEvent(window, new Event('resize'))
-		expect(wrapper).toMatchSnapshot();
 		expect(wrapper.getByText(/xs/)).toBeInTheDocument();
 	});
 

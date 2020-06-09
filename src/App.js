@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 import FlexContainer from "./components/_Shared/FlexContainer";
@@ -8,34 +8,16 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 
-import { routes } from "./routes";
+import { routes } from "routes";
 
 function App() {
-  const [categoriesData, setCategoriesData] = useState([{ category_path: '/all', category_name: 'All products', showInMenu: true }]);
   const ContainerWithLoader = WithLoader(FlexContainer);
-
-
-  useEffect(() => {
-    const fetchCategories = async () => {
-      const categoriesBuffer = await fetch(`${process.env.REACT_APP_API_URL}/category`, {
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      });
-      const categoriesResolved = await categoriesBuffer.json();
-      const categoriesWithShowInMenu = categoriesResolved.map(e => ({ showInMenu: true, ...e }))
-      setCategoriesData([...categoriesData, ...categoriesWithShowInMenu]);
-    }
-    fetchCategories();
-  }, [])
 
   return (
     <>
-      {console.log(categoriesData)}
       <Navbar/>
       <Header/>
-      <Menu categories={categoriesData}/>
+      <Menu/>
       <Container main mx_auto>
         <ContainerWithLoader isLoading={false} main_container>
             <Switch>

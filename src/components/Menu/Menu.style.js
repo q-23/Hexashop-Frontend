@@ -14,7 +14,7 @@ const Wrapper = styled.nav`
   z-index: 90;
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
   overflow: scroll;
-  transform: translate3d(${({ width }) => width === 'xs' ? '-100vw' : '-25vw'}, 0, 0);
+  transform: translate3d(-100vw , 0, 0);
 	box-shadow: ${({ visible }) => visible ? '10px 2px 23px -1px rgba(0,0,0,0.62)' : 'none'};
 	${({ visible }) => visible && `
 	  transform: translate3d(0vw, 0, 0);
