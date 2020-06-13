@@ -2,9 +2,9 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { PreviewWrapper } from "./ProductPreview.styles";
 import Typography from "components/_Shared/Typography";
 import Container from "components/_Shared/Container";
-import Component from "components/_Shared/Component";
 import FlexItem from "components/_Shared/FlexItem";
 import Button from "components/_Shared/Button";
 import Image from "components/_Shared/Image";
@@ -13,10 +13,6 @@ import * as styles from './ProductPreview.styles'
 
 const ProductPreview = ({ product = {}, width = 1 }) => {
 	const { name, price, image_thumbnail, _id } = product;
-
-	const PreviewWrapper = Component('div')`
-		margin: 1.5em;
-	`
 
 	return (
 		<FlexItem flex_width={width} xl={3} lg={4} sm={6} xs={12} styles={styles.FLEX_ITEM_STYLES}>

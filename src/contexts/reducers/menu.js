@@ -3,27 +3,29 @@ import { withRouter } from 'react-router-dom';
 export const MenuContext = createContext();
 
 export const StateProviderMenu = ({ children, location }) => {
-	const [menuCategories, setMenuCategories] = useState([{ category_path: '/all_products', category_name: 'All products', showInMenu: true }]);
+	const [menuCategories, setMenuCategories] = useState([{ category_path: '/all_products', category_name: 'All products' }]);
 	const [activeCategory, setActiveCategory] = useState(undefined);
 	const [menuOpen, setMenuOpen] = useState(false)
 
+	const fetchCategories = async () => {
+		const categoriesBuffer = await fetch(`${process.env.REACT_APP_API_URL}/category`, {
+			headers : {
+				'Content-Type': 'application/json',
+				'Accept': 'application/json'
+			}
+		});
+		const categoriesResolved = await categoriesBuffer.json();
+		const categoriesWithMappedPaths = categoriesResolved.map(e => ({ ...e, category_path: '/category' + e.category_path}));
+		setMenuCategories([...menuCategories, ...categoriesWithMappedPaths]);
+	}
+
 	useEffect(() => {
-		const fetchCategories = async () => {
-			const categoriesBuffer = await fetch(`${process.env.REACT_APP_API_URL}/category`, {
-				headers : {
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				}
-			});
-			const categoriesResolved = await categoriesBuffer.json();
-			const categoriesWithShowInMenu = categoriesResolved.map(e => ({ ...e, showInMenu: true, category_path: '/category' + e.category_path}));
-			setMenuCategories([...menuCategories, ...categoriesWithShowInMenu]);
-		}
 		fetchCategories();
 	}, []);
 
 	useEffect(() => {
 		const foundCategory = menuCategories.find(category => category.category_path === location.pathname);
+
 		if (foundCategory) {
 			setActiveCategory(foundCategory)
 		}

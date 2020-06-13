@@ -53,8 +53,6 @@ M
 src/contexts/reducers/menu.js,9/3/9300a80f1a79b55691a64d1d033021f8dbe3118b
 P
  src/tests/Menu/Menu.mock.data.js,2/0/20f9a9f653c52b61c238ee7961228598d5bc6668
-I
-src/tests/App/App.test.js,0/e/0eb9daa41c0183dcba5248218bddb99e117a317d
 W
 'src/components/_Shared/FlexContainer.js,c/5/c5be0cd09066e89ae5fe14572d46115498e0d251
 R
@@ -99,3 +97,29 @@ V
 ,src/components/_HOC/WithLoader/WithLoader.js,e/1/e1b32c0366d2c01e8e3a637059d66c5213967b3e
 Z
 *src/components/_HOC/WithWidth/WithWidth.js,e/7/e7a0fda5d162595f223c2ea1b6a5b3da3147b1b7
+W
+'src/tests/WithLoader/WithLoader.test.js,2/7/27b0e3eda1a2ae463c07afdd9745703d6a7ec80f
+U
+%src/components/Header/Header.style.js,1/1/11983430a1489a89c5404b3d699b208f5d01dcc1
+O
+src/views/CategoryView/index.js,5/8/58bc1f8d9b0c23071e1a10ee310e929fa8e021c9
+k
+;src/tests/helperFunctions/mapImageUrls/mapImageUrls.test.js,c/a/ca2a1718d4c6298495ed1e7fbc95aac21db1b976
+S
+#src/helperFunctions/mapImageUrls.js,0/7/071bcdbd38181655e2093db794a20b91ddf86957
+p
+@src/tests/helperFunctions/mapImageUrls/mapImageUrls.mock.data.js,9/e/9e9dcae3216eec6bef77064aa2ac6b6b77db5014
+Q
+!src/components/Menu/Menu.style.js,f/1/f175dfa2f8978a5336354b65605ba5a7e535e718
+N
+src/views/ProductView/index.js,e/7/e7cfb763b148f401f8ea7f1ddb9175c4a90d502a
+V
+&src/views/CategoryView/CategoryView.js,3/c/3c3a8c9428a81c905502a1c4fc90959c9b526e48
+T
+$src/views/ProductView/ProductView.js,7/a/7a4bf326bec3514e035a15bd34bd2f0ab2c6dda1
+[
++src/components/ProductPresentation/index.js,2/1/211964142410e811ff063275f90aef3ed067ad7e
+i
+9src/components/ProductPresentation/ProductPresentation.js,5/4/543b08ea3a2f5538de5f9a24b660f097a05c1bc4
+o
+?src/components/ProductPresentation/ProductPresentation.style.js,0/6/066341514aaf2bd9bf6cf3e57fd5731aa6c59b94

@@ -6,13 +6,6 @@ import { render, fireEvent } from '@testing-library/react'
 import FlexItem from "components/_Shared/FlexItem";
 
 describe('[FLEX ITEM]', () => {
-	test('Should render component', () => {
-		const wrapper = render(
-				<FlexItem/>
-		);
-		expect(wrapper).toMatchSnapshot();
-	});
-
 	test('Should render proper width - xs', () => {
 		const wrapper = render(
 			<FlexItem xs={6}/>
@@ -63,14 +56,22 @@ describe('[FLEX ITEM]', () => {
 		expect(wrapper.container.querySelector('div[width="xl"]')).toHaveStyle(`max-width: ${(2 * 100) / 12}%`)
 	});
 
-	test('Should render the closest provided breakpoint width when no width for current one is specified', () => {
+	test('Should render 100% width when no breakpoint is provided', () => {
 		const wrapper = render(
-			<FlexItem md={3} lg={8} xl={2}/>
+			<FlexItem/>
 		);
 		window.innerWidth = 300
 		fireEvent(window, new Event('resize'))
+		expect(wrapper.container.querySelector('div[width="xs"]')).toHaveStyle(`max-width: 100%`)
+	});
 
-		expect(wrapper.container.querySelector('div[width="xs"]')).toHaveStyle(`max-width: ${(3 * 100) / 12}%`)
+	test('Should get closest possible width when none is provided for current resolution', () => {
+		const wrapper = render(
+			<FlexItem xs={3} sm={2} md={6}/>
+		);
+		window.innerWidth = 1300
+		fireEvent(window, new Event('resize'))
+		expect(wrapper.container.querySelector('div[width="xl"]')).toHaveStyle(`max-width: 50%`)
 	});
 })
 

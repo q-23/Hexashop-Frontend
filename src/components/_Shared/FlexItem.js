@@ -8,10 +8,10 @@ const returnFlexWidth = props => {
 	if (!props[props.width]) {
 		const indexOfPresentBreakpoint = breakpointsArr.findIndex(el => el === props.width);
 		const availableGivenBreakpoints = breakpointsArr
-			.slice(indexOfPresentBreakpoint)
+			.slice(0, indexOfPresentBreakpoint)
 			.filter(breakpoint => Object.keys(props).includes(breakpoint));
-		const firstBreakpointHigherThanPresent = availableGivenBreakpoints[0];
-		return calculateWidth(props[firstBreakpointHigherThanPresent])
+		const properBreakpoint = availableGivenBreakpoints.pop();
+		return calculateWidth(props[properBreakpoint])
 	}
 	return calculateWidth(props[props.width])
 };
@@ -21,9 +21,11 @@ const FlexItem = styled.div`
 	${({styles}) => styles}
 	${({ spacing }) => `padding: ${spacing * .5 || 0}em`};
 	${props => 
-		Object.keys(props).some(e => breakpointsArr.includes(e)) && 
+		Object.keys(props).some(e => breakpointsArr.includes(e)) ? 
 		`max-width: ${returnFlexWidth(props)}%;
-			flex-basis: ${returnFlexWidth(props)}%;`
+		flex-basis: ${returnFlexWidth(props)}%;` :
+		`max-width: 100%;
+		flex-basis: 100`
 	};
 `;
 

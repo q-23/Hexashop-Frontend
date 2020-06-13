@@ -8,7 +8,7 @@ import {MenuOverlay, MenuWrapper, Link, List} from './Menu.style'
 
 const Menu = ({ location }) => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);
-	const { menuCategories, setActiveCategory } = useContext(MenuContext);
+	const { menuCategories } = useContext(MenuContext);
 
 	const { pathname } = location;
 
@@ -18,7 +18,6 @@ const Menu = ({ location }) => {
 				<ul>
 					{
 						menuCategories
-							.filter(e => !!e.showInMenu)
 							.map(el =>
 							<List key={`${el.category_path} - ${el.category_name}`}>
 								<Link
@@ -26,7 +25,6 @@ const Menu = ({ location }) => {
 									activelink={pathname === el.category_path ? 1 : 0}
 									onClick={() => {
 										setMenuOpen(false)
-										el._id && setActiveCategory(el._id)
 									}}
 								>
 									{el.category_name}

@@ -7,14 +7,15 @@ import { mapImageThumbnails} from "helperFunctions/mapImageUrls";
 import { MenuContext } from "contexts/reducers/menu";
 import { withRouter } from 'react-router-dom';
 
-const CategoryView = ({ location }) => {
+const CategoryView = () => {
 	const [categoryData, setCategoryData] = useState({});
 	const { activeCategory } = useContext(MenuContext);
 
-	useEffect(() => {
-		async function fetchData() {
+	async function fetchData() {
+		if (typeof activeCategory === 'object') {
+			const { _id } = { ...activeCategory }
 			try {
-				const res = await fetch(`${process.env.REACT_APP_API_URL}/category/${activeCategory._id}?sortBy=price:desc`, {
+				const res = await fetch(`${process.env.REACT_APP_API_URL}/category/${_id}?sortBy=price:desc`, {
 					headers: {
 						'Content-Type': 'application/json',
 						'Accept': 'application/json'
@@ -23,11 +24,14 @@ const CategoryView = ({ location }) => {
 				const result = await res.json()
 				setCategoryData(result)
 			} catch (e) {
-				console.log(e)
 			}
-			}
+		}
+	}
+
+	useEffect(() => {
 		fetchData();
 	}, [activeCategory])
+
 	return(
 		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 			{!!categoryData.products &&

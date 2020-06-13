@@ -6,37 +6,37 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-AxiKw fExOlD"
+        class="sc-AxhCb jSODUK"
         width="md"
       >
         <div
-          class="sc-AxgMl fQBKcB"
+          class="sc-AxjAm vNKQB"
         >
           <a
             href="/product/undefined"
           >
             <img
-              class="sc-AxhUy jGTwbv"
+              class="sc-AxgMl fqiElp"
             />
           </a>
           <div
-            class="sc-AxirZ kSZTkj"
+            class="sc-AxiKw cqErTH"
           >
             <a
               href="/product/undefined"
             >
               <p
-                class="sc-AxjAm lkoRYA"
+                class="sc-AxirZ jpBNwn"
               />
             </a>
             <p
-              class="sc-AxjAm eLQBs"
+              class="sc-AxirZ ejNgpD"
               color="gray"
             >
               $
             </p>
             <button
-              class="sc-AxhCb ijslLw"
+              class="sc-AxhUy krWDTZ"
               style="bottom: 0px;"
             >
               Add to cart
@@ -48,37 +48,37 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-AxiKw fExOlD"
+      class="sc-AxhCb jSODUK"
       width="md"
     >
       <div
-        class="sc-AxgMl fQBKcB"
+        class="sc-AxjAm vNKQB"
       >
         <a
           href="/product/undefined"
         >
           <img
-            class="sc-AxhUy jGTwbv"
+            class="sc-AxgMl fqiElp"
           />
         </a>
         <div
-          class="sc-AxirZ kSZTkj"
+          class="sc-AxiKw cqErTH"
         >
           <a
             href="/product/undefined"
           >
             <p
-              class="sc-AxjAm lkoRYA"
+              class="sc-AxirZ jpBNwn"
             />
           </a>
           <p
-            class="sc-AxjAm eLQBs"
+            class="sc-AxirZ ejNgpD"
             color="gray"
           >
             $
           </p>
           <button
-            class="sc-AxhCb ijslLw"
+            class="sc-AxhUy krWDTZ"
             style="bottom: 0px;"
           >
             Add to cart

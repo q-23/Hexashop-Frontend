@@ -3,6 +3,7 @@ import React, {useContext} from 'react';
 import '@testing-library/jest-dom/extend-expect'
 import { render, fireEvent } from '@testing-library/react'
 import {renderWithRouter} from "tests/utils";
+import { act } from 'react-dom/test-utils';
 
 import Menu from 'components/Menu';
 
@@ -20,12 +21,24 @@ const TestComponent = ({categories}) => {
 	)
 }
 
+const TestComponentLinks = () => {
+	const { setMenuCategories } = useContext(MenuContext);
+	React.useEffect(() => setMenuCategories(MOCK_CATEGORIES) ,[])
+	return (
+		<div>
+			<Menu/>
+		</div>
+	)
+}
+
 describe('[MENU]', () => {
-	test('Should render without failing with empty data', () => {
-		const wrapper = render(
-			renderWithRouter(<Menu />)
-		);
-		expect(wrapper).toMatchSnapshot();
+	test('Should render without failing with empty data', async () => {
+		await act(async () => {
+			const wrapper = render(
+				renderWithRouter(<Menu />)
+			);
+			expect(wrapper).toMatchSnapshot();
+		})
 	})
 
 	test('Should not render list without data given', () => {
@@ -36,18 +49,18 @@ describe('[MENU]', () => {
 	});
 
 	test('Should render lists of links', () => {
-		const wrapper = render(renderWithRouter(<Menu categories={MOCK_CATEGORIES}/>));
+		const wrapper = render(renderWithRouter(<TestComponentLinks/>));
 		const { getByText } = wrapper;
 		MOCK_CATEGORIES.forEach(link => {
 			console.log(link.category_name)
 			expect(getByText(link.category_name)).toBeInTheDocument()
-			expect(getByText(link.category_name)).toHaveAttribute('href', '/category' + link.category_path)
+			expect(getByText(link.category_name)).toHaveAttribute('href', link.category_path)
 		})
 		expect(wrapper).toMatchSnapshot();
 	});
 
 	test('Should add underline to active links', () => {
-		const wrapper = render(renderWithRouter(<Menu categories={MOCK_CATEGORIES}/>, MOCK_CATEGORIES[0].category_path));
+		const wrapper = render(renderWithRouter(<TestComponentLinks/>, MOCK_CATEGORIES[0].category_path));
 		const { getByText } = wrapper;
 		expect(getByText(/First category/)).toHaveStyle(`text-decoration: underline;`)
 	});

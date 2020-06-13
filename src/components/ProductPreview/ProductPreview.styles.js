@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 export const IMAGE_STYLES = `
 	max-width: 250px; 
 	width: 100%;
@@ -26,4 +28,8 @@ export const PRODUCT_NAME_STYLES = `
 export const PRODUCT_PRICE_STYLES = `
 	text-align: center;
 	font-size: .9em;
+`;
+
+export const PreviewWrapper = styled.div`
+	margin: 1.5em;
 `;
