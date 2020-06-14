@@ -3,7 +3,6 @@ import React, {useContext, useEffect, useState} from "react";
 import FlexContainer from "components/_Shared/FlexContainer";
 import ProductPreview from "components/ProductPreview";
 
-import { mapImageThumbnails} from "helperFunctions/mapImageUrls";
 import { MenuContext } from "contexts/reducers/menu";
 import { withRouter } from 'react-router-dom';
 
@@ -34,10 +33,10 @@ const CategoryView = () => {
 
 	return(
 		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
+			{console.log(categoryData)}
 			{!!categoryData.products &&
-				mapImageThumbnails(categoryData.products)
-					.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>
-				)}
+				categoryData.products.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>
+			)}
 		</FlexContainer>
 	)
 };

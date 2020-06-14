@@ -10,6 +10,8 @@ const FlexContainer = styled.div`
 		background-color: white;
 		box-shadow: 0px 0px 31px -6px rgba(0,0,0,0.62);
 	`};
+	${({ padding }) => !!padding && `padding: ${padding}`};
+	${({ direction }) => !!direction && `flex-direction: ${direction}`};
 	${({ m_auto }) => m_auto && 'margin: auto;'};
 	${({ styles }) => !!styles && styles};
 `;

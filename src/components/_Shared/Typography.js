@@ -6,6 +6,7 @@ const Typography = styled.p`
 	${({ padding }) => `padding: ${padding}`};
 	${({ color }) => `color: ${color || DARK_GRAY};`};
 	${({ styles }) => !!styles && styles}
+	${({ align }) => !!align && `text-align: ${align}`}
 `;
 
 export default Typography;

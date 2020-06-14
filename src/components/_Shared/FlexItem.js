@@ -20,6 +20,8 @@ const FlexItem = styled.div`
 	${({ m_auto }) => m_auto && 'margin: auto;'}
 	${({styles}) => styles}
 	${({ spacing }) => `padding: ${spacing * .5 || 0}em`};
+	${({padding}) => !!padding && `padding: ${padding}`};
+	${({align}) => !!align && `text-align: ${align}`};
 	${props => 
 		Object.keys(props).some(e => breakpointsArr.includes(e)) ? 
 		`max-width: ${returnFlexWidth(props)}%;

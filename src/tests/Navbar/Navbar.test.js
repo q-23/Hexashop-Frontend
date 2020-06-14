@@ -3,7 +3,8 @@ import React, { useContext } from 'react';
 import { render, fireEvent } from '@testing-library/react'
 import {MenuContext} from "contexts/reducers/menu";
 import '@testing-library/jest-dom/extend-expect'
-import { renderWithRouter } from "tests/utils";
+import { RenderWithRouter, RenderWithMenuContext } from "tests/utils";
+import compose from 'helperFunctions/compose'
 
 import Navbar from "components/Navbar/Navbar";
 
@@ -21,14 +22,14 @@ const TestComponent = () => {
 describe('[NAVBAR]', () => {
 	test('Should render component', () => {
 		const wrapper = render(
-			renderWithRouter(<Navbar/>)
+			compose(RenderWithRouter(), RenderWithMenuContext)(<Navbar/>)
 		);
 		expect(wrapper).toMatchSnapshot();
 	});
 
 	test('Should open the menu after clicking proper button', () => {
 		const wrapper = render(
-			renderWithRouter(<TestComponent/>)
+			compose(RenderWithRouter(), RenderWithMenuContext)(<TestComponent/>)
 		);
 		fireEvent.click(wrapper.container.querySelector('.fa-bars'))
 		expect(wrapper.getByText(/true/)).toBeInTheDocument();
@@ -36,7 +37,7 @@ describe('[NAVBAR]', () => {
 
 	test('Should close the menu after clicking button two times', () => {
 		const wrapper = render(
-			renderWithRouter(<TestComponent/>)
+			compose(RenderWithRouter(), RenderWithMenuContext)(<TestComponent/>)
 		);
 		fireEvent.click(wrapper.container.querySelector('.fa-bars'))
 		expect(wrapper.getByText(/true/)).toBeInTheDocument();

@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-AxhCb jSODUK"
+        class="sc-AxhCb SGqyx"
         width="md"
       >
         <div
@@ -26,17 +26,17 @@ Object {
               href="/product/undefined"
             >
               <p
-                class="sc-AxirZ jpBNwn"
+                class="sc-AxirZ gKUwHA"
               />
             </a>
             <p
-              class="sc-AxirZ ejNgpD"
+              class="sc-AxirZ lhafAA"
               color="gray"
             >
               $
             </p>
             <button
-              class="sc-AxhUy krWDTZ"
+              class="sc-AxhUy kHYgLs"
               style="bottom: 0px;"
             >
               Add to cart
@@ -48,7 +48,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-AxhCb jSODUK"
+      class="sc-AxhCb SGqyx"
       width="md"
     >
       <div
@@ -68,17 +68,17 @@ Object {
             href="/product/undefined"
           >
             <p
-              class="sc-AxirZ jpBNwn"
+              class="sc-AxirZ gKUwHA"
             />
           </a>
           <p
-            class="sc-AxirZ ejNgpD"
+            class="sc-AxirZ lhafAA"
             color="gray"
           >
             $
           </p>
           <button
-            class="sc-AxhUy krWDTZ"
+            class="sc-AxhUy kHYgLs"
             style="bottom: 0px;"
           >
             Add to cart

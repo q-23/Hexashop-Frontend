@@ -18,7 +18,7 @@ const ProductPreview = ({ product = {}, width = 1 }) => {
 		<FlexItem flex_width={width} xl={3} lg={4} sm={6} xs={12} styles={styles.FLEX_ITEM_STYLES}>
 			<PreviewWrapper>
 				<Link to={`/product/${_id}`} >
-					<Image styles={styles.IMAGE_STYLES} src={image_thumbnail}/>
+					<Image styles={styles.IMAGE_STYLES} src={image_thumbnail && image_thumbnail.link}/>
 				</Link>
 				<Container styles={'height: 100%'}>
 					<Link to={`/product/${_id}`} >

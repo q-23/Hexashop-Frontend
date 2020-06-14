@@ -6,16 +6,16 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxjAm cGDYKr"
+        class="sc-AxirZ fgjiRk"
         width="md"
       >
         <ul>
           <ul
-            class="sc-AxiKw gSZvgP"
+            class="sc-AxhCb gfYHRH"
           >
             <a
               activelink="0"
-              class="sc-AxhCb inCRGH"
+              class="sc-AxhUy eWjJEu"
               href="/all_products"
             >
               All products
@@ -24,22 +24,22 @@ Object {
         </ul>
       </nav>
       <div
-        class="sc-AxirZ fYEXoq"
+        class="sc-AxiKw gqwTpW"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxjAm cGDYKr"
+      class="sc-AxirZ fgjiRk"
       width="md"
     >
       <ul>
         <ul
-          class="sc-AxiKw gSZvgP"
+          class="sc-AxhCb gfYHRH"
         >
           <a
             activelink="0"
-            class="sc-AxhCb inCRGH"
+            class="sc-AxhUy eWjJEu"
             href="/all_products"
           >
             All products
@@ -48,7 +48,7 @@ Object {
       </ul>
     </nav>
     <div
-      class="sc-AxirZ fYEXoq"
+      class="sc-AxiKw gqwTpW"
     />
   </div>,
   "debug": [Function],
@@ -112,16 +112,16 @@ Object {
     <div>
       <div>
         <nav
-          class="sc-AxjAm cGDYKr"
+          class="sc-AxirZ fgjiRk"
           width="md"
         >
           <ul>
             <ul
-              class="sc-AxiKw gSZvgP"
+              class="sc-AxhCb gfYHRH"
             >
               <a
                 activelink="0"
-                class="sc-AxhCb inCRGH"
+                class="sc-AxhUy eWjJEu"
                 href="/cat1"
               >
                 First category
@@ -130,7 +130,7 @@ Object {
           </ul>
         </nav>
         <div
-          class="sc-AxirZ fYEXoq"
+          class="sc-AxiKw gqwTpW"
         />
       </div>
     </div>
@@ -138,16 +138,16 @@ Object {
   "container": <div>
     <div>
       <nav
-        class="sc-AxjAm cGDYKr"
+        class="sc-AxirZ fgjiRk"
         width="md"
       >
         <ul>
           <ul
-            class="sc-AxiKw gSZvgP"
+            class="sc-AxhCb gfYHRH"
           >
             <a
               activelink="0"
-              class="sc-AxhCb inCRGH"
+              class="sc-AxhUy eWjJEu"
               href="/cat1"
             >
               First category
@@ -156,7 +156,7 @@ Object {
         </ul>
       </nav>
       <div
-        class="sc-AxirZ fYEXoq"
+        class="sc-AxiKw gqwTpW"
       />
     </div>
   </div>,
@@ -220,16 +220,16 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxjAm cGDYKr"
+        class="sc-AxirZ fgjiRk"
         width="xs"
       >
         <ul>
           <ul
-            class="sc-AxiKw gSZvgP"
+            class="sc-AxhCb gfYHRH"
           >
             <a
               activelink="0"
-              class="sc-AxhCb inCRGH"
+              class="sc-AxhUy eWjJEu"
               href="/all_products"
             >
               All products
@@ -238,22 +238,22 @@ Object {
         </ul>
       </nav>
       <div
-        class="sc-AxirZ fYEXoq"
+        class="sc-AxiKw gqwTpW"
       />
     </div>
   </body>,
   "container": <div>
     <nav
-      class="sc-AxjAm cGDYKr"
+      class="sc-AxirZ fgjiRk"
       width="xs"
     >
       <ul>
         <ul
-          class="sc-AxiKw gSZvgP"
+          class="sc-AxhCb gfYHRH"
         >
           <a
             activelink="0"
-            class="sc-AxhCb inCRGH"
+            class="sc-AxhUy eWjJEu"
             href="/all_products"
           >
             All products
@@ -262,7 +262,7 @@ Object {
       </ul>
     </nav>
     <div
-      class="sc-AxirZ fYEXoq"
+      class="sc-AxiKw gqwTpW"
     />
   </div>,
   "debug": [Function],

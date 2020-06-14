@@ -4,6 +4,8 @@ import ProductPresentation from "components/ProductPresentation";
 import FlexContainer from "components/_Shared/FlexContainer";
 
 import { withRouter } from 'react-router-dom';
+import { Form } from 'react-final-form';
+import { FormFullWidth } from "components/_Shared/Form";
 
 const ProductView = ({ match }) => {
 	const [productData, setProductData] = useState(undefined);
@@ -27,9 +29,19 @@ const ProductView = ({ match }) => {
 	}, [match.params.id])
 
 	return(
-		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
-			{ productData && <ProductPresentation product={productData}/> }
-		</FlexContainer>
+		<Form
+			onSubmit={console.log}
+			initialValues={{product_id: match.params.id}}
+			render={({ handleSubmit, form, values }) => (
+				<FormFullWidth
+					onSubmit={handleSubmit}
+				>
+					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
+						{ productData && <ProductPresentation form={form} values={values} product={productData}/> }
+					</FlexContainer>
+				</FormFullWidth>
+			)}
+		/>
 	)
 };
 

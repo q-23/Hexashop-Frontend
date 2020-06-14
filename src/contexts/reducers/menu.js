@@ -21,6 +21,7 @@ export const StateProviderMenu = ({ children, location }) => {
 
 	useEffect(() => {
 		fetchCategories();
+		return () => {}
 	}, []);
 
 	useEffect(() => {

@@ -1,7 +1,8 @@
 const DARK_BLUE_ACCENT = '#134179';
 const LIGHT_PURPLE = '#D19FE4';
 const LIGHT_BLUE = '#EDF6FF';
-const DARK_GRAY = '#42474B';
+const LIGHT_DARK = '#878787';
+const DARK_GRAY = '#42474b';
 const DARK_BLUE = '#437FC7';
 const WHITE = '#FFFFFF';
 const BROWN = '#B9732F';
@@ -9,6 +10,7 @@ const BLUE = '#3750CF';
 
 export {
 	LIGHT_PURPLE,
+	LIGHT_DARK,
 	LIGHT_BLUE,
 	DARK_BLUE,
 	DARK_GRAY,

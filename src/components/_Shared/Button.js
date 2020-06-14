@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as palette from 'assets/css_variables/colors';
+
 const Button = styled.button`
 	font-size: 1.2em;
 	padding: 0.45em 1.2em;
@@ -8,6 +8,10 @@ const Button = styled.button`
 	&:focus {
 		outline: none;
 	}
+	${({quantity_button}) => quantity_button && `
+		background-color: transparent;
+		border: none;
+	`};
 	${({ navbar_border_left }) => navbar_border_left && `
 			border-left:   1px solid #fff;
 	`};
@@ -46,6 +50,7 @@ const Button = styled.button`
 		&:hover {
 			transition: all .4s ease-in-out;
 			background-position: 100% 0;
+			box-shadow: 0 4px 15px 0 rgba(209, 159, 228, 0.9);
 		}
 	`};	
 	${({ styles }) => !!styles && styles}

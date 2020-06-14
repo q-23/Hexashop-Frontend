@@ -6,37 +6,37 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxjAm szlxQ"
+        class="sc-AxirZ hmtEPn"
       >
         <button
-          class="sc-AxirZ ExBPc"
+          class="sc-AxiKw jbtwJr"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-bars"
+            class="sc-AxhCb kXQQEV fa fa-bars"
             color="#FFF"
           />
         </button>
         <button
-          class="sc-AxirZ ExBPc"
+          class="sc-AxiKw jbtwJr"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-github"
+            class="sc-AxhCb kXQQEV fa fa-github"
             color="#FFF"
           />
         </button>
         <button
-          class="sc-AxirZ hmsNGS"
+          class="sc-AxiKw hvZhqN"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-user"
+            class="sc-AxhCb kXQQEV fa fa-user"
             color="#FFF"
           />
         </button>
         <button
-          class="sc-AxirZ cDMgGh"
+          class="sc-AxiKw inRIvO"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-shopping-basket"
+            class="sc-AxhCb kXQQEV fa fa-shopping-basket"
             color="#FFF"
           />
         </button>
@@ -45,37 +45,37 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-AxjAm szlxQ"
+      class="sc-AxirZ hmtEPn"
     >
       <button
-        class="sc-AxirZ ExBPc"
+        class="sc-AxiKw jbtwJr"
       >
         <i
-          class="sc-AxiKw sMAqB fa fa-bars"
+          class="sc-AxhCb kXQQEV fa fa-bars"
           color="#FFF"
         />
       </button>
       <button
-        class="sc-AxirZ ExBPc"
+        class="sc-AxiKw jbtwJr"
       >
         <i
-          class="sc-AxiKw sMAqB fa fa-github"
+          class="sc-AxhCb kXQQEV fa fa-github"
           color="#FFF"
         />
       </button>
       <button
-        class="sc-AxirZ hmsNGS"
+        class="sc-AxiKw hvZhqN"
       >
         <i
-          class="sc-AxiKw sMAqB fa fa-user"
+          class="sc-AxhCb kXQQEV fa fa-user"
           color="#FFF"
         />
       </button>
       <button
-        class="sc-AxirZ cDMgGh"
+        class="sc-AxiKw inRIvO"
       >
         <i
-          class="sc-AxiKw sMAqB fa fa-shopping-basket"
+          class="sc-AxhCb kXQQEV fa fa-shopping-basket"
           color="#FFF"
         />
       </button>
