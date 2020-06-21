@@ -1,12 +1,12 @@
 import React from "react";
 
-import { Input } from "./QuantityInput.style";
+import { Input, InputWrapper } from "./QuantityInput.style";
 import Button from "components/_Shared/Button";
 import Icon from "components/_Shared/Icon";
 
 const QuantityInput = input => {
 	return (
-		<div>
+		<InputWrapper>
 			<Button quantity_button onClick={() => {
 				if (input.value > 1)
 					input.onChange(input.value -1)
@@ -23,7 +23,7 @@ const QuantityInput = input => {
 			<Button quantity_button type={'button'} onClick={() => input.onChange(input.value + 1)}>
 				<Icon className={'fa fa-plus'}/>
 			</Button>
-		</div>
+		</InputWrapper>
 	)
 };
 

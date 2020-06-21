@@ -4,14 +4,17 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom'
-import StateProviderMenu from "./contexts/reducers/menu";
+import StateProviderMenu from "./contexts/menu/menu";
+import { StateProviderAuthorization } from "contexts/authorization/authorization";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <StateProviderMenu>
-        <App />
-      </StateProviderMenu>
+      <StateProviderAuthorization>
+        <StateProviderMenu>
+          <App />
+        </StateProviderMenu>
+      </StateProviderAuthorization>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

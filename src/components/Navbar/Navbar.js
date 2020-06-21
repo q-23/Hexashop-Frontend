@@ -6,7 +6,7 @@ import { NavbarStyle } from "./Navbar.style";
 import Button from "components/_Shared/Button";
 import Icon from "components/_Shared/Icon";
 
-import { MenuContext } from 'contexts/reducers/menu';
+import { MenuContext } from 'contexts/menu/menu';
 
 const Navbar = () => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);

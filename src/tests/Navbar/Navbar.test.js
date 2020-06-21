@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { render, fireEvent } from '@testing-library/react'
-import {MenuContext} from "contexts/reducers/menu";
+import {MenuContext} from "contexts/menu/menu";
 import '@testing-library/jest-dom/extend-expect'
 import { RenderWithRouter, RenderWithMenuContext } from "tests/utils";
 import compose from 'helperFunctions/compose'

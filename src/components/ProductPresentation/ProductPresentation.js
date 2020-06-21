@@ -1,30 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 
-import FlexContainer from "components/_Shared/FlexContainer";
-import Typography from "components/_Shared/Typography";
-import { Image } from "./ProductPresentation.style";
-import FlexItem from "components/_Shared/FlexItem";
-import { LIGHT_DARK } from 'assets/css_variables/colors';
+import { Image, BrandLabel, ProductNameBox, ProductName } from "./ProductPresentation.style";
 import QuantityInput from "components/QuantityInput/QuantityInput";
-import { Field } from 'react-final-form';
+import FlexContainer from "components/_Shared/FlexContainer";
+import { LIGHT_DARK } from 'assets/css_variables/colors';
+import Typography from "components/_Shared/Typography";
+import FlexItem from "components/_Shared/FlexItem";
+import HRLine from  'components/_Shared/HRLine';
 import Button from "components/_Shared/Button";
 
+import { Field } from 'react-final-form';
+import { Link } from "react-router-dom";
 
-const ProductPresentation = ({ product, form, values }) => {
+
+const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
+	const findMainImageIndex = product =>
+		!!product && !!product.images && product.images.findIndex(img => img.main);
+
+	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(findMainImageIndex(product));
+
+
 	return (
+		<>
+			<ProductNameBox>
+				<ProductName size={'2em'} align={'center'}>{product.name}</ProductName>
+			</ProductNameBox>
 			<FlexContainer wrap={'wrap'} padding={'1em'}>
-				<FlexItem xs={12}>
-					<Typography size={'2em'} align={'center'}>{product.name}</Typography>
-					<hr/>
+				<FlexItem xs={12} sm={4}>
+					<Image src={product.images[currentPhotoIndex]._id}/>
+					<FlexContainer wrap={'wrap'}>
+						{product.images.map((image, index) => (
+							<FlexItem xs={3} lg={4} xl={3} key={image._id}>
+								<Image src={image._id} onClick={() => setCurrentPhotoIndex(index)}/>
+							</FlexItem>
+						))}
+					</FlexContainer>
 				</FlexItem>
-				<FlexItem xs={12} sm={3}>
-					<Image  src={product.images[0]._id}/>
-				</FlexItem>
-				<FlexItem xs={12} sm={9}>
+				<FlexItem xs={12} sm={8}>
 					<FlexContainer wrap={'wrap'} direction={'row'}>
-						<FlexItem xs={12} padding={'1em'} align={'center'}>
-							<Typography align={'center'} size={'1.5em'} color={LIGHT_DARK}>{product.price} $</Typography>
-							<Typography size={'1.3em'}>{product.description}</Typography>
+						<FlexItem xs={12} padding={'0 1em'} align={'center'}>
+							{product.brand &&
+								(<BrandLabel><span>Brand: </span>
+									<Link to={`/brand/${product.brand && product.brand._id}`}>
+										{product.brand.brand_name}
+									</Link>
+								</BrandLabel>)
+							}
+							<Typography size={'1.3em'} align={'justify'}>{product.description}</Typography>
+							<br/>
+							<HRLine/>
 							<Field name={'quantity'} initialValue={1}>
 								{({ input }) => (
 									<QuantityInput form={form} values={values} {...input}/>
@@ -37,10 +61,12 @@ const ProductPresentation = ({ product, form, values }) => {
 							>
 								Add to cart
 							</Button>
+							<Typography align={'center'} size={'1.5em'} color={LIGHT_DARK}>{product.price * values.quantity} $</Typography>
 						</FlexItem>
 					</FlexContainer>
 				</FlexItem>
 			</FlexContainer>
+		</>
 	)
 };
 

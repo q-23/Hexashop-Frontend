@@ -3,7 +3,7 @@ import React, {useContext, useEffect, useState} from "react";
 import FlexContainer from "components/_Shared/FlexContainer";
 import ProductPreview from "components/ProductPreview";
 
-import { MenuContext } from "contexts/reducers/menu";
+import { MenuContext } from "contexts/menu/menu";
 import { withRouter } from 'react-router-dom';
 
 const CategoryView = () => {

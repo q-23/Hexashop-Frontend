@@ -3,6 +3,9 @@ const LIGHT_PURPLE = '#D19FE4';
 const LIGHT_BLUE = '#EDF6FF';
 const LIGHT_DARK = '#878787';
 const DARK_GRAY = '#42474b';
+const VALID_GREEN = '#74B62E';
+const ERROR_RED = '#E93F3A';
+const LIGHT_GRAY = '#d3d3d3';
 const DARK_BLUE = '#437FC7';
 const WHITE = '#FFFFFF';
 const BROWN = '#B9732F';
@@ -10,8 +13,11 @@ const BLUE = '#3750CF';
 
 export {
 	LIGHT_PURPLE,
+	VALID_GREEN,
 	LIGHT_DARK,
+	LIGHT_GRAY,
 	LIGHT_BLUE,
+	ERROR_RED,
 	DARK_BLUE,
 	DARK_GRAY,
 	WHITE,

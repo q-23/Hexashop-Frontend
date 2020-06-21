@@ -15,4 +15,8 @@ const Input = styled.input`
 	}
 `;
 
-export { Input }
+const InputWrapper = styled.div`
+	display: inline-block;
+`
+
+export { Input, InputWrapper }

@@ -2,6 +2,7 @@ import HomePage from "./views/HomePage";
 import CategoryView from "./views/CategoryView";
 import AllProducts from "./views/AllProducts";
 import ProductView from "views/ProductView/ProductView";
+import LoginView from "views/LoginView";
 
 export const routes = [
 	{
@@ -20,5 +21,9 @@ export const routes = [
 	{
 		path: '/product/:id',
 		component: ProductView
+	},
+	{
+		path: '/login',
+		component: LoginView
 	}
 ]

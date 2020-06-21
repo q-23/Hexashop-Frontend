@@ -9,7 +9,7 @@ import compose from 'helperFunctions/compose'
 import Menu from 'components/Menu';
 
 import { MOCK_CATEGORIES, MOCK_CATEGORY_NOT_SHOW_IN_MENU } from "./Menu.mock.data";
-import {MenuContext} from "contexts/reducers/menu";
+import {MenuContext} from "contexts/menu/menu";
 
 const TestComponent = ({categories}) => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { withRouter } from 'react-router-dom';
 
-import { MenuContext } from 'contexts/reducers/menu';
+import { MenuContext } from 'contexts/menu/menu';
 
 import {MenuOverlay, MenuWrapper, Link, List} from './Menu.style'
 
