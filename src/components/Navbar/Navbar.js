@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 
 import { withRouter } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { NavbarStyle } from "./Navbar.style";
 import Button from "components/_Shared/Button";
 import Icon from "components/_Shared/Icon";
+
+import { NavbarStyle } from "./Navbar.style";
 
 import { MenuContext } from 'contexts/menu/menu';
 
@@ -19,10 +21,11 @@ const Navbar = () => {
 			<Button navbar_button  nav_border_right>
 				<Icon className="fa fa-github" size={'1.7em'} color={'#FFF'}/>
 			</Button>
-
-			<Button navbar_button float={'right'} nav_border_right>
-				<Icon className="fa fa-user" size={'1.7em'} color={'#FFF'}/>
-			</Button>
+			<Link to={'/login'}>
+				<Button navbar_button float={'right'} nav_border_right>
+					<Icon className="fa fa-user" size={'1.7em'} color={'#FFF'}/>
+				</Button>
+			</Link>
 			<Button navbar_button float={'right'}  nav_border_left>
 				<Icon className="fa fa-shopping-basket" size={'1.7em'} color={'#FFF'}/>
 			</Button>

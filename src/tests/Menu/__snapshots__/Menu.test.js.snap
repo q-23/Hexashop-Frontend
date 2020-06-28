@@ -110,6 +110,29 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <nav
+        class="sc-AxirZ fgjiRk"
+        width="md"
+      >
+        <ul>
+          <ul
+            class="sc-AxhCb gfYHRH"
+          >
+            <a
+              activelink="0"
+              class="sc-AxhUy eWjJEu"
+              href="/all_products"
+            >
+              All products
+            </a>
+          </ul>
+        </ul>
+      </nav>
+      <div
+        class="sc-AxiKw gqwTpW"
+      />
+    </div>
+    <div>
       <div>
         <nav
           class="sc-AxirZ fgjiRk"

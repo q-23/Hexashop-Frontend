@@ -1,29 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import FlexContainer from "components/_Shared/FlexContainer";
 import LoginPanel from "components/LoginPanel";
 
+import { useStateValueAuthorization } from 'contexts/authorization/authorization'
+import { FormFullWidth } from "components/_Shared/Form";
+import { post } from "helperFunctions/fetchFunctions";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
-import { FormFullWidth } from "components/_Shared/Form";
-import { useStateValueAuthorization } from 'contexts/authorization/authorization'
-import { get } from "helperFunctions/fetchFunctions";
 
-
-const LoginView = () => {
+const LoginView = ({ history }) => {
 	const [auth, dispatch] = useStateValueAuthorization();
 
 	async function logIn(data) {
 		try {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/user/login`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				},
-				body: JSON.stringify(data)
-			});
-			console.log(res)
+			const res = await post({ url: '/user/login',body: JSON.stringify(data)});
 			const result = await res.json();
 			const { token } = result;
 			dispatch({ type: 'login', payload: { token } });
@@ -31,14 +22,12 @@ const LoginView = () => {
 		}
 	}
 
-	async function getData() {
-		try {
-			const res =  await get({url: '/user/me', auth})
-			const reee = await res.json()
-			console.log(reee)
-		} catch (e) {
+	useEffect(() => {
+		console.log(auth)
+		if (auth.length) {
+			history.push('/')
 		}
-	}
+	}, [auth])
 
 	return(
 		<Form
@@ -47,7 +36,6 @@ const LoginView = () => {
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
-					{console.log(getData())}
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						<LoginPanel/>
 					</FlexContainer>

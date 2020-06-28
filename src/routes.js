@@ -3,6 +3,7 @@ import CategoryView from "./views/CategoryView";
 import AllProducts from "./views/AllProducts";
 import ProductView from "views/ProductView/ProductView";
 import LoginView from "views/LoginView";
+import AccountView from "views/AccountView";
 
 export const routes = [
 	{
@@ -25,5 +26,9 @@ export const routes = [
 	{
 		path: '/login',
 		component: LoginView
+	},
+	{
+		path: '/account',
+		component: AccountView
 	}
 ]

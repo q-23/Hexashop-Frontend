@@ -5,21 +5,16 @@ import * as palette from 'assets/css_variables/colors'
 
 const StyledInput = styled.input`
 		border: 0;
-		border-bottom: 1px solid ${({ valid, invalid }) => valid ? palette.VALID_GREEN : invalid ? palette.ERROR_RED : palette.DARK_GRAY};  
+		border-bottom: 1px solid ${({ valid, invalid, disabled }) => valid ? palette.VALID_GREEN : invalid ? palette.ERROR_RED : disabled ? palette.LIGHT_GRAY : palette.DARK_GRAY};  
 		background: transparent;
 		width: 100%;
 		padding: 1rem 0 .5rem 0;
 		font-size: 1rem;
-		color: black;
+		color: ${({disabled}) => disabled ? palette.LIGHT_GRAY : 'black'};
 		&:focus { 
 		 border:none;
 		 outline:none;
-		 border-bottom:1px solid #e74c3c;
-		}
-		&:focus ~ label{
-			top:-12px;
-			font-size:12px;
-			color: red;
+		 border-bottom:1px solid ${palette.DARK_BLUE};
 		}
 	`;
 
@@ -34,7 +29,7 @@ const InputLabel = styled.label`
 		top: 0;
 		left:0;
 		font-size: .8rem;
-		color: ${({ valid, invalid }) => valid ? palette.VALID_GREEN : invalid ? palette.ERROR_RED : palette.DARK_GRAY};
+		color: ${({ valid, invalid, disabled }) => valid ? palette.VALID_GREEN : invalid ? palette.ERROR_RED : disabled ? palette.LIGHT_GRAY : palette.DARK_GRAY};
 		transition: all 0.5s ease-in-out;
 	`;
 
@@ -42,7 +37,7 @@ const Input = ({ label, valid, invalid, ...props }) => {
 
 	return (
 		<InputContainer>
-			<InputLabel valid={valid} invalid={invalid}>
+			<InputLabel valid={valid} invalid={invalid} disabled={props.disabled}>
 				{label}
 			</InputLabel>
 			<StyledInput valid={valid} invalid={invalid} {...props}/>

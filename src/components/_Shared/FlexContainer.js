@@ -14,6 +14,13 @@ const FlexContainer = styled.div`
 	${({ direction }) => !!direction && `flex-direction: ${direction}`};
 	${({ m_auto }) => m_auto && 'margin: auto;'};
 	${({ styles }) => !!styles && styles};
+	${({spacing}) => `
+		& > div {
+			padding: ${spacing * .5}em;
+		}
+		width: calc(100% + ${spacing}em);
+  	margin: -${spacing * .5}em
+	`};
 `;
 
 export default FlexContainer;

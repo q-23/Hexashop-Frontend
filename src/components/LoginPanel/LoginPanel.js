@@ -1,28 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
 
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
 import FlexItem from "components/_Shared/FlexItem";
-import Input from "components/_Shared/Input";
-import { Field } from 'react-final-form';
+import BoxName from "components/_Shared/BoxName";
 import Button from "components/_Shared/Button";
+import Input from "components/_Shared/Input";
+import Icon from "components/_Shared/Icon";
+
+import validations from "components/Validation";
+
+import { Field } from 'react-final-form';
 
 const LoginPanel = () => {
 
 	return (
 		<>
+			<BoxHeaderContainer>
+				<BoxName>Log in <Icon className={'fa fa-sign-in'}/></BoxName>
+			</BoxHeaderContainer>
 			<FlexContainer wrap={'wrap'} padding={'1em'} justify={'center'} styles={'margin: 10em 0'}>
 				<FlexItem xs={12} md={8} lg={6} xl={4} align={'center'}>
-					<Field name={'email'}>
-						{({ input }) => (
-						<Input label={'E-mail'} {...input} key={'email'}/>
+					<Field
+						validate={validations.required}
+						name={'email'}
+					>
+						{({ input, meta }) => (
+							<Input
+								invalid={meta.error && meta.touched}
+								label={'E-mail'}
+								key={'email'}
+								{...input}
+							/>
 							)}
 					</Field>
-					<Field name={'password'}>
-						{({ input }) => (
-						<Input label={'Password'} type={'password'} {...input} key={'password'}/>
+					<Field
+						validate={validations.required}
+						name={'password'}
+					>
+						{({ input, meta }) => (
+							<Input
+								invalid={meta.error && meta.touched}
+								label={'Password'}
+								type={'password'}
+								key={'password'}
+								{...input}
+							/>
 							)}
 					</Field>
-					<Button with_gradient type={'submit'}>Login</Button>
+					<Button with_gradient type={'submit'}>Log in</Button>
 				</FlexItem>
 			</FlexContainer>
 		</>

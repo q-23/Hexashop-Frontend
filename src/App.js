@@ -7,7 +7,7 @@ import WithLoader from "components/_HOC/WithLoader";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
-
+import RouteWithAuthorization from "components/_HOC/RouteWithAuthorization";
 import { routes } from "routes";
 
 function App() {

@@ -49,8 +49,6 @@ N
 src/components/_Shared/Icon.js,8/7/87c081ffbf08eafe2e0856acfc565bf976987c15
 T
 $src/components/_Shared/Typography.js,3/5/357c960ee78e1c54f19c934619172b1619d5e908
-M
-src/contexts/reducers/menu.js,9/3/9300a80f1a79b55691a64d1d033021f8dbe3118b
 P
  src/tests/Menu/Menu.mock.data.js,2/0/20f9a9f653c52b61c238ee7961228598d5bc6668
 W
@@ -135,3 +133,33 @@ n
 >src/tests/ProductPresentation/ProductPresentation.mock.data.js,0/6/06113cbb379526601ded962dbb6e4ddeaf5f12c8
 P
  src/components/_Shared/HRLine.js,d/9/d90086ae4b7ddec3be9328659d7c04796c9cde38
+L
+src/views/LoginView/index.js,5/6/563f5af870841697f2ab645819ceb46e114898e6
+R
+"src/components/LoginPanel/index.js,4/4/442c3bbfdda2d948c9efdf03ba8a4faea8f8d255
+V
+&src/contexts/authorization/reducers.js,c/c/cc10febbe02e9e2164157f10b3799268ed61e59b
+U
+%src/helperFunctions/fetchFunctions.js,7/2/720e07e4c6ccc39723befd25cf6c9fa2c09cad5d
+I
+src/contexts/menu/menu.js,f/7/f7d05cd053ee0a2f8c172c530730b3c9835d99ef
+O
+src/components/_Shared/Input.js,2/0/2024572f4c0279b28297f08b8626e666b58c2cd3
+[
++src/contexts/authorization/authorization.js,1/9/192820bc2c191d0a17c907705c662ca4c83b7306
+P
+ src/views/LoginView/LoginView.js,b/9/b9e452d4a10e916edf58d3494d2930a16777d94d
+W
+'src/components/LoginPanel/LoginPanel.js,9/2/9298c04a93911f8e93e1c2f0bf37bc17b3ab612b
+\
+,src/components/_Shared/BoxHeaderContainer.js,f/d/fdae074e28596656fe1711c8e414cb4384cc2b7a
+W
+'src/components/Validation/Validation.js,4/1/413149b4d85efaf8366c7256a429f205fa9f3141
+X
+(src/tests/Validations/Validation.test.js,a/3/a39298ab5cfec3fc18534065bdf87607b12c9773
+Q
+!src/components/_Shared/BoxName.js,c/e/ce1d68683732a67276c72f83d63fbc46a93a749b
+c
+3src/components/_HOC/RouteWithAuthorization/index.js,7/4/74e4e2e1f07d9ae5c66302a4420c17ee7300f29b
+t
+Dsrc/components/_HOC/RouteWithAuthorization/RouteWithAuthorization.js,5/5/55031e824a73eb94aaf924e143fc4c07cfa7012e

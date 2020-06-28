@@ -46,11 +46,19 @@ const Button = styled.button`
     transition: all .4s ease-in-out;
 		background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
 		box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-		  
+		animation-timing-function: ease-in-out;
+
+		@keyframes glow {
+			0% {box-shadow: 0 4px 15px 0 rgba(209, 159, 228, 0.9);}
+			50% {box-shadow: 0 7px 18px 0 rgba(209, 159, 228, 0.95);}
+			100% {box-shadow: 0 4px 15px 0 rgba(209, 159, 228, 0.9);}
+		}
+					
 		&:hover {
 			transition: all .4s ease-in-out;
 			background-position: 100% 0;
-			box-shadow: 0 4px 15px 0 rgba(209, 159, 228, 0.9);
+			// box-shadow: 0 4px 15px 0 rgba(209, 159, 228, 0.9);
+			animation: glow 1s infinite
 		}
 	`};	
 	${({ styles }) => !!styles && styles}

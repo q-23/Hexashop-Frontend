@@ -6,20 +6,24 @@ Object {
   "baseElement": <body>
     <div>
       <header
-        class="sc-AxiKw kPZMXK"
+        class="sc-AxhCb kZiuqK"
       >
         <div
-          class="sc-AxjAm bfGScI"
+          class="sc-AxirZ cjictr"
         >
           <div
-            class="sc-AxirZ fSEYPD"
+            class="sc-AxiKw hrzuUn"
             width="md"
           >
-            <img
-              alt="logo"
-              class="sc-AxhCb dBDaOb"
-              src="logo.png"
-            />
+            <a
+              href="/"
+            >
+              <img
+                alt="logo"
+                class="sc-AxhUy jvmxQu"
+                src="logo.png"
+              />
+            </a>
           </div>
         </div>
       </header>
@@ -27,20 +31,24 @@ Object {
   </body>,
   "container": <div>
     <header
-      class="sc-AxiKw kPZMXK"
+      class="sc-AxhCb kZiuqK"
     >
       <div
-        class="sc-AxjAm bfGScI"
+        class="sc-AxirZ cjictr"
       >
         <div
-          class="sc-AxirZ fSEYPD"
+          class="sc-AxiKw hrzuUn"
           width="md"
         >
-          <img
-            alt="logo"
-            class="sc-AxhCb dBDaOb"
-            src="logo.png"
-          />
+          <a
+            href="/"
+          >
+            <img
+              alt="logo"
+              class="sc-AxhUy jvmxQu"
+              src="logo.png"
+            />
+          </a>
         </div>
       </div>
     </header>

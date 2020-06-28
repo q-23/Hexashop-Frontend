@@ -1,4 +1,4 @@
-let reducers = localStorageName => (state, action) => {
+const reducers = localStorageName => (state, action) => {
 	switch (action.type) {
 		case 'init': {
 			return state;
@@ -7,10 +7,7 @@ let reducers = localStorageName => (state, action) => {
 			const { token } = action.payload;
 			localStorage.setItem(localStorageName, JSON.stringify(token));
 
-			return token;
-		}
-		case 'setCheckTokenInterval': {
-			return { ...state, checkTokenInterval: action.payload };
+			return { token };
 		}
 		case 'logout': {
 			localStorage.removeItem(localStorageName);

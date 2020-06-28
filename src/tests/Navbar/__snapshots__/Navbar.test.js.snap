@@ -6,37 +6,41 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="sc-AxirZ hmtEPn"
+        class="sc-AxhCb CFffv"
       >
         <button
-          class="sc-AxiKw jbtwJr"
+          class="sc-AxirZ edtojf"
         >
           <i
-            class="sc-AxhCb kXQQEV fa fa-bars"
+            class="sc-AxiKw sMAqB fa fa-bars"
             color="#FFF"
           />
         </button>
         <button
-          class="sc-AxiKw jbtwJr"
+          class="sc-AxirZ edtojf"
         >
           <i
-            class="sc-AxhCb kXQQEV fa fa-github"
+            class="sc-AxiKw sMAqB fa fa-github"
             color="#FFF"
           />
         </button>
+        <a
+          href="/login"
+        >
+          <button
+            class="sc-AxirZ lojPWt"
+          >
+            <i
+              class="sc-AxiKw sMAqB fa fa-user"
+              color="#FFF"
+            />
+          </button>
+        </a>
         <button
-          class="sc-AxiKw hvZhqN"
+          class="sc-AxirZ eqVsUa"
         >
           <i
-            class="sc-AxhCb kXQQEV fa fa-user"
-            color="#FFF"
-          />
-        </button>
-        <button
-          class="sc-AxiKw inRIvO"
-        >
-          <i
-            class="sc-AxhCb kXQQEV fa fa-shopping-basket"
+            class="sc-AxiKw sMAqB fa fa-shopping-basket"
             color="#FFF"
           />
         </button>
@@ -45,37 +49,41 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="sc-AxirZ hmtEPn"
+      class="sc-AxhCb CFffv"
     >
       <button
-        class="sc-AxiKw jbtwJr"
+        class="sc-AxirZ edtojf"
       >
         <i
-          class="sc-AxhCb kXQQEV fa fa-bars"
+          class="sc-AxiKw sMAqB fa fa-bars"
           color="#FFF"
         />
       </button>
       <button
-        class="sc-AxiKw jbtwJr"
+        class="sc-AxirZ edtojf"
       >
         <i
-          class="sc-AxhCb kXQQEV fa fa-github"
+          class="sc-AxiKw sMAqB fa fa-github"
           color="#FFF"
         />
       </button>
+      <a
+        href="/login"
+      >
+        <button
+          class="sc-AxirZ lojPWt"
+        >
+          <i
+            class="sc-AxiKw sMAqB fa fa-user"
+            color="#FFF"
+          />
+        </button>
+      </a>
       <button
-        class="sc-AxiKw hvZhqN"
+        class="sc-AxirZ eqVsUa"
       >
         <i
-          class="sc-AxhCb kXQQEV fa fa-user"
-          color="#FFF"
-        />
-      </button>
-      <button
-        class="sc-AxiKw inRIvO"
-      >
-        <i
-          class="sc-AxhCb kXQQEV fa fa-shopping-basket"
+          class="sc-AxiKw sMAqB fa fa-shopping-basket"
           color="#FFF"
         />
       </button>

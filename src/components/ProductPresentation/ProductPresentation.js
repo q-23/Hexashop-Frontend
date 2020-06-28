@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-import { Image, BrandLabel, ProductNameBox, ProductName } from "./ProductPresentation.style";
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import QuantityInput from "components/QuantityInput/QuantityInput";
+import { Image, BrandLabel } from "./ProductPresentation.style";
 import FlexContainer from "components/_Shared/FlexContainer";
 import { LIGHT_DARK } from 'assets/css_variables/colors';
 import Typography from "components/_Shared/Typography";
 import FlexItem from "components/_Shared/FlexItem";
+import BoxName from "components/_Shared/BoxName";
 import HRLine from  'components/_Shared/HRLine';
 import Button from "components/_Shared/Button";
 
@@ -22,9 +24,9 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 
 	return (
 		<>
-			<ProductNameBox>
-				<ProductName size={'2em'} align={'center'}>{product.name}</ProductName>
-			</ProductNameBox>
+			<BoxHeaderContainer>
+				<BoxName>{product.name}</BoxName>
+			</BoxHeaderContainer>
 			<FlexContainer wrap={'wrap'} padding={'1em'}>
 				<FlexItem xs={12} sm={4}>
 					<Image src={product.images[currentPhotoIndex]._id}/>
