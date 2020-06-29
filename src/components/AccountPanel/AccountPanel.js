@@ -13,12 +13,12 @@ import HRLine from "components/_Shared/HRLine";
 import { Field } from 'react-final-form';
 import {Spacer} from "components/AccountPanel/AccountPanel.style";
 
-const AccountPanel = () => {
+const AccountPanel = ({ isViewTypeRegister }) => {
 
 	return (
 		<>
 			<BoxHeaderContainer>
-				<BoxName>Edit account <Icon className={'fa fa-sign-in'}/></BoxName>
+				<BoxName>{isViewTypeRegister ? 'Register' : 'Edit account'} <Icon className={'fa fa-sign-in'}/></BoxName>
 			</BoxHeaderContainer>
 			<FlexContainer wrap={'wrap'} padding={'1em'} justify={'flex-start'} styles={'margin: 2em 0'}>
 				<FlexItem xs={12} align={'center'}>
@@ -32,7 +32,7 @@ const AccountPanel = () => {
 								invalid={meta.error && meta.touched}
 								label={'E-mail'}
 								key={'email'}
-								disabled
+								disabled={!isViewTypeRegister}
 								{...input}
 							/>
 							)}

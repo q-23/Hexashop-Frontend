@@ -7,11 +7,13 @@ import { useStateValueAuthorization } from 'contexts/authorization/authorization
 import { FormFullWidth } from "components/_Shared/Form";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
-import { get, patch } from "helperFunctions/fetchFunctions";
+import { get, patch, post } from "helperFunctions/fetchFunctions";
 import { diff } from 'deep-object-diff';
-const AccountView = () => {
+const AccountView = ({ match }) => {
 	const [accountData, setAccountData] = useState({});
 	const [auth] = useStateValueAuthorization();
+
+	const isViewTypeRegister = match.path === '/register';
 
 	async function fetchAccountData() {
 		try {
@@ -28,28 +30,43 @@ const AccountView = () => {
 			const changedFields = diff(accountData, accData);
 			delete changedFields.email;
 
-			const response = await patch({url: '/user', auth, body: JSON.stringify(changedFields)});
-			const responseJSON = await response.json();
-			console.log(responseJSON, response)
+			await patch({url: '/user', auth, body: JSON.stringify(changedFields)});
+			fetchAccountData()
+		} catch (e) {
+			console.log(e);
+		}
+	}
+
+	async function registerAccount(accData) {
+		try {
+			const acc = await post({url: '/user/new', auth, body: JSON.stringify(accData)});
+			console.log(acc)
 		} catch (e) {
 			console.log(e);
 		}
 	}
 
 	useEffect(() => {
-		fetchAccountData()
+		if(!isViewTypeRegister){
+			fetchAccountData()
+		}
 	}, []);
 
 	return(
 		<Form
-			onSubmit={editAccountData}
+			onSubmit={accData => {
+				if(isViewTypeRegister) {
+					registerAccount(accData)
+				}
+				editAccountData(accData)
+			}}
 			initialValues={accountData}
 			render={({ handleSubmit}) => (
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
-						<AccountPanel/>
+						<AccountPanel isViewTypeRegister={isViewTypeRegister}/>
 					</FlexContainer>
 				</FormFullWidth>
 			)}

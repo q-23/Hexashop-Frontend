@@ -163,3 +163,15 @@ c
 3src/components/_HOC/RouteWithAuthorization/index.js,7/4/74e4e2e1f07d9ae5c66302a4420c17ee7300f29b
 t
 Dsrc/components/_HOC/RouteWithAuthorization/RouteWithAuthorization.js,5/5/55031e824a73eb94aaf924e143fc4c07cfa7012e
+T
+$src/components/AccountPanel/index.js,6/e/6e8419113d0e3f35a5b196e2ce4a17566575980f
+N
+src/views/AccountView/index.js,4/4/44e5b41b1f2a5128ce9dca583787de892db64a38
+Z
+*src/views/AccountView/AccountView.style.js,e/f/ef52bbdcee47e8a73d50e341c4bf65e7250511e1
+a
+1src/components/AccountPanel/AccountPanel.style.js,1/9/192aef3796ae08b0aaf81797f9276abee7ba67c2
+[
++src/components/AccountPanel/AccountPanel.js,f/2/f2048733452e6b9050df4ec9337c80886c5f5c91
+T
+$src/views/AccountView/AccountView.js,1/e/1e5c2f3aee28cdb2293058c72851b150d6e4544b

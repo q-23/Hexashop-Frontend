@@ -30,5 +30,9 @@ export const routes = [
 	{
 		path: '/account',
 		component: AccountView
+	},
+	{
+		path: '/register',
+		component: AccountView
 	}
 ]
