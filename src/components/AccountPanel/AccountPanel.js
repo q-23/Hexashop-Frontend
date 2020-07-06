@@ -7,18 +7,29 @@ import BoxName from "components/_Shared/BoxName";
 import Button from "components/_Shared/Button";
 import Input from "components/_Shared/Input";
 import Icon from "components/_Shared/Icon";
-import {InputWrapper} from "views/AccountView/AccountView.style";
 import validations from "components/Validation";
-import HRLine from "components/_Shared/HRLine";
+import BasicLink from "components/_Shared/BasicLink";
+
+import {InputWrapper} from "views/AccountView/AccountView.style";
+
 import { Field } from 'react-final-form';
 import {Spacer} from "components/AccountPanel/AccountPanel.style";
+import {useStateValueAuthorization} from "contexts/authorization/authorization";
+import { withRouter } from 'react-router-dom';
 
-const AccountPanel = ({ isViewTypeRegister }) => {
+const AccountPanel = ({ isViewTypeRegister, history }) => {
+	const [,dispatch] = useStateValueAuthorization();
+
+	const logout = () => {
+		dispatch({ type: 'logout' });
+		history.push('/')
+	}
+
 
 	return (
 		<>
 			<BoxHeaderContainer>
-				<BoxName>{isViewTypeRegister ? 'Register' : 'Edit account'} <Icon className={'fa fa-sign-in'}/></BoxName>
+				<BoxName>{isViewTypeRegister ? 'Register an account' : 'Edit account'} <Icon className={'fa fa-sign-in'}/></BoxName>
 			</BoxHeaderContainer>
 			<FlexContainer wrap={'wrap'} padding={'1em'} justify={'flex-start'} styles={'margin: 2em 0'}>
 				<FlexItem xs={12} align={'center'}>
@@ -174,7 +185,9 @@ const AccountPanel = ({ isViewTypeRegister }) => {
 				<Spacer/>
 				<FlexItem xs={12} align={'center'}>
 					<InputWrapper>
-						<Button with_gradient type={'submit'}>Save account</Button>
+						<Button with_gradient type={'submit'}>{isViewTypeRegister ? 'Register' : 'Save account'}</Button>
+						<br/>
+						{!isViewTypeRegister && <BasicLink onClick={logout}>Log out</BasicLink>}
 					</InputWrapper>
 				</FlexItem>
 			</FlexContainer>
@@ -182,4 +195,4 @@ const AccountPanel = ({ isViewTypeRegister }) => {
 	)
 };
 
-export default AccountPanel;
+export default withRouter(AccountPanel);

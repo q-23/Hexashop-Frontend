@@ -5,7 +5,15 @@ const Image = styled.div`
 	width: 100%;
 	background-image: ${({ src }) => `url("${process.env.REACT_APP_API_URL}/image/${src}")`};
 	background-position: center;
-	background-size: contain;
+	background-size: cover;
+	${({miniature}) => miniature && `
+		cursor: pointer;
+		filter: saturation(.7);
+		transition: .2s ease-in-out;
+		&:hover {
+			filter: saturation(1)
+		}
+	`};
 	&:after {
 		content: "";
 		display: block;

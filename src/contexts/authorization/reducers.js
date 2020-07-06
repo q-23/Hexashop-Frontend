@@ -4,14 +4,14 @@ const reducers = localStorageName => (state, action) => {
 			return state;
 		}
 		case 'login': {
-			const { token } = action.payload;
+			const token = action.payload;
 			localStorage.setItem(localStorageName, JSON.stringify(token));
 
-			return { token };
+			return token;
 		}
 		case 'logout': {
 			localStorage.removeItem(localStorageName);
-			return {};
+			return '';
 		}
 		default:
 			return state;

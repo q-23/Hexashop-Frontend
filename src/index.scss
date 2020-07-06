@@ -26,8 +26,11 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #7f7f7f;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /*//DEBUG*/

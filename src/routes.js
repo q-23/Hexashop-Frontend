@@ -4,7 +4,8 @@ import AllProducts from "./views/AllProducts";
 import ProductView from "views/ProductView/ProductView";
 import LoginView from "views/LoginView";
 import AccountView from "views/AccountView";
-
+import RegistrationSuccessPage from "views/RegistrationSuccessPage";
+import EmailVerificationSuccessPage from "views/EmailVerificationSuccessPage/EmailVerificationSuccessPage";
 export const routes = [
 	{
 		path: '/',
@@ -34,5 +35,13 @@ export const routes = [
 	{
 		path: '/register',
 		component: AccountView
+	},
+	{
+		path: '/registration_success',
+		component: RegistrationSuccessPage
+	},
+	{
+		path: '/verify_email/:id',
+		component: EmailVerificationSuccessPage
 	}
 ]

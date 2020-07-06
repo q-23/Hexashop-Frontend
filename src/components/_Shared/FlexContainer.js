@@ -3,8 +3,9 @@ import styled from 'styled-components';
 const FlexContainer = styled.div`
 	width: 100%;
 	display: flex;
-	${({ justify }) => `justify-content: ${justify}`};
-	${({ wrap }) => `flex-wrap: ${wrap}`};
+	${({ justify }) => justify && `justify-content: ${justify}`};
+	${({ wrap }) => wrap && `flex-wrap: ${wrap}`};
+	${({ align }) => align && `align-items: ${align}`};
 	${({ main_container }) => main_container && `
 		margin-top: -3.95em;
 		background-color: white;
@@ -12,9 +13,10 @@ const FlexContainer = styled.div`
 	`};
 	${({ padding }) => !!padding && `padding: ${padding}`};
 	${({ direction }) => !!direction && `flex-direction: ${direction}`};
+	
 	${({ m_auto }) => m_auto && 'margin: auto;'};
 	${({ styles }) => !!styles && styles};
-	${({spacing}) => `
+	${({spacing}) => spacing && `
 		& > div {
 			padding: ${spacing * .5}em;
 		}

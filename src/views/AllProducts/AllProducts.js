@@ -20,9 +20,11 @@ const AllProducts = () => {
 		fetchData();
 	}, [])
 	return(
-		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
+		// <FlexContainer justify={'flex-start'} wrap={'wrap'}>
+		<>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
-		</FlexContainer>
+		</>
+			// </FlexContainer>
 	)
 };
 
