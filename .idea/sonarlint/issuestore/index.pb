@@ -195,3 +195,11 @@ Z
 *src/views/RegistrationSuccessPage/index.js,e/e/ee737f7909e88d56044527e6067f31faf812c2f7
 v
 Fsrc/views/EmailVerificationSuccessPage/EmailVerificationSuccessPage.js,5/a/5a52cbc984127cfac6826ccf03a984bf84d911b5
+R
+"src/components/Pagination/index.js,d/2/d2f09f66055ffb19d543b3f8a52628654b90b4aa
+W
+'src/components/Pagination/Pagination.js,8/7/87a2040e4e91d8cce0617aedd0b40caaa6481e87
+b
+2src/components/_HOC/WithLoader/WithLoader.style.js,e/a/ea94a10736a86dc609dc41800d0dd30fe289488c
+]
+-src/components/Pagination/Pagination.style.js,3/e/3eb5fc0b0489a61f88d469ae6c888033afa7317f
