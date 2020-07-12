@@ -16,12 +16,13 @@ import { Field } from 'react-final-form';
 import {Spacer} from "components/AccountPanel/AccountPanel.style";
 import {useStateValueAuthorization} from "contexts/authorization/authorization";
 import { withRouter } from 'react-router-dom';
+import authorizationActions from "contexts/authorization/actions";
 
 const AccountPanel = ({ isViewTypeRegister, history }) => {
 	const [,dispatch] = useStateValueAuthorization();
 
 	const logout = () => {
-		dispatch({ type: 'logout' });
+		dispatch({ type: authorizationActions.LOGOUT });
 		history.push('/')
 	}
 

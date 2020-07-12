@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import FlexContainer from "components/_Shared/FlexContainer";
 import LoginPanel from "components/LoginPanel";
+import authorizationActions from "contexts/authorization/actions";
 
 import { useStateValueAuthorization } from 'contexts/authorization/authorization'
 import { FormFullWidth } from "components/_Shared/Form";
@@ -17,7 +18,7 @@ const LoginView = ({ history }) => {
 			const res = await post({ url: '/user/login',body: JSON.stringify(data)});
 			const result = await res.json();
 			const { token } = result;
-			dispatch({ type: 'login', payload: token });
+			dispatch({ type: authorizationActions.LOGIN, payload: token });
 			history.push('/')
 		} catch (e) {
 			console.log(e)

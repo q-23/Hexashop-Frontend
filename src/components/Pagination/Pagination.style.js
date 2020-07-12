@@ -18,8 +18,10 @@ const PaginationButton = styled.button`
 	border: none;
 	background-color: transparent;
 	transition: .2s ease-in-out;
+	text-decoration: ${({current}) => current ? 'underline' : 'none'};
 	cursor: ${({ dots }) => dots ? 'unset' : 'pointer'};
 	font-size: 1.2rem;
 `;
+
 
 export { PaginationArrowButton, PaginationButton };

@@ -203,3 +203,5 @@ b
 2src/components/_HOC/WithLoader/WithLoader.style.js,e/a/ea94a10736a86dc609dc41800d0dd30fe289488c
 ]
 -src/components/Pagination/Pagination.style.js,3/e/3eb5fc0b0489a61f88d469ae6c888033afa7317f
+W
+'src/tests/Pagination/Pagination.test.js,f/4/f42c3a880de9bc32adc79442786c55cee317cc04

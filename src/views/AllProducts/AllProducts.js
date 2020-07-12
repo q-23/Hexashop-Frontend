@@ -1,10 +1,17 @@
 import React, {useEffect, useState} from "react";
 
-import FlexContainer from "components/_Shared/FlexContainer";
 import ProductPreview from "components/ProductPreview";
+import Pagination from "components/Pagination";
+
+import { useStateValuePagination } from "contexts/pagination/pagination";
+import paginationActions from 'contexts/pagination/actions';
 
 const AllProducts = () => {
 	const [productsData, setProductsData] = useState([]);
+
+	const [pagination, dispatch] = useStateValuePagination();
+
+	console.log(pagination)
 
 	useEffect(() => {
 		async function fetchData() {
@@ -15,16 +22,18 @@ const AllProducts = () => {
 				}
 			});
 			const result = await res.json()
-			setProductsData(result)
+			setProductsData(result.products);
+			dispatch({ type: paginationActions.SET_ITEMS_COUNT, payload: 135 });
 		}
 		fetchData();
-	}, [])
+	}, []);
+
+
 	return(
-		// <FlexContainer justify={'flex-start'} wrap={'wrap'}>
 		<>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
+			<Pagination currentPage={1}/>
 		</>
-			// </FlexContainer>
 	)
 };
 

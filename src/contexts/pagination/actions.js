@@ -1,0 +1,10 @@
+const paginationActions = {
+	SET_ITEMS_COUNT: 'SET_ITEMS_COUNT',
+	NEXT_PAGE: 'NEXT_PAGE',
+	PREVIOUS_PAGE: 'PREVIOUS_PAGE',
+	SET_SKIP_PAGES: 'SET_SKIP_PAGES',
+	SELECT_PAGE: 'SELECT_PAGE',
+	INIT: 'INIT'
+};
+
+export default paginationActions;

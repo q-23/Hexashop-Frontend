@@ -1,10 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
 
-import FlexContainer from "components/_Shared/FlexContainer";
 import ProductPreview from "components/ProductPreview";
 
 import { MenuContext } from "contexts/menu/menu";
 import { withRouter } from 'react-router-dom';
+import Pagination from "components/Pagination";
 
 const CategoryView = () => {
 	const [categoryData, setCategoryData] = useState({});
@@ -32,12 +32,13 @@ const CategoryView = () => {
 	}, [activeCategory])
 
 	return(
-		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
+		<>
 			{console.log(categoryData)}
 			{!!categoryData.products &&
 				categoryData.products.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>
 			)}
-		</FlexContainer>
+			<Pagination/>
+		</>
 	)
 };
 

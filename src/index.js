@@ -6,15 +6,18 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom'
 import StateProviderMenu from "./contexts/menu/menu";
 import { StateProviderAuthorization } from "contexts/authorization/authorization";
+import {StateProviderPagination} from "contexts/pagination/pagination";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <StateProviderAuthorization>
-        <StateProviderMenu>
-          <App />
-        </StateProviderMenu>
-      </StateProviderAuthorization>
+      <StateProviderPagination>
+        <StateProviderAuthorization>
+          <StateProviderMenu>
+            <App />
+          </StateProviderMenu>
+        </StateProviderAuthorization>
+      </StateProviderPagination>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
