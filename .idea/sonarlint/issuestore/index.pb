@@ -205,3 +205,11 @@ b
 -src/components/Pagination/Pagination.style.js,3/e/3eb5fc0b0489a61f88d469ae6c888033afa7317f
 W
 'src/tests/Pagination/Pagination.test.js,f/4/f42c3a880de9bc32adc79442786c55cee317cc04
+U
+%src/contexts/authorization/actions.js,9/f/9f1a0bb4726ac779e490817b6bedd3190ce4c69b
+R
+"src/contexts/pagination/actions.js,c/f/cf08c7d407cf221e3475750497be18e55035f77d
+S
+#src/contexts/pagination/reducers.js,d/9/d9d1dd62f6563613999c003ed5d5cb242c12a088
+U
+%src/contexts/pagination/pagination.js,0/a/0a1f913265a25170dbaffc73e8872160c48c7a0c

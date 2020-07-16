@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 
 
 const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
+
 	const findMainImageIndex = product =>
 		!!product && !!product.images && product.images.findIndex(img => img.main);
 

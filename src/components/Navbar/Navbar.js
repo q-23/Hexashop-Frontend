@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import Button from "components/_Shared/Button";
 import Icon from "components/_Shared/Icon";
+import CartIcon from "components/CartIcon";
 
 import { NavbarStyle } from "./Navbar.style";
 
@@ -29,7 +30,7 @@ const Navbar = () => {
 				</Button>
 			</Link>
 			<Button navbar_button float={'right'}  nav_border_left>
-				<Icon className="fa fa-shopping-basket" size={'1.7em'} color={'#FFF'}/>
+				<CartIcon />
 			</Button>
 		</NavbarStyle>
 	)

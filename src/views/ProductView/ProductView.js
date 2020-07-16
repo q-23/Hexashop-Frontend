@@ -7,8 +7,12 @@ import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
 import { FormFullWidth } from "components/_Shared/Form";
 
+import { useShopcart } from "contexts/shopcart/shopcart";
+import shopcartActions from "contexts/shopcart/actions";
+
 const ProductView = ({ match }) => {
 	const [productData, setProductData] = useState(undefined);
+	const [shopcart, dispatch] = useShopcart()
 
 	async function fetchData() {
 		try {
@@ -30,12 +34,13 @@ const ProductView = ({ match }) => {
 
 	return(
 		<Form
-			onSubmit={console.log}
+			onSubmit={e => dispatch({ type: shopcartActions.ADD_ITEM_TO_CART, payload: e })}
 			initialValues={{product_id: match.params.id}}
 			render={({ handleSubmit, form, values }) => (
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
+					{console.log(shopcart)}
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						{ productData && <ProductPresentation form={form} values={values} product={productData}/> }
 					</FlexContainer>
