@@ -5,10 +5,19 @@ const shopcartReducers = (state, action) => {
 	switch (type) {
 		case shopcartActions.ADD_ITEM_TO_CART: {
 			const { product_id, quantity } = payload;
-			if(!state.id) {
+			if(!state.products[product_id]) {
 				return { ...state, products: { ...state.products, [product_id]: quantity } }
 			}
-			return { ...state, products: { ...state.products, [product_id]: state[product_id] + quantity } }
+			return { ...state, products: { ...state.products, [product_id]: state.products[product_id] + quantity } }
+		}
+		case shopcartActions.SET_ITEM_QUANTITY: {
+			const { product_id, quantity } = payload;
+			return { ...state, products: { ...state.products, [product_id]: quantity } }
+		}
+		case shopcartActions.REMOVE_ITEM: {
+			delete state.products[payload];
+			console.log('ttt', state)
+			return state;
 		}
 		case shopcartActions.CALCULATE_TOTAL_QUANTITY: {
 			const { products } = state;

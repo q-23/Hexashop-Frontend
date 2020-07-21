@@ -29,8 +29,6 @@ b
 2src/tests/Header/__snapshots__/Header.test.js.snap,6/6/6679af384747c8d861d1b550296a9b87af6cda66
 V
 &src/components/ProductPreview/index.js,e/8/e862077e888ce913c3dd219816792c4aeb5c4a59
-N
-src/views/AllProducts/index.js,2/0/20c0b189f0f1c010c884964b984f50b6c4a9ba2c
 4
 .env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 <
@@ -43,8 +41,6 @@ S
 #src/components/_Shared/Component.js,d/4/d4fc7dce09b1bc569c7fd33da795a92b58dd6889
 N
 src/components/Navbar/index.js,7/6/76ffedc97f48bd319432f8c720b746ec14cddf2f
-N
-src/views/HomePage/HomePage.js,7/0/701b1ee4ea3733698e7e91d66bee324c307c8d06
 N
 src/components/_Shared/Icon.js,8/7/87c081ffbf08eafe2e0856acfc565bf976987c15
 T
@@ -69,8 +65,6 @@ d
 4src/tests/ProductPreview/ProductPreview.mock.data.js,c/c/cc751ea02d572e3a696e1f75622d5df42ea77f94
 O
 src/tests/Header/Header.test.js,0/c/0c9560c4295169bcfa89b67f24e5cdbc56fce56a
-T
-$src/views/AllProducts/AllProducts.js,b/c/bce25b683c85f344b32aef39707d49ab3291cb68
 _
 /src/tests/ProductPreview/ProductPreview.test.js,5/6/56aed234d0ace0ce173e861b58256c1f998a57d5
 U
@@ -181,20 +175,12 @@ S
 -src/components/LoginPanel/LoginPanel.style.js,1/8/18f1d30d17f758aa7ecdbe84e1d9006196e0509f
 `
 0src/components/RegistrationSuccessPanel/index.js,f/3/f35f37f737e250071afcd0e44d0065a6ce564689
-l
-<src/views/RegistrationSuccessPage/RegistrationSuccessPage.js,0/2/02e07bd0c1e1fd15f7504c776f994bcd2b358178
 e
 5src/components/EmailVerificationSuccessPanel/index.js,e/4/e488c9d753e1eaf6934d61a53eb384fa5f63545c
-_
-/src/views/EmailVerificationSuccessPage/index.js,5/e/5e553d1695abc021ca67c8c1497bf649a21bd39d
 y
 Isrc/components/RegistrationSuccessPanel/RegistrationSuccessPanel.style.js,d/0/d032728b304466cf56403b5cfbc43a464455227c
 s
 Csrc/components/RegistrationSuccessPanel/RegistrationSuccessPanel.js,2/0/20ca5c3a79b3ef1f3038ffaabb88b87e03bbd89e
-Z
-*src/views/RegistrationSuccessPage/index.js,e/e/ee737f7909e88d56044527e6067f31faf812c2f7
-v
-Fsrc/views/EmailVerificationSuccessPage/EmailVerificationSuccessPage.js,5/a/5a52cbc984127cfac6826ccf03a984bf84d911b5
 R
 "src/components/Pagination/index.js,d/2/d2f09f66055ffb19d543b3f8a52628654b90b4aa
 W
@@ -213,3 +199,33 @@ S
 #src/contexts/pagination/reducers.js,d/9/d9d1dd62f6563613999c003ed5d5cb242c12a088
 U
 %src/contexts/pagination/pagination.js,0/a/0a1f913265a25170dbaffc73e8872160c48c7a0c
+P
+ src/contexts/shopcart/actions.js,3/a/3a44f0fe0b0c772fd9cab5ab070f80b72d67b396
+P
+ src/components/CartIcon/index.js,b/3/b38557831dc2ee4a60af7dd4a2e565cff1a73f71
+Q
+!src/contexts/shopcart/reducers.js,d/f/df83d3ed3e2e8b46a1ac68d65507f4f1ea5d472e
+Q
+!src/contexts/shopcart/shopcart.js,c/5/c5bf035149d36722914510a8f96f63c26b1c8d1f
+S
+#src/components/CartIcon/CartIcon.js,1/3/137d68143f29fccea1377203d5e75fc58933c18b
+f
+6src/tests/PaginationContext/PaginationContext.tests.js,7/a/7a7a224faa33122ebc5826f867e32b8b16cda681
+O
+src/views/HomePageView/index.js,5/2/526a2c47b2ebf9a792ae970c934ec98caa090b1a
+\
+,src/views/AllProductsView/AllProductsView.js,b/5/b56d91bfab33e0be54176e6dbbb4d6489bb685a5
+R
+"src/views/AllProductsView/index.js,2/1/21f71a5b0358c65a23383927a4f28bf725d4a58d
+_
+/src/views/EmailVerificationSuccessView/index.js,3/2/329e20efe651d2ee03090594c80a16921be3b4ab
+Z
+*src/views/RegistrationSuccessView/index.js,5/d/5dcacbb9938ffa3406f403990a91d3f007dea657
+K
+src/views/CartView/index.js,4/6/466e133f7473ce2b28322240eec97cb0ac385d26
+N
+src/views/CartView/CartView.js,6/e/6e58b9a6df5984e4d619c5bcaf5d49fc98fd3ddc
+P
+ src/components/CartItem/index.js,f/a/fa6c17b4c682d590de096a7c46a669fe90c522a0
+S
+#src/components/CartItem/CartItem.js,3/3/33b49843ab132aff5e38b888d4c107414049508a

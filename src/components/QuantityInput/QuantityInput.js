@@ -18,7 +18,13 @@ const QuantityInput = input => {
 				<Input
 					name={'quantity'}
 					min={1}
+					max={99}
 					{...input}
+					onChange={e => {
+						if (!isNaN(Number(e.target.value))) {
+							input.onChange(Number(e.target.value))
+						}
+					}}
 				/>
 			<Button quantity_button type={'button'} onClick={() => input.onChange(input.value + 1)}>
 				<Icon className={'fa fa-plus'}/>

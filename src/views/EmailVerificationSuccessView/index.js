@@ -1,0 +1,3 @@
+import EmailVerificationSuccessView from "views/EmailVerificationSuccessView/EmailVerificationSuccessView";
+
+export default EmailVerificationSuccessView;

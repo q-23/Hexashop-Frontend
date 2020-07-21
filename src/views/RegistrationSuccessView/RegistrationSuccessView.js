@@ -6,23 +6,7 @@ import { FormFullWidth } from "components/_Shared/Form";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
 import RegistrationSuccessPanel from "components/RegistrationSuccessPanel";
-import {get} from "helperFunctions/fetchFunctions";
-
-const EmailVerificationSuccessPage = ({ match }) => {
-	async function verifyEmail(id) {
-		try {
-			const response = await get({url: `/user/verify/${id}`});
-			const res = await response.json();
-			console.log(res)
-		} catch (e) {
-			console.log(e)
-		}
-
-	}
-
-	useEffect(() => {
-		verifyEmail(match.params.id)
-	}, [])
+const RegistrationSuccessView = ({ history }) => {
 
 	return(
 		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
@@ -31,4 +15,4 @@ const EmailVerificationSuccessPage = ({ match }) => {
 	)
 };
 
-export default withRouter(EmailVerificationSuccessPage);
+export default withRouter(RegistrationSuccessView);

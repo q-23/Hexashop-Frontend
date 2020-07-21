@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const IMAGE_STYLES = `
+export const IMAGE_STYLES = css`
 	max-width: 250px; 
 	width: 100%;
 	height: auto;
@@ -13,19 +13,19 @@ export const IMAGE_STYLES = `
 	}
 `;
 
-export const FLEX_ITEM_STYLES = `
+export const FLEX_ITEM_STYLES = css`
 	text-align: center;
 	filter: saturate(90%);
 `;
 
-export const PRODUCT_NAME_STYLES = `
+export const PRODUCT_NAME_STYLES = css`
 	font-weight: 400;
 	text-align: center;
 	cursor: pointer;
 	font-size: 1.2em;
 `;
 
-export const PRODUCT_PRICE_STYLES = `
+export const PRODUCT_PRICE_STYLES = css`
 	text-align: center;
 	font-size: .9em;
 `;

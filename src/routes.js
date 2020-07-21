@@ -1,15 +1,17 @@
-import HomePage from "./views/HomePage";
+import HomePageView from "./views/HomePageView";
 import CategoryView from "./views/CategoryView";
-import AllProducts from "./views/AllProducts";
+import AllProductsView from "./views/AllProductsView";
 import ProductView from "views/ProductView/ProductView";
 import LoginView from "views/LoginView";
 import AccountView from "views/AccountView";
-import RegistrationSuccessPage from "views/RegistrationSuccessPage";
-import EmailVerificationSuccessPage from "views/EmailVerificationSuccessPage/EmailVerificationSuccessPage";
+import RegistrationSuccessView from "views/RegistrationSuccessView";
+import EmailVerificationSuccessView from "views/EmailVerificationSuccessView/EmailVerificationSuccessView";
+import CartView from "views/CartView";
+
 export const routes = [
 	{
 		path: '/',
-		component: HomePage,
+		component: HomePageView,
 		exact: true
 	},
 	{
@@ -18,7 +20,7 @@ export const routes = [
 	},
 	{
 		path: '/all_products',
-		component: AllProducts
+		component: AllProductsView
 	},
 	{
 		path: '/product/:id',
@@ -38,10 +40,14 @@ export const routes = [
 	},
 	{
 		path: '/registration_success',
-		component: RegistrationSuccessPage
+		component: RegistrationSuccessView
 	},
 	{
 		path: '/verify_email/:id',
-		component: EmailVerificationSuccessPage
+		component: EmailVerificationSuccessView
+	},
+	{
+		path: '/cart',
+		component: CartView
 	}
 ]

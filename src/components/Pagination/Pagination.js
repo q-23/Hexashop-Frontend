@@ -55,6 +55,7 @@ const Pagination = () => {
 					paginate(pagination.currentPage, pagination.numberOfPages).map(el => {
 						return (
 							<PaginationButton
+								key={el}
 								current={el === pagination.currentPage}
 								dots={typeof el === 'string'}
 								onClick={() => dispatch({ type: paginationActions.SELECT_PAGE, payload: el })}

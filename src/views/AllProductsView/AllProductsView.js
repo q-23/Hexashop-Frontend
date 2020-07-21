@@ -6,7 +6,7 @@ import Pagination from "components/Pagination";
 import { useStateValuePagination } from "contexts/pagination/pagination";
 import paginationActions from 'contexts/pagination/actions';
 
-const AllProducts = () => {
+const AllProductsView = () => {
 	const [productsData, setProductsData] = useState([]);
 
 	const [pagination, dispatch] = useStateValuePagination();
@@ -37,4 +37,4 @@ const AllProducts = () => {
 	)
 };
 
-export default AllProducts;
+export default AllProductsView;

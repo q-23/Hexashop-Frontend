@@ -1,111 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[NAVBAR] Should render component 1`] = `
+exports[`[PAGINATION] Should render one page button when given only one page 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <nav
-        class="sc-AxgMl fSAtcU"
+      <div
+        class="sc-AxjAm bnhQgg"
       >
-        <button
-          class="sc-AxirZ edtojf"
-        >
-          <i
-            class="sc-AxiKw sMAqB fa fa-bars"
-            color="#FFF"
-          />
-        </button>
-        <button
-          class="sc-AxirZ edtojf"
-        >
-          <i
-            class="sc-AxiKw sMAqB fa fa-github"
-            color="#FFF"
-          />
-        </button>
-        <a
-          href="/login"
+        <div
+          class="sc-AxhCb cmWvdN"
         >
           <button
-            class="sc-AxirZ lojPWt"
+            class="sc-AxirZ bcQSl"
           >
             <i
-              class="sc-AxiKw sMAqB fa fa-user"
-              color="#FFF"
+              class="sc-AxhUy egJAyM fa fa-arrow-left"
             />
           </button>
-        </a>
-        <button
-          class="sc-AxirZ eqVsUa"
-        >
-          <div
-            class="sc-AxhUy dJvEOz"
+          <button
+            class="sc-AxiKw iUMAXY"
+          >
+            1
+          </button>
+          <button
+            class="sc-AxirZ bcQSl"
           >
             <i
-              class="sc-AxiKw sMAqB fa fa-shopping-basket"
-              color="#FFF"
+              class="sc-AxhUy egJAyM fa fa-arrow-right"
             />
-            <span
-              class="sc-AxhCb eGRRou"
-            >
-              0
-            </span>
-          </div>
-        </button>
-      </nav>
+          </button>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <nav
-      class="sc-AxgMl fSAtcU"
+    <div
+      class="sc-AxjAm bnhQgg"
     >
-      <button
-        class="sc-AxirZ edtojf"
-      >
-        <i
-          class="sc-AxiKw sMAqB fa fa-bars"
-          color="#FFF"
-        />
-      </button>
-      <button
-        class="sc-AxirZ edtojf"
-      >
-        <i
-          class="sc-AxiKw sMAqB fa fa-github"
-          color="#FFF"
-        />
-      </button>
-      <a
-        href="/login"
+      <div
+        class="sc-AxhCb cmWvdN"
       >
         <button
-          class="sc-AxirZ lojPWt"
+          class="sc-AxirZ bcQSl"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-user"
-            color="#FFF"
+            class="sc-AxhUy egJAyM fa fa-arrow-left"
           />
         </button>
-      </a>
-      <button
-        class="sc-AxirZ eqVsUa"
-      >
-        <div
-          class="sc-AxhUy dJvEOz"
+        <button
+          class="sc-AxiKw iUMAXY"
+        >
+          1
+        </button>
+        <button
+          class="sc-AxirZ bcQSl"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-shopping-basket"
-            color="#FFF"
+            class="sc-AxhUy egJAyM fa fa-arrow-right"
           />
-          <span
-            class="sc-AxhCb eGRRou"
-          >
-            0
-          </span>
-        </div>
-      </button>
-    </nav>
+        </button>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

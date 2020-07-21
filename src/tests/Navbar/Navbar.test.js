@@ -3,7 +3,12 @@ import React, { useContext } from 'react';
 import { render, fireEvent } from '@testing-library/react'
 import {MenuContext} from "contexts/menu/menu";
 import '@testing-library/jest-dom/extend-expect'
-import { RenderWithRouter, RenderWithMenuContext } from "tests/utils";
+import {
+	RenderWithRouter,
+	RenderWithMenuContext,
+	RenderWithAuthorizationContext,
+	RenderWithShopcartContext
+} from "tests/utils";
 import compose from 'helperFunctions/compose'
 
 import Navbar from "components/Navbar/Navbar";
@@ -22,14 +27,22 @@ const TestComponent = () => {
 describe('[NAVBAR]', () => {
 	test('Should render component', () => {
 		const wrapper = render(
-			compose(RenderWithRouter(), RenderWithMenuContext)(<Navbar/>)
+			compose(
+				RenderWithRouter(),
+				RenderWithMenuContext,
+				RenderWithAuthorizationContext,
+				RenderWithShopcartContext)(<Navbar/>)
 		);
 		expect(wrapper).toMatchSnapshot();
 	});
 
 	test('Should open the menu after clicking proper button', () => {
 		const wrapper = render(
-			compose(RenderWithRouter(), RenderWithMenuContext)(<TestComponent/>)
+			compose(
+				RenderWithRouter(),
+				RenderWithMenuContext,
+				RenderWithAuthorizationContext,
+				RenderWithShopcartContext)(<TestComponent/>)
 		);
 		fireEvent.click(wrapper.container.querySelector('.fa-bars'))
 		expect(wrapper.getByText(/true/)).toBeInTheDocument();
@@ -37,7 +50,11 @@ describe('[NAVBAR]', () => {
 
 	test('Should close the menu after clicking button two times', () => {
 		const wrapper = render(
-			compose(RenderWithRouter(), RenderWithMenuContext)(<TestComponent/>)
+			compose(
+				RenderWithRouter(),
+				RenderWithMenuContext,
+				RenderWithAuthorizationContext,
+				RenderWithShopcartContext)(<TestComponent/>)
 		);
 		fireEvent.click(wrapper.container.querySelector('.fa-bars'))
 		expect(wrapper.getByText(/true/)).toBeInTheDocument();

@@ -29,9 +29,11 @@ const Navbar = () => {
 					<Icon className="fa fa-user" size={'1.7em'} color={'#FFF'}/>
 				</Button>
 			</Link>
-			<Button navbar_button float={'right'}  nav_border_left>
-				<CartIcon />
-			</Button>
+			<Link to={'/cart'}>
+				<Button navbar_button float={'right'}  nav_border_left>
+					<CartIcon />
+				</Button>
+			</Link>
 		</NavbarStyle>
 	)
 };

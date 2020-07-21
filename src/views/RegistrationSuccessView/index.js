@@ -1,0 +1,3 @@
+import RegistrationSuccessView from "views/RegistrationSuccessView/RegistrationSuccessView";
+
+export default RegistrationSuccessView;
