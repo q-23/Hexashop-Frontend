@@ -17,10 +17,13 @@ const returnFlexWidth = props => {
 };
 
 const FlexItem = styled.div`
+	display: flex;
+	flex-direction: column;
 	${({ m_auto }) => m_auto && 'margin: auto;'}
 	${({styles}) => styles}
 	${({padding}) => !!padding && `padding: ${padding}`};
-	${({align}) => !!align && `text-align: ${align}`};
+	${({align}) => !!align && `align-items: ${align}`};
+	${({justify}) => justify && `justify-content: ${justify}`};
 	${props => 
 		Object.keys(props).some(e => breakpointsArr.includes(e)) ? 
 		`max-width: ${returnFlexWidth(props)}%;

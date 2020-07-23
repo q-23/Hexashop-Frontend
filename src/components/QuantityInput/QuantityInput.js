@@ -21,7 +21,7 @@ const QuantityInput = input => {
 					max={99}
 					{...input}
 					onChange={e => {
-						if (!isNaN(Number(e.target.value))) {
+						if (!isNaN(Number(e.target.value)) && e.target.value > 0) {
 							input.onChange(Number(e.target.value))
 						}
 					}}

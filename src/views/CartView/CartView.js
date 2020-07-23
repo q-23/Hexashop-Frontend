@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from "react";
 
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
 import CartItem from "components/CartItem/CartItem";
+import BoxName from "components/_Shared/BoxName";
 
+import { FormFullWidth } from "components/_Shared/Form";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
-import { FormFullWidth } from "components/_Shared/Form";
 
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
-import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
-import BoxName from "components/_Shared/BoxName";
+import Pagination from "components/Pagination";
 
 const CartView = () => {
 	const [productData, setProductData] = useState([]);
@@ -49,13 +50,25 @@ const CartView = () => {
 					<BoxHeaderContainer>
 						<BoxName>Your cart items</BoxName>
 					</BoxHeaderContainer>
-					<FlexContainer justify={'flex-start'} wrap={'wrap'} padding={'1em'}>
+					<FlexContainer
+						justify={'flex-start'}
+						width={'unset'}
+						wrap={'wrap'}
+					>
 						{productData.products &&
-							productData.products.map(({image_thumbnail, _id, price}) =>
-								<CartItem key={_id} price={price} image_thumbnail={image_thumbnail.link} id={_id}/>
+							productData.products.map(({image_thumbnail, _id, price, name}, idx) =>
+								<CartItem
+									lastItem={idx === productData.products.length - 1}
+									image_thumbnail={image_thumbnail.link}
+									price={price}
+									name={name}
+									key={_id}
+									id={_id}
+								/>
 							)
 						}
 					</FlexContainer>
+					<Pagination/>
 				</FormFullWidth>
 			)}
 		/>

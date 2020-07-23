@@ -229,3 +229,5 @@ P
  src/components/CartItem/index.js,f/a/fa6c17b4c682d590de096a7c46a669fe90c522a0
 S
 #src/components/CartItem/CartItem.js,3/3/33b49843ab132aff5e38b888d4c107414049508a
+Y
+)src/components/CartItem/CartItem.style.js,b/f/bff4fc9c786e63f8cdb9f1ddc86f3c6eabb3c7d9

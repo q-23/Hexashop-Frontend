@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FlexContainer = styled.div`
-	width: 100%;
+	width: ${({width}) => width ? width : '100%'};
 	display: flex;
 	${({ justify }) => justify && `justify-content: ${justify}`};
 	${({ wrap }) => wrap && `flex-wrap: ${wrap}`};

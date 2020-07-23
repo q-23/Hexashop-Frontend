@@ -32,7 +32,7 @@ const AllProductsView = () => {
 	return(
 		<>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
-			<Pagination currentPage={1}/>
+			<Pagination/>
 		</>
 	)
 };

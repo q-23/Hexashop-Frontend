@@ -3,16 +3,16 @@ import React, {useEffect, useState} from "react";
 import ProductPresentation from "components/ProductPresentation";
 import FlexContainer from "components/_Shared/FlexContainer";
 
+import { FormFullWidth } from "components/_Shared/Form";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
-import { FormFullWidth } from "components/_Shared/Form";
 
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
 
 const ProductView = ({ match }) => {
 	const [productData, setProductData] = useState(undefined);
-	const [shopcart, dispatch] = useShopcart()
+	const [,dispatch] = useShopcart()
 
 	async function fetchData() {
 		try {
@@ -40,7 +40,6 @@ const ProductView = ({ match }) => {
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
-					{console.log(shopcart)}
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						{ productData && <ProductPresentation form={form} values={values} product={productData}/> }
 					</FlexContainer>
