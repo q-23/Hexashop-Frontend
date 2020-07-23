@@ -48,25 +48,26 @@ const Pagination = () => {
 	return(
 		<BoxHeaderContainer variant_down>
 			<FlexContainer justify={'center'} align={'center'} styles={'height: 100%'}>
-				<PaginationArrowButton  onClick={() => dispatch({ type: paginationActions.PREVIOUS_PAGE })}>
-					<Icon className={'fa fa-arrow-left'}/>
-				</PaginationArrowButton>
-				{
-					paginate(pagination.currentPage, pagination.numberOfPages).map(el => {
-						return (
-							<PaginationButton
-								key={el}
-								current={el === pagination.currentPage}
-								dots={typeof el === 'string'}
-								onClick={() => dispatch({ type: paginationActions.SELECT_PAGE, payload: el })}
-							>
-								{el}
-							</PaginationButton>)
-					})
-				}
-				<PaginationArrowButton onClick={() => dispatch({ type: paginationActions.NEXT_PAGE })}>
-					<Icon className={'fa fa-arrow-right'}/>
-				</PaginationArrowButton>
+				{pagination.noOfPages > 1 && (
+					<>
+						<PaginationArrowButton  onClick={() => dispatch({ type: paginationActions.PREVIOUS_PAGE })}>
+							<Icon className={'fa fa-arrow-left'}/>
+						</PaginationArrowButton>
+							{paginate(pagination.currentPage, pagination.numberOfPages).map(el => (
+								<PaginationButton
+									key={el}
+									current={el === pagination.currentPage}
+									dots={typeof el === 'string'}
+									onClick={() => dispatch({ type: paginationActions.SELECT_PAGE, payload: el })}
+								>
+									{el}
+								</PaginationButton>
+							))}
+						<PaginationArrowButton onClick={() => dispatch({ type: paginationActions.NEXT_PAGE })}>
+							<Icon className={'fa fa-arrow-right'}/>
+						</PaginationArrowButton>
+					</>
+				)}
 			</FlexContainer>
 		</BoxHeaderContainer>
 	)

@@ -4,6 +4,8 @@ import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
 import CartItem from "components/CartItem/CartItem";
 import BoxName from "components/_Shared/BoxName";
+import FlexItem from "components/_Shared/FlexItem";
+import Typography from "components/_Shared/Typography";
 
 import { FormFullWidth } from "components/_Shared/Form";
 import { withRouter } from 'react-router-dom';
@@ -12,9 +14,10 @@ import { Form } from 'react-final-form';
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
 import Pagination from "components/Pagination";
+import Button from "components/_Shared/Button";
 
 const CartView = () => {
-	const [productData, setProductData] = useState([]);
+	const [productData, setProductData] = useState({});
 	const [shopcart, dispatch] = useShopcart()
 
 	async function fetchData() {
@@ -33,6 +36,14 @@ const CartView = () => {
 		} catch (e) {
 			console.log(e)
 		}
+	};
+
+	const calculateTotalPrice = ({ productsCountObj = {}, productsPricesArr = [] }) => {
+		const totalPrice = productsPricesArr.reduce((total, val) => {
+			const quantity = productsCountObj[val._id];
+			return total += quantity * val.price;
+		}, 0)
+		return totalPrice;
 	}
 
 	useEffect(() => {
@@ -55,8 +66,12 @@ const CartView = () => {
 						width={'unset'}
 						wrap={'wrap'}
 					>
+						{console.log(productData.products && productData.products
+							.filter(el => Object.keys(shopcart.products).includes(el._id)))}
 						{productData.products &&
-							productData.products.map(({image_thumbnail, _id, price, name}, idx) =>
+							productData.products
+								.filter(el => Object.keys(shopcart.products).includes(el._id))
+								.map(({image_thumbnail, _id, price, name}, idx) =>
 								<CartItem
 									lastItem={idx === productData.products.length - 1}
 									image_thumbnail={image_thumbnail.link}
@@ -68,6 +83,10 @@ const CartView = () => {
 							)
 						}
 					</FlexContainer>
+					<FlexItem align={'center'} padding={'1em 0'}>
+						<Typography>Total price: {calculateTotalPrice({ productsCountObj: shopcart.products, productsPricesArr: productData.products })}$</Typography>
+						<Button with_gradient>Proceed to checkout</Button>
+					</FlexItem>
 					<Pagination/>
 				</FormFullWidth>
 			)}

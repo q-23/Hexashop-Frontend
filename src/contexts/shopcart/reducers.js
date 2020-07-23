@@ -16,7 +16,6 @@ const shopcartReducers = (state, action) => {
 		}
 		case shopcartActions.REMOVE_ITEM: {
 			delete state.products[payload];
-			console.log('ttt', state)
 			return state;
 		}
 		case shopcartActions.CALCULATE_TOTAL_QUANTITY: {
