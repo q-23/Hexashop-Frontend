@@ -6,6 +6,7 @@ const Image = styled.div`
 	background-image: ${({ src }) => `url("${process.env.REACT_APP_API_URL}/image/${src}")`};
 	background-position: center;
 	background-size: cover;
+	cursor: ${({pointer}) => pointer && 'pointer'};
 	${({miniature}) => miniature && `
 		cursor: pointer;
 		filter: saturation(.7);

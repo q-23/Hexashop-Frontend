@@ -23,7 +23,6 @@ const ItemCount = styled.span`
 
 const IconContainer = styled.div`
 	justify-content: center;
-	align-items: center;
 	position: relative;
 	cursor: pointer;
 	display: flex;

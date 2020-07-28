@@ -18,7 +18,7 @@ import Button from "components/_Shared/Button";
 
 const CartView = () => {
 	const [productData, setProductData] = useState({});
-	const [shopcart, dispatch] = useShopcart()
+	const [shopcart, dispatch] = useShopcart();
 
 	async function fetchData() {
 		try {

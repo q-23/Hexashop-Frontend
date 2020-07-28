@@ -14,6 +14,8 @@ import Button from "components/_Shared/Button";
 import { Field } from 'react-final-form';
 import { Link } from "react-router-dom";
 
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 
@@ -21,7 +23,8 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 		!!product && !!product.images && product.images.findIndex(img => img.main);
 
 	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(findMainImageIndex(product));
-
+	const [lightboxPhotoIndex, setLightboxPhotoIndex] = useState(currentPhotoIndex)
+	const [lightboxOpen, setLightboxOpen] = useState(false);
 
 	return (
 		<>
@@ -30,7 +33,14 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 			</BoxHeaderContainer>
 			<FlexContainer wrap={'wrap'} padding={'1em'}>
 				<FlexItem xs={12} sm={4}>
-					<Image src={product.images[currentPhotoIndex]._id}/>
+					<Image
+						src={product.images[currentPhotoIndex]._id}
+						pointer
+					 	onClick={() => {
+							setLightboxOpen(true);
+							setLightboxPhotoIndex(currentPhotoIndex);
+						}}
+					/>
 					<FlexContainer wrap={'wrap'}>
 						{product.images.map((image, index) => (
 							<FlexItem xs={3} lg={4} xl={3} key={image._id}>
@@ -69,6 +79,16 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 					</FlexContainer>
 				</FlexItem>
 			</FlexContainer>
+			{lightboxOpen &&
+				<Lightbox
+					mainSrc={product.images[lightboxPhotoIndex].link}
+					onCloseRequest={() => setLightboxOpen(false)}
+					nextSrc={product.images[(lightboxPhotoIndex + 1) % product.images.length]}
+					prevSrc={product.images[(lightboxPhotoIndex + product.images.length - 1) % product.images.length]}
+					onMoveNextRequest={() =>  setLightboxPhotoIndex((lightboxPhotoIndex + 1) % product.images.length)}
+					onMovePrevRequest={() => setLightboxPhotoIndex((lightboxPhotoIndex + product.images.length - 1) % product.images.length)}
+				/>
+			}
 		</>
 	)
 };
