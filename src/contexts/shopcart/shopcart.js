@@ -24,7 +24,6 @@ export const StateProviderShopcart = ({ children }) => {
 
 	useEffect(() => {
 		dispatch({ type: shopcartActions.CALCULATE_TOTAL_QUANTITY });
-		console.log('caklccck')
 	}, [shopcart.products]);
 
 	return (

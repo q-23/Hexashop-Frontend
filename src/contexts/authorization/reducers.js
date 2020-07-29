@@ -1,15 +1,17 @@
+import authorizationActions from "contexts/authorization/actions";
+
 const reducers = localStorageName => (state, action) => {
 	switch (action.type) {
-		case 'init': {
+		case authorizationActions.INIT: {
 			return state;
 		}
-		case 'login': {
+		case authorizationActions.LOGIN: {
 			const token = action.payload;
 			localStorage.setItem(localStorageName, JSON.stringify(token));
 
 			return token;
 		}
-		case 'logout': {
+		case authorizationActions.LOGOUT: {
 			localStorage.removeItem(localStorageName);
 			return '';
 		}

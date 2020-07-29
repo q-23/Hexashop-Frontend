@@ -34,7 +34,7 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 			<FlexContainer wrap={'wrap'} padding={'1em'}>
 				<FlexItem xs={12} sm={4}>
 					<Image
-						src={product.images[currentPhotoIndex]._id}
+						src={product.images[currentPhotoIndex].link}
 						pointer
 					 	onClick={() => {
 							setLightboxOpen(true);
@@ -44,7 +44,7 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 					<FlexContainer wrap={'wrap'}>
 						{product.images.map((image, index) => (
 							<FlexItem xs={3} lg={4} xl={3} key={image._id}>
-								<Image miniature src={image._id} onClick={() => setCurrentPhotoIndex(index)}/>
+								<Image miniature src={image.link} onClick={() => setCurrentPhotoIndex(index)}/>
 							</FlexItem>
 						))}
 					</FlexContainer>

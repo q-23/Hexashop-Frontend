@@ -18,6 +18,7 @@ const LoginView = ({ history }) => {
 			const res = await post({ url: '/user/login',body: JSON.stringify(data)});
 			const result = await res.json();
 			const { token } = result;
+			console.log(token)
 			dispatch({ type: authorizationActions.LOGIN, payload: token });
 			history.push('/')
 		} catch (e) {

@@ -3,7 +3,7 @@ import Typography from "components/_Shared/Typography";
 
 const Image = styled.div`
 	width: 100%;
-	background-image: ${({ src }) => `url("${process.env.REACT_APP_API_URL}/image/${src}")`};
+	background-image: ${({ src }) => `url("${src}")`};
 	background-position: center;
 	background-size: cover;
 	cursor: ${({pointer}) => pointer && 'pointer'};

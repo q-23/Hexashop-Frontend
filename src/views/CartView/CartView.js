@@ -15,10 +15,16 @@ import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
 import Pagination from "components/Pagination";
 import Button from "components/_Shared/Button";
+import StripeCheckout from "react-stripe-checkout";
+import {post} from "helperFunctions/fetchFunctions";
+import {useStateValueAuthorization} from "contexts/authorization/authorization";
 
 const CartView = () => {
 	const [productData, setProductData] = useState({});
 	const [shopcart, dispatch] = useShopcart();
+	const [auth] = useStateValueAuthorization();
+
+	console.log(auth)
 
 	async function fetchData() {
 		try {
@@ -45,6 +51,21 @@ const CartView = () => {
 		}, 0)
 		return totalPrice;
 	}
+
+	const totalPrice = calculateTotalPrice({ productsCountObj: shopcart.products, productsPricesArr: productData.products });
+
+
+	const priceForStripe = totalPrice * 100;
+	const publishableKey = 'pk_test_KaeF3caMETDpOj9zf52Po3MA00NzmDDYoC';
+
+	const onToken = async (token) => {
+		const res = await post({ url: '/purchase', auth, body: JSON.stringify({token: token, products: shopcart.products})});
+		const resp = await res.json();
+		console.log(resp)
+
+		alert('Payment successful')
+	}
+
 
 	useEffect(() => {
 		fetchData();
@@ -84,8 +105,22 @@ const CartView = () => {
 						}
 					</FlexContainer>
 					<FlexItem align={'center'} padding={'1em 0'}>
-						<Typography>Total price: {calculateTotalPrice({ productsCountObj: shopcart.products, productsPricesArr: productData.products })}$</Typography>
-						<Button with_gradient>Proceed to checkout</Button>
+						<StripeCheckout
+							description={`your total is ${totalPrice}$`}
+							image={'https://svgshare.com/i/CUz.svg'}
+							stripeKey={publishableKey}
+							style={{display: 'none'}}
+							amount={priceForStripe}
+							name={'Hexashop Ltd.'}
+							panelLabel={'Pay Now'}
+							label={"Pay Now"}
+							token={onToken}
+							shippingAddress
+							billingAddress
+						>
+							<Button with_gradient type={'button'}>Proceed to checkout</Button>
+						</StripeCheckout>
+						<Typography>Total price: {totalPrice}$</Typography>
 					</FlexItem>
 					<Pagination/>
 				</FormFullWidth>

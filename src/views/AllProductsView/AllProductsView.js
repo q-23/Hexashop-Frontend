@@ -11,20 +11,19 @@ const AllProductsView = () => {
 
 	const [pagination, dispatch] = useStateValuePagination();
 
-	console.log(pagination)
+	async function fetchData() {
+		const res = await fetch(`${process.env.REACT_APP_API_URL}/product?sortBy=price:desc`, {
+			headers : {
+				'Content-Type': 'application/json',
+				'Accept': 'application/json'
+			}
+		});
+		const result = await res.json()
+		setProductsData(result.products);
+		dispatch({ type: paginationActions.SET_ITEMS_COUNT, payload: 135 });
+	}
 
 	useEffect(() => {
-		async function fetchData() {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/product?sortBy=price:desc`, {
-				headers : {
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				}
-			});
-			const result = await res.json()
-			setProductsData(result.products);
-			dispatch({ type: paginationActions.SET_ITEMS_COUNT, payload: 135 });
-		}
 		fetchData();
 	}, []);
 
