@@ -12,6 +12,7 @@ const BROWN = '#B9732F';
 const BLUE = '#3750CF';
 
 export {
+	DARK_BLUE_ACCENT,
 	LIGHT_PURPLE,
 	VALID_GREEN,
 	LIGHT_DARK,

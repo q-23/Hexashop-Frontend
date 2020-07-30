@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Icon from "components/_Shared/Icon"
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { LIGHT_PURPLE } from "assets/css_variables/colors";
 

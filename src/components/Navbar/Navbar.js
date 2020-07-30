@@ -21,9 +21,11 @@ const Navbar = () => {
 			<Button navbar_button nav_border_right onClick={() => setMenuOpen(!menuOpen)}>
 				<Icon className={`fa fa-${menuOpen ? 'times' : 'bars'}`} size={'1.7em'} color={'#FFF'}/>
 			</Button>
-			<Button navbar_button  nav_border_right>
-				<Icon className="fa fa-github" size={'1.7em'} color={'#FFF'}/>
-			</Button>
+			<a href={'https://github.com/q-23/Hexashop-Frontend'} target={'_blank'}>
+				<Button navbar_button  nav_border_right>
+					<Icon className="fa fa-github" size={'1.7em'} color={'#FFF'}/>
+				</Button>
+			</a>
 			<Link to={!!auth && auth.length ? '/account' : '/login'}>
 				<Button navbar_button float={'right'} nav_border_right>
 					<Icon className="fa fa-user" size={'1.7em'} color={'#FFF'}/>

@@ -10,24 +10,23 @@ import Typography from "components/_Shared/Typography";
 import { FormFullWidth } from "components/_Shared/Form";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
+import { CartEmptyImage } from "views/CartView/CartView.style";
+import CART_EMPTY_IMAGE from 'assets/images/shopcart_empty.jpg';
 
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
 import Pagination from "components/Pagination";
-import Button from "components/_Shared/Button";
-import StripeCheckout from "react-stripe-checkout";
 import {post} from "helperFunctions/fetchFunctions";
 import {useStateValueAuthorization} from "contexts/authorization/authorization";
 
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import CartProductsList from "components/CartProductsList";
 
-const CartView = () => {
+import { toast } from 'react-toastify';
+
+const CartView = ({ history }) => {
 	const [productData, setProductData] = useState({});
 	const [shopcart, dispatch] = useShopcart();
 	const [auth] = useStateValueAuthorization();
-
-	console.log(auth)
 
 	async function fetchData() {
 		try {
@@ -40,7 +39,8 @@ const CartView = () => {
 					'Accept': 'application/json'
 				}
 			});
-			const result = await res.json()
+			const result = await res.json();
+			console.log(result)
 			setProductData(result)
 		} catch (e) {
 			console.log(e)
@@ -57,9 +57,7 @@ const CartView = () => {
 
 	const totalPrice = calculateTotalPrice({ productsCountObj: shopcart.products, productsPricesArr: productData.products });
 
-
 	const priceForStripe = totalPrice * 100;
-	const publishableKey = 'pk_test_KaeF3caMETDpOj9zf52Po3MA00NzmDDYoC';
 
 	const onToken = async (token) => {
 		const res = await post({ url: '/purchase', auth, body: JSON.stringify({token: token, products: shopcart.products})});
@@ -74,6 +72,7 @@ const CartView = () => {
 				draggable: true,
 				progress: undefined,
 			});
+			history.push('/all_products');
 			dispatch({ type: shopcartActions.CLEAR_CART });
 		}
 		if(res.status - 400 < 100) {
@@ -89,10 +88,9 @@ const CartView = () => {
 		}
 	}
 
-
 	useEffect(() => {
 		fetchData();
-	}, [shopcart.products])
+	}, [Object.keys(shopcart.products).join(',')])
 
 	return(
 		<Form
@@ -103,51 +101,24 @@ const CartView = () => {
 					onSubmit={handleSubmit}
 				>
 					<BoxHeaderContainer>
-						<BoxName>Your cart items</BoxName>
+						<BoxName>{shopcart.productsCount === 0 ? 'Your cart is empty...' : 'Your cart items'}</BoxName>
 					</BoxHeaderContainer>
-					<FlexContainer
-						justify={'flex-start'}
-						width={'unset'}
-						wrap={'wrap'}
-					>
-						{console.log(productData.products && productData.products
-							.filter(el => Object.keys(shopcart.products).includes(el._id)))}
-						{productData.products &&
-							productData.products
-								.filter(el => Object.keys(shopcart.products).includes(el._id))
-								.map(({image_thumbnail, _id, price, name}, idx) =>
-								<CartItem
-									lastItem={idx === productData.products.length - 1}
-									image_thumbnail={image_thumbnail.link}
-									price={price}
-									name={name}
-									key={_id}
-									id={_id}
-								/>
-							)
-						}
-					</FlexContainer>
-					<FlexItem align={'center'} padding={'1em 0'}>
-						<StripeCheckout
-							description={`your total is ${totalPrice}$`}
-							image={'https://svgshare.com/i/CUz.svg'}
-							stripeKey={publishableKey}
-							style={{display: 'none'}}
-							amount={priceForStripe}
-							name={'Hexashop Ltd.'}
-							panelLabel={'Pay Now'}
-							label={"Pay Now"}
-							token={onToken}
-							shippingAddress
-							billingAddress
-						>
-							<Button with_gradient type={'button'}>Pay now {totalPrice}$</Button>
-						</StripeCheckout>
-						<br/>
-						<Typography color={'red'}>Use the following card info: 4242 4242 4242 4242 EXP: 11/22 CVV: 123</Typography>
-					</FlexItem>
+						{shopcart.productsCount === 0 ? (
+							<FlexContainer justify={'center'}>
+								<FlexItem>
+									<CartEmptyImage src={CART_EMPTY_IMAGE}/>
+								</FlexItem>
+							</FlexContainer>
+						) : (
+							<CartProductsList
+								priceForStripe={priceForStripe}
+								productData={productData}
+								totalPrice={totalPrice}
+								shopcart={shopcart}
+								onToken={onToken}
+							/>
+						)}
 					<Pagination/>
-					<ToastContainer />
 				</FormFullWidth>
 			)}
 		/>

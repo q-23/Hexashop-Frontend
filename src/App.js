@@ -7,10 +7,10 @@ import WithLoader from "components/_HOC/WithLoader";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
-import RouteWithAuthorization from "components/_HOC/RouteWithAuthorization";
-import Pagination from "components/Pagination";
 
 import { routes } from "routes";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const ContainerWithLoader = WithLoader(FlexContainer);
@@ -30,6 +30,7 @@ function App() {
             }
           </Switch>
         </ContainerWithLoader>
+        <ToastContainer />
       </Container>
     </>
   );

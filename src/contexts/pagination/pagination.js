@@ -16,6 +16,7 @@ export const StateProviderPagination = ({ children }) => {
 
 	useEffect(() => {
 		dispatch({ type: paginationActions.SET_SKIP_PAGES })
+	//	eslint-disable-next-line
 	}, [pagination.currentPage]);
 
 	return (

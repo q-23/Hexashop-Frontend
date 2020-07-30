@@ -21,7 +21,7 @@ export const StateProviderMenu = ({ children, location }) => {
 
 	useEffect(() => {
 		fetchCategories();
-		return () => {}
+	//	eslint-disable-next-line
 	}, []);
 
 	useEffect(() => {
