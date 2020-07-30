@@ -19,6 +19,9 @@ import StripeCheckout from "react-stripe-checkout";
 import {post} from "helperFunctions/fetchFunctions";
 import {useStateValueAuthorization} from "contexts/authorization/authorization";
 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const CartView = () => {
 	const [productData, setProductData] = useState({});
 	const [shopcart, dispatch] = useShopcart();
@@ -60,10 +63,30 @@ const CartView = () => {
 
 	const onToken = async (token) => {
 		const res = await post({ url: '/purchase', auth, body: JSON.stringify({token: token, products: shopcart.products})});
-		const resp = await res.json();
-		console.log(resp)
-
-		alert('Payment successful')
+		const responseMessage = await res.json();
+		if (res.status === 200) {
+			toast.success(responseMessage.message, {
+				position: "bottom-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			});
+			dispatch({ type: shopcartActions.CLEAR_CART });
+		}
+		if(res.status - 400 < 100) {
+			toast.error(responseMessage.error, {
+				position: "bottom-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			});
+		}
 	}
 
 
@@ -118,11 +141,13 @@ const CartView = () => {
 							shippingAddress
 							billingAddress
 						>
-							<Button with_gradient type={'button'}>Proceed to checkout</Button>
+							<Button with_gradient type={'button'}>Pay now {totalPrice}$</Button>
 						</StripeCheckout>
-						<Typography>Total price: {totalPrice}$</Typography>
+						<br/>
+						<Typography color={'red'}>Use the following card info: 4242 4242 4242 4242 EXP: 11/22 CVV: 123</Typography>
 					</FlexItem>
 					<Pagination/>
+					<ToastContainer />
 				</FormFullWidth>
 			)}
 		/>

@@ -18,6 +18,9 @@ const shopcartReducers = (state, action) => {
 			delete state.products[payload];
 			return state;
 		}
+		case shopcartActions.CLEAR_CART: {
+			return { products: { }, productsCount: 0 }
+		}
 		case shopcartActions.CALCULATE_TOTAL_QUANTITY: {
 			const { products } = state;
 			const productsCount = Object.values(products).reduce((acc, val) => {
