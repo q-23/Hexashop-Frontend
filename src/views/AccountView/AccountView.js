@@ -5,7 +5,7 @@ import AccountPanel from "components/AccountPanel";
 
 import { useStateValueAuthorization } from 'contexts/authorization/authorization'
 import { FormFullWidth } from "components/_Shared/Form";
-import { withRouter } from 'react-router-dom';
+import {useHistory, withRouter} from 'react-router-dom';
 import { Form } from 'react-final-form';
 import { get, patch, post } from "helperFunctions/fetchFunctions";
 import { diff } from 'deep-object-diff';
@@ -13,6 +13,7 @@ import {toast} from "react-toastify";
 const AccountView = ({ match }) => {
 	const [accountData, setAccountData] = useState({});
 	const [auth] = useStateValueAuthorization();
+	const history = useHistory();
 
 	const isViewTypeRegister = match.path === '/register';
 
@@ -33,6 +34,7 @@ const AccountView = ({ match }) => {
 
 			const res = await patch({url: '/user', auth, body: JSON.stringify(changedFields)});
 			const resJSON = await res.json();
+			console.log(resJSON)
 			if(res.status === 200) {
 				return toast.success(resJSON.message, {
 					position: "bottom-right",
@@ -64,8 +66,33 @@ const AccountView = ({ match }) => {
 
 	async function registerAccount(accData) {
 		try {
-			const acc = await post({url: '/user/new', auth, body: JSON.stringify(accData)});
-			console.log(acc)
+			const res = await post({url: '/user/new', auth, body: JSON.stringify(accData)});
+			const result = await res.json();
+			console.log(result)
+
+			if(res.status === 400) {
+				return toast.error(result.error.replace('Error: ', ''), {
+					position: "bottom-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+			}
+			if(res.status === 201) {
+				history.push('/login');
+				return toast.success(result.message, {
+					position: "bottom-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+			}
 		} catch (e) {
 			console.log(e);
 		}
@@ -81,9 +108,11 @@ const AccountView = ({ match }) => {
 		<Form
 			onSubmit={accData => {
 				if(isViewTypeRegister) {
+					console.log('register')
 					registerAccount(accData)
+				} else {
+					editAccountData(accData)
 				}
-				editAccountData(accData)
 			}}
 			initialValues={accountData}
 			render={({ handleSubmit}) => (

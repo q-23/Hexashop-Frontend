@@ -2,12 +2,10 @@ import React from "react";
 
 import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
-import BasicLink from "components/_Shared/BasicLink";
 import FlexItem from "components/_Shared/FlexItem";
 import BoxName from "components/_Shared/BoxName";
 import Button from "components/_Shared/Button";
 import Input from "components/_Shared/Input";
-import Icon from "components/_Shared/Icon";
 import {RegisterBox} from "components/LoginPanel/LoginPanel.style";
 import validations from "components/Validation";
 import { Link } from "react-router-dom";

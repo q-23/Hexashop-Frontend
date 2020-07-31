@@ -4,6 +4,7 @@ import * as palette from 'assets/css_variables/colors';
 export const RegisterBox = styled.div`
 	width: 100%;
 	margin-top: 1.25rem;
+	text-align: center;
 	color: ${palette.LIGHT_DARK}
 `
 

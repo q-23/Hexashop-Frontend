@@ -2,23 +2,25 @@ import React from "react";
 
 import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
+import BasicLink from "components/_Shared/BasicLink";
 import FlexItem from "components/_Shared/FlexItem";
 import BoxName from "components/_Shared/BoxName";
+import validations from "components/Validation";
 import Button from "components/_Shared/Button";
 import Input from "components/_Shared/Input";
-import Icon from "components/_Shared/Icon";
-import validations from "components/Validation";
-import BasicLink from "components/_Shared/BasicLink";
 
-import {InputWrapper} from "views/AccountView/AccountView.style";
-import {AccountImage} from "components/AccountPanel/AccountPanel.style";
+import {
+	AccountImage,
+	InputWrapper
+} from "components/AccountPanel/AccountPanel.style";
 
 import ACCOUNT_IMAGE from 'assets/images/account_image.jpg';
 
-import { Field } from 'react-final-form';
-import {Spacer} from "components/AccountPanel/AccountPanel.style";
 import {useStateValueAuthorization} from "contexts/authorization/authorization";
+import {Spacer} from "components/AccountPanel/AccountPanel.style";
 import { withRouter } from 'react-router-dom';
+import { Field } from 'react-final-form';
+
 import authorizationActions from "contexts/authorization/actions";
 
 const AccountPanel = ({ isViewTypeRegister, history }) => {
@@ -29,11 +31,10 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 		history.push('/')
 	}
 
-
 	return (
 		<>
 			<BoxHeaderContainer>
-				<BoxName>{isViewTypeRegister ? 'Register an account' : 'Edit account'} <Icon className={'fa fa-sign-in'}/></BoxName>
+				<BoxName>{isViewTypeRegister ? 'Register an account' : 'Edit account'}</BoxName>
 			</BoxHeaderContainer>
 			<FlexContainer wrap={'wrap'} padding={'1em'} justify={'flex-start'} styles={'margin: 2em 0; position: relative'}>
 				<AccountImage src={ACCOUNT_IMAGE}/>
@@ -192,7 +193,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 					<InputWrapper>
 						<Button with_gradient type={'submit'}>{isViewTypeRegister ? 'Register' : 'Save account'}</Button>
 						<br/>
-						{!isViewTypeRegister && <BasicLink onClick={logout}>Log out</BasicLink>}
+						{!isViewTypeRegister && <BasicLink align={'center'} onClick={logout}>Log out</BasicLink>}
 					</InputWrapper>
 				</FlexItem>
 			</FlexContainer>

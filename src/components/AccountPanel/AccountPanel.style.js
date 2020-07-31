@@ -6,13 +6,19 @@ export const Spacer = styled.div`
 	height: 3rem;
 `;
 
+export const InputWrapper = styled.div`
+	margin: 1rem;
+	z-index: 2;
+`
+
 export const AccountImage = styled.img`
-	top: 50%;
-	right: 0;
+	bottom: 3rem;
+	right: 3rem;
 	animation: accountImage 3s infinite;
 	position: absolute;
 	transform: translateY(50%);
 	max-width: 80%;
+	opacity: .3;
 	@keyframes accountImage {
 		0% { transform: scale(1) rotate(-2deg) }
 		50% { transform: scale(1.1) rotate(2deg) }

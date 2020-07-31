@@ -33,12 +33,17 @@ const AllProductsView = () => {
 	}
 
 	useEffect(() => {
+		if (!location.params.page || location.params.page === 'NaN') {
+			history.push('/all_products/1')
+		}
 		dispatch({ type: paginationActions.SELECT_PAGE, payload: Number(location.params.page) });
 	}, [])
 
 	useEffect(() => {
 		fetchData();
-		history.push(`/all_products/${pagination.currentPage}`);
+		if (!isNaN(pagination.currentPage)) {
+			history.push(`/all_products/${pagination.currentPage}`);
+		}
 		return () => abortController.abort();
 	}, [pagination.skip]);
 

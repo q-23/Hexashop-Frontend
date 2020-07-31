@@ -9,6 +9,7 @@ import { FormFullWidth } from "components/_Shared/Form";
 import { post } from "helperFunctions/fetchFunctions";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
+import {toast} from "react-toastify";
 
 const LoginView = ({ history }) => {
 	const [auth, dispatch] = useStateValueAuthorization();
@@ -18,9 +19,29 @@ const LoginView = ({ history }) => {
 			const res = await post({ url: '/user/login',body: JSON.stringify(data)});
 			const result = await res.json();
 			const { token } = result;
-			console.log(token)
 			dispatch({ type: authorizationActions.LOGIN, payload: token });
-			history.push('/')
+			if(res.status === 200) {
+				toast.success(result.message, {
+					position: "bottom-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+			}
+			if(res.status === 400) {
+				toast.error(result.error.replace('Error: ', ''), {
+					position: "bottom-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+			}
 		} catch (e) {
 			console.log(e)
 		}
@@ -28,7 +49,7 @@ const LoginView = ({ history }) => {
 
 	useEffect(() => {
 		console.log(auth)
-		if (auth.length) {
+		if (auth && auth.length) {
 			history.push('/')
 		}
 	}, [auth])

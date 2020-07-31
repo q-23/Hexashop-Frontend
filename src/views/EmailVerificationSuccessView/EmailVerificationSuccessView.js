@@ -1,17 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
+import RegistrationSuccessPanel from "components/RegistrationSuccessPanel";
 import FlexContainer from "components/_Shared/FlexContainer";
 
-import { withRouter } from 'react-router-dom';
-import RegistrationSuccessPanel from "components/RegistrationSuccessPanel";
+import { useHistory, useRouteMatch } from 'react-router-dom';
 import {get} from "helperFunctions/fetchFunctions";
+import { withRouter } from 'react-router-dom';
 
-const EmailVerificationSuccessView = ({ match }) => {
+const EmailVerificationSuccessView = () => {
+	const [message, setMessage] = useState('');
+	const match = useRouteMatch();
+	const history = useHistory();
+
 	async function verifyEmail(id) {
 		try {
-			const response = await get({url: `/user/verify/${id}`});
-			const res = await response.json();
-			console.log(res)
+			const res = await get({url: `/user/verify/${id}`});
+			const response = await res.json();
+			console.log(response)
+			if (response.error) {
+				setMessage(response.error)
+			} else {
+				setMessage(response.message)
+			}
 		} catch (e) {
 			console.log(e)
 		}
@@ -19,12 +29,14 @@ const EmailVerificationSuccessView = ({ match }) => {
 	}
 
 	useEffect(() => {
-		verifyEmail(match.params.id)
+		const timeout = setTimeout(() => history.push('/login'), 5000);
+		verifyEmail(match.params.id);
+		return () => clearTimeout(timeout);
 	}, [])
 
 	return(
 		<FlexContainer justify={'flex-start'} wrap={'wrap'}>
-			<RegistrationSuccessPanel/>
+			<RegistrationSuccessPanel message={message} />
 		</FlexContainer>
 	)
 };
