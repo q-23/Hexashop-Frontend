@@ -11,6 +11,9 @@ import validations from "components/Validation";
 import BasicLink from "components/_Shared/BasicLink";
 
 import {InputWrapper} from "views/AccountView/AccountView.style";
+import {AccountImage} from "components/AccountPanel/AccountPanel.style";
+
+import ACCOUNT_IMAGE from 'assets/images/account_image.jpg';
 
 import { Field } from 'react-final-form';
 import {Spacer} from "components/AccountPanel/AccountPanel.style";
@@ -32,7 +35,8 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 			<BoxHeaderContainer>
 				<BoxName>{isViewTypeRegister ? 'Register an account' : 'Edit account'} <Icon className={'fa fa-sign-in'}/></BoxName>
 			</BoxHeaderContainer>
-			<FlexContainer wrap={'wrap'} padding={'1em'} justify={'flex-start'} styles={'margin: 2em 0'}>
+			<FlexContainer wrap={'wrap'} padding={'1em'} justify={'flex-start'} styles={'margin: 2em 0; position: relative'}>
+				<AccountImage src={ACCOUNT_IMAGE}/>
 				<FlexItem xs={12} align={'center'}>
 					<InputWrapper>
 					<Field

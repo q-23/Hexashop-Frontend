@@ -1,13 +1,15 @@
 import React, {useContext, useEffect, useState} from "react";
 
 import ProductPreview from "components/ProductPreview";
+import Pagination from "components/Pagination";
 
+import {useStateValuePagination} from "contexts/pagination/pagination";
 import { MenuContext } from "contexts/menu/menu";
 import { withRouter } from 'react-router-dom';
-import Pagination from "components/Pagination";
 
 const CategoryView = () => {
 	const [categoryData, setCategoryData] = useState({});
+	const [pagination, dispatch] = useStateValuePagination();
 	const { activeCategory } = useContext(MenuContext);
 
 	async function fetchData() {
@@ -21,6 +23,7 @@ const CategoryView = () => {
 					}
 				});
 				const result = await res.json()
+				console.log(result)
 				setCategoryData(result)
 			} catch (e) {
 			}

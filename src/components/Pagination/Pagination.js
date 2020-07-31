@@ -48,7 +48,7 @@ const Pagination = () => {
 	return(
 		<BoxHeaderContainer variant_down>
 			<FlexContainer justify={'center'} align={'center'} styles={'height: 100%'}>
-				{pagination.noOfPages > 1 && (
+				{pagination.numberOfPages > 1 && (
 					<>
 						<PaginationArrowButton  onClick={() => dispatch({ type: paginationActions.PREVIOUS_PAGE })}>
 							<Icon className={'fa fa-arrow-left'}/>

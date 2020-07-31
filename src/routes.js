@@ -19,7 +19,11 @@ export const routes = [
 		component: CategoryView
 	},
 	{
-		path: '/all_products',
+		path: '/all_products/:page',
+		component: AllProductsView
+	},
+	{
+		path: '/all_products/',
 		component: AllProductsView
 	},
 	{

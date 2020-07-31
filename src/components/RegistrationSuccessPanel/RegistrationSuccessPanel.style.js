@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as palette from 'assets/css_variables/colors';
 
 export const SuccessImage = styled.img`
 	top: -50%;

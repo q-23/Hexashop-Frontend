@@ -231,3 +231,17 @@ S
 #src/components/CartItem/CartItem.js,3/3/33b49843ab132aff5e38b888d4c107414049508a
 Y
 )src/components/CartItem/CartItem.style.js,b/f/bff4fc9c786e63f8cdb9f1ddc86f3c6eabb3c7d9
+x
+Hsrc/components/EmailVerificationSuccessPanel/RegistrationSuccessPanel.js,3/3/335b68f61d58376a0562451f305f4b3d5b0f64f1
+~
+Nsrc/components/EmailVerificationSuccessPanel/RegistrationSuccessPanel.style.js,7/7/77f11ab895e5648d675ded9f0133e47e013ba5f9
+l
+<src/views/RegistrationSuccessView/RegistrationSuccessView.js,9/6/96c6c6fc8e166e445b9c6f676a7b816ee24762bc
+X
+(src/components/CartProductsList/index.js,8/6/867f9cb74099b7fb3c0ae8bcbcfafc92a89664fc
+T
+$src/views/CartView/CartView.style.js,2/9/292c936878232bd9022776bc0f5254dd48271482
+c
+3src/components/CartProductsList/CartProductsList.js,7/8/787f25736e68d0636ad197675d7d8947da9d4098
+v
+Fsrc/views/EmailVerificationSuccessView/EmailVerificationSuccessView.js,b/c/bc7ae63d5ca12458721824314e3d9ae0017b9e9b

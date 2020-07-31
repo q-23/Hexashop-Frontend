@@ -15,7 +15,7 @@ const paginationReducers = (state, action) => {
 		case paginationActions.SET_ITEMS_COUNT: {
 			const itemsCount = payload;
 			const { limit } = state;
-			return { ...state, numberOfPages: Math.ceil(itemsCount/limit) };
+			return { ...state, numberOfPages: Math.ceil(itemsCount/limit), numberOfItems: itemsCount };
 		}
 		case paginationActions.NEXT_PAGE: {
 			if(state.currentPage < state.numberOfPages) {

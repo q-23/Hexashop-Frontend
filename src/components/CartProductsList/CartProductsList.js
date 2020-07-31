@@ -33,10 +33,11 @@ const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, on
 				}
 			</FlexContainer>
 			<FlexItem align={'center'} padding={'1em 0'}>
+				{console.log(process.env)}
 				<StripeCheckout
 					description={`your total is ${totalPrice}$`}
 					image={'https://svgshare.com/i/CUz.svg'}
-					stripeKey={process.env.STRIPE_KEY}
+					stripeKey={process.env.REACT_APP_STRIPE_KEY}
 					style={{display: 'none'}}
 					amount={priceForStripe}
 					name={'Hexashop Ltd.'}
