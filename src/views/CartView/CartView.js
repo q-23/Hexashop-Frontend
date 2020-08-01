@@ -16,7 +16,7 @@ import shopcartActions from "contexts/shopcart/actions";
 import Pagination from "components/Pagination";
 import {post} from "helperFunctions/fetchFunctions";
 import {useStateValueAuthorization} from "contexts/authorization/authorization";
-
+import { Link } from "react-router-dom";
 import CartProductsList from "components/CartProductsList";
 
 import { toast } from 'react-toastify';
@@ -105,7 +105,9 @@ const CartView = ({ history }) => {
 						{shopcart.productsCount === 0 ? (
 							<FlexContainer justify={'center'}>
 								<FlexItem>
-									<CartEmptyImage src={CART_EMPTY_IMAGE}/>
+									<Link to={'/all_products'}>
+										<CartEmptyImage src={CART_EMPTY_IMAGE}/>
+									</Link>
 								</FlexItem>
 							</FlexContainer>
 						) : (
