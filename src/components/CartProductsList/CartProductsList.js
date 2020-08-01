@@ -6,9 +6,9 @@ import FlexItem from "components/_Shared/FlexItem";
 import StripeCheckout from "react-stripe-checkout";
 import Button from "components/_Shared/Button";
 import Typography from "components/_Shared/Typography";
+import { Link } from "react-router-dom";
 
-
-const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, onToken}) => {
+const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, onToken, auth}) => {
 
 	return (
 		<>
@@ -33,24 +33,36 @@ const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, on
 				}
 			</FlexContainer>
 			<FlexItem align={'center'} padding={'1em 0'}>
-				{console.log(process.env)}
-				<StripeCheckout
-					description={`your total is ${totalPrice}$`}
-					image={'https://svgshare.com/i/CUz.svg'}
-					stripeKey={process.env.REACT_APP_STRIPE_KEY}
-					style={{display: 'none'}}
-					amount={priceForStripe}
-					name={'Hexashop Ltd.'}
-					panelLabel={'Pay Now'}
-					label={"Pay Now"}
-					token={onToken}
-					shippingAddress
-					billingAddress
-				>
-					<Button with_gradient type={'button'}>Pay now {totalPrice}$</Button>
-				</StripeCheckout>
-				<br/>
-				<Typography color={'red'}>Use the following card info: 4242 4242 4242 4242 EXP: 11/22 CVV: 123</Typography>
+				{auth.token ?
+					(
+						<>
+							<StripeCheckout
+								description={`your total is ${totalPrice}$`}
+								image={'https://svgshare.com/i/CUz.svg'}
+								stripeKey={process.env.REACT_APP_STRIPE_KEY}
+								style={{display: 'none'}}
+								amount={priceForStripe}
+								name={'Hexashop Ltd.'}
+								panelLabel={'Pay Now'}
+								label={"Pay Now"}
+								token={onToken}
+								shippingAddress
+								billingAddress
+							>
+								<Button with_gradient type={'button'}>Pay now {totalPrice}$</Button>
+							</StripeCheckout>
+							<br/>
+							<Typography color={'red'}>Use the following card info: 4242 4242 4242 4242 EXP: 11/22 CVV: 123</Typography>
+						</>
+					) :
+					(
+						<>
+							<Link to={'/register'}>
+								<Button with_gradient type={'button'}>Register to complete your purchase</Button>
+							</Link>
+						</>
+					)
+				}
 			</FlexItem>
 		</>
 	)

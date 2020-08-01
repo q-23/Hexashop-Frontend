@@ -16,7 +16,7 @@ const CategoryView = () => {
 		if (typeof activeCategory === 'object') {
 			const { _id } = { ...activeCategory }
 			try {
-				const res = await fetch(`${process.env.REACT_APP_API_URL}/category/${_id}?sortBy=price:desc`, {
+				const res = await fetch(`${process.env.REACT_APP_API_URL}/category/${_id}?sortBy=price:desc&limit=12&skip=${pagination.skip}`, {
 					headers: {
 						'Content-Type': 'application/json',
 						'Accept': 'application/json'
@@ -36,7 +36,6 @@ const CategoryView = () => {
 
 	return(
 		<>
-			{console.log(categoryData)}
 			{!!categoryData.products &&
 				categoryData.products.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>
 			)}

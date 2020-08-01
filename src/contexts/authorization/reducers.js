@@ -13,7 +13,7 @@ const reducers = localStorageName => (state, action) => {
 		}
 		case authorizationActions.LOGOUT: {
 			localStorage.removeItem(localStorageName);
-			return '';
+			return {};
 		}
 		default:
 			return state;

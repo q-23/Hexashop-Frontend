@@ -5,11 +5,12 @@ import AccountPanel from "components/AccountPanel";
 
 import { useStateValueAuthorization } from 'contexts/authorization/authorization'
 import { FormFullWidth } from "components/_Shared/Form";
-import {useHistory, withRouter} from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
 import { get, patch, post } from "helperFunctions/fetchFunctions";
 import { diff } from 'deep-object-diff';
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
+
 const AccountView = ({ match }) => {
 	const [accountData, setAccountData] = useState({});
 	const [auth] = useStateValueAuthorization();
@@ -19,7 +20,7 @@ const AccountView = ({ match }) => {
 
 	async function fetchAccountData() {
 		try {
-			const response = await get({url: '/user/me', auth});
+			const response = await get({url: '/user/me', auth: auth.token});
 			const responseJSON = await response.json()
 			setAccountData(responseJSON)
 		} catch (e) {
@@ -68,7 +69,6 @@ const AccountView = ({ match }) => {
 		try {
 			const res = await post({url: '/user/new', auth, body: JSON.stringify(accData)});
 			const result = await res.json();
-			console.log(result)
 
 			if(res.status === 400) {
 				return toast.error(result.error.replace('Error: ', ''), {

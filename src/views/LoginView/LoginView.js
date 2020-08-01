@@ -18,8 +18,10 @@ const LoginView = ({ history }) => {
 		try {
 			const res = await post({ url: '/user/login',body: JSON.stringify(data)});
 			const result = await res.json();
-			const { token } = result;
-			dispatch({ type: authorizationActions.LOGIN, payload: token });
+			const { token, isAdmin } = result;
+
+			dispatch({ type: authorizationActions.LOGIN, payload: { token, isAdmin } });
+
 			if(res.status === 200) {
 				toast.success(result.message, {
 					position: "bottom-right",
@@ -48,8 +50,7 @@ const LoginView = ({ history }) => {
 	}
 
 	useEffect(() => {
-		console.log(auth)
-		if (auth && auth.length) {
+		if (auth && auth.token && auth.token.length) {
 			history.push('/')
 		}
 	}, [auth])

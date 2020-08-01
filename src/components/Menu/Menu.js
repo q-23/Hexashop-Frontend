@@ -9,7 +9,7 @@ import {MenuOverlay, MenuWrapper, Link, List} from './Menu.style'
 const Menu = ({ location }) => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);
 	const { menuCategories } = useContext(MenuContext);
-
+	console.log(menuCategories)
 	const { pathname } = location;
 
 	return(

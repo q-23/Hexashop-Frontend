@@ -26,7 +26,7 @@ const Navbar = () => {
 					<Icon className="fa fa-github" size={'1.7em'} color={'#FFF'}/>
 				</Button>
 			</a>
-			<Link to={!!auth && auth.length ? '/account' : '/login'}>
+			<Link to={!!auth && auth.token && auth.token.length ? '/account' : '/login'}>
 				<Button navbar_button float={'right'} nav_border_right>
 					<Icon className="fa fa-user" size={'1.7em'} color={'#FFF'}/>
 				</Button>

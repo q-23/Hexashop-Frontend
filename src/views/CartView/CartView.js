@@ -2,10 +2,8 @@ import React, {useEffect, useState} from "react";
 
 import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
-import CartItem from "components/CartItem/CartItem";
 import BoxName from "components/_Shared/BoxName";
 import FlexItem from "components/_Shared/FlexItem";
-import Typography from "components/_Shared/Typography";
 
 import { FormFullWidth } from "components/_Shared/Form";
 import { withRouter } from 'react-router-dom';
@@ -61,7 +59,7 @@ const CartView = ({ history }) => {
 	const priceForStripe = totalPrice * 100;
 
 	const onToken = async (token) => {
-		const res = await post({ url: '/purchase', auth, body: JSON.stringify({token: token, products: shopcart.products})});
+		const res = await post({ url: '/purchase', auth: auth.token, body: JSON.stringify({token: token, products: shopcart.products})});
 		const responseMessage = await res.json();
 		if (res.status === 200) {
 			toast.success(responseMessage.message, {
@@ -117,6 +115,7 @@ const CartView = ({ history }) => {
 								totalPrice={totalPrice}
 								shopcart={shopcart}
 								onToken={onToken}
+								auth={auth}
 							/>
 						)}
 					<Pagination/>
