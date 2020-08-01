@@ -243,3 +243,11 @@ c
 3src/components/CartProductsList/CartProductsList.js,7/8/787f25736e68d0636ad197675d7d8947da9d4098
 v
 Fsrc/views/EmailVerificationSuccessView/EmailVerificationSuccessView.js,b/c/bc7ae63d5ca12458721824314e3d9ae0017b9e9b
+C
+coverage/clover.xml,8/5/85d04cac3d316bb5de852c5f07fccbc0fdfa1227
+O
+coverage/lcov-report/index.html,d/4/d41f4826c3c092a0915ae3306b427ca8e58b8795
+P
+ coverage/lcov-report/prettify.js,c/c/cc4cfadeae2d3967d71b5728be357c976a3fc251
+A
+public/_redirects,2/3/23775fff9b8562e83258540491a380fe4b133207
