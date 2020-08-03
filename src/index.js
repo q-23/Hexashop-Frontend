@@ -6,20 +6,17 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom'
 import StateProviderMenu from "./contexts/menu/menu";
 import { StateProviderAuthorization } from "contexts/authorization/authorization";
-import {StateProviderPagination} from "contexts/pagination/pagination";
 import {StateProviderShopcart} from "contexts/shopcart/shopcart";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <StateProviderShopcart>
-        <StateProviderPagination>
           <StateProviderAuthorization>
             <StateProviderMenu>
               <App />
             </StateProviderMenu>
           </StateProviderAuthorization>
-        </StateProviderPagination>
       </StateProviderShopcart>
     </BrowserRouter>
   </React.StrictMode>,

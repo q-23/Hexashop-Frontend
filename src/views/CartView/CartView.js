@@ -20,7 +20,6 @@ import { Link } from "react-router-dom";
 import CartProductsList from "components/CartProductsList";
 
 import { toast } from 'react-toastify';
-import paginationActions from "contexts/pagination/actions";
 
 const CartView = ({ history }) => {
 	const [productData, setProductData] = useState({});
@@ -39,7 +38,6 @@ const CartView = ({ history }) => {
 				}
 			});
 			const result = await res.json();
-			dispatch({ type: paginationActions.SET_ITEMS_COUNT, payload: result.count });
 			setProductData(result)
 		} catch (e) {
 			console.log(e)

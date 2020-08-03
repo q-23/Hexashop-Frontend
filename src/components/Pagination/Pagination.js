@@ -6,11 +6,8 @@ import {
 	PaginationButton } from "components/Pagination/Pagination.style";
 import FlexContainer from "components/_Shared/FlexContainer";
 import Icon from "components/_Shared/Icon";
-import {useStateValuePagination} from "contexts/pagination/pagination";
-import paginationActions from "contexts/pagination/actions";
 
-const Pagination = () => {
-	const [pagination, dispatch] = useStateValuePagination();
+const Pagination = ({ currentPage = 1, numberOfPages = 1, setPage = () => {} }) => {
 
 	const paginate = (currentPage, nrOfPages) => {
 		const delta = 2;
@@ -48,22 +45,22 @@ const Pagination = () => {
 	return(
 		<BoxHeaderContainer variant_down>
 			<FlexContainer justify={'center'} align={'center'} styles={'height: 100%'}>
-				{pagination.numberOfPages > 1 && (
+				{numberOfPages > 1 && (
 					<>
-						<PaginationArrowButton  onClick={() => dispatch({ type: paginationActions.PREVIOUS_PAGE })}>
+						<PaginationArrowButton  onClick={() => currentPage > 1 && setPage(currentPage - 1)}>
 							<Icon className={'fa fa-arrow-left'}/>
 						</PaginationArrowButton>
-							{paginate(pagination.currentPage, pagination.numberOfPages).map(el => (
+							{paginate(currentPage, numberOfPages).map(el => (
 								<PaginationButton
 									key={el}
-									current={el === pagination.currentPage}
+									current={el === currentPage}
 									dots={typeof el === 'string'}
-									onClick={() => dispatch({ type: paginationActions.SELECT_PAGE, payload: el })}
+									onClick={() => setPage(el)}
 								>
 									{el}
 								</PaginationButton>
 							))}
-						<PaginationArrowButton onClick={() => dispatch({ type: paginationActions.NEXT_PAGE })}>
+						<PaginationArrowButton onClick={() => currentPage < numberOfPages && setPage(currentPage + 1)}>
 							<Icon className={'fa fa-arrow-right'}/>
 						</PaginationArrowButton>
 					</>

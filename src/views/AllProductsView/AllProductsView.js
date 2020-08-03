@@ -3,20 +3,20 @@ import React, {useEffect, useState} from "react";
 import ProductPreview from "components/ProductPreview";
 import Pagination from "components/Pagination";
 
-import { useStateValuePagination } from "contexts/pagination/pagination";
-import paginationActions from 'contexts/pagination/actions';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 
+import { setPagesCount, setPage } from "helperFunctions/pagination";
+
 const AllProductsView = () => {
+	const [pagination, setPagination] = useState({ currentPage: 1, numberOfPages: 1 });
 	const [productsData, setProductsData] = useState([]);
-	const [pagination, dispatch] = useStateValuePagination();
 	const abortController = new AbortController();
-	const history = useHistory();
 	const location = useRouteMatch();
+	const history = useHistory();
 
 	async function fetchData() {
 		try {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/product?sortBy=name:asc&limit=12&skip=${pagination.skip}`, {
+			const res = await fetch(`${process.env.REACT_APP_API_URL}/product?sortBy=name:asc&limit=12&skip=${(pagination.currentPage - 1) * 12}`, {
 				signal: abortController.signal,
 				headers : {
 					'Content-Type': 'application/json',
@@ -24,9 +24,8 @@ const AllProductsView = () => {
 				}
 			});
 			const result = await res.json();
-			if (pagination.numberOfItems !== result.count) {
-				dispatch({type: paginationActions.SET_ITEMS_COUNT, payload: result.count});
-			}
+			console.log(result)
+			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
 			setProductsData(result.products);
 		} catch (e) {
 		}
@@ -36,7 +35,6 @@ const AllProductsView = () => {
 		if (!location.params.page || location.params.page === 'NaN') {
 			history.push('/all_products/1')
 		}
-		dispatch({ type: paginationActions.SELECT_PAGE, payload: Number(location.params.page) });
 	}, [])
 
 	useEffect(() => {
@@ -45,12 +43,17 @@ const AllProductsView = () => {
 			history.push(`/all_products/${pagination.currentPage}`);
 		}
 		return () => abortController.abort();
-	}, [pagination.skip]);
+	}, [pagination.currentPage]);
 
 	return(
 		<>
+			{console.log((pagination.currentPage - 1) * 12)}
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
-			<Pagination/>
+			<Pagination
+				numberOfPages={pagination.numberOfPages}
+				currentPage={pagination.currentPage}
+				setPage={setPage({ pagination, setPagination })}
+			/>
 		</>
 	)
 };
