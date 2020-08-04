@@ -1,90 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[PRODUCT PREVIEW] Should render component 1`] = `
+exports[`[LOADER] Should render component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="sc-AxhCb hqcsvC"
-        width="md"
+        class="sc-AxjAm ihXqjT"
       >
         <div
-          class="sc-AxjAm vNKQB"
-        >
-          <a
-            href="/product/undefined"
-          >
-            <img
-              class="sc-AxgMl lhoVBi"
-            />
-          </a>
-          <div
-            class="sc-AxiKw bKNIjT"
-          >
-            <a
-              href="/product/undefined"
-            >
-              <p
-                class="sc-AxirZ gKUwHA"
-              />
-            </a>
-            <p
-              class="sc-AxirZ lhafAA"
-              color="gray"
-            >
-              $
-            </p>
-            <button
-              class="sc-AxhUy gdDRTR"
-              style="bottom: 0px;"
-            >
-              Add to cart
-            </button>
-          </div>
-        </div>
+          class="sc-AxirZ jXdwqp"
+        />
+        <div
+          class="sc-AxiKw epJASo"
+        />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-AxhCb hqcsvC"
-      width="md"
+      class="sc-AxjAm ihXqjT"
     >
       <div
-        class="sc-AxjAm vNKQB"
-      >
-        <a
-          href="/product/undefined"
-        >
-          <img
-            class="sc-AxgMl lhoVBi"
-          />
-        </a>
-        <div
-          class="sc-AxiKw bKNIjT"
-        >
-          <a
-            href="/product/undefined"
-          >
-            <p
-              class="sc-AxirZ gKUwHA"
-            />
-          </a>
-          <p
-            class="sc-AxirZ lhafAA"
-            color="gray"
-          >
-            $
-          </p>
-          <button
-            class="sc-AxhUy gdDRTR"
-            style="bottom: 0px;"
-          >
-            Add to cart
-          </button>
-        </div>
-      </div>
+        class="sc-AxirZ jXdwqp"
+      />
+      <div
+        class="sc-AxiKw epJASo"
+      />
     </div>
   </div>,
   "debug": [Function],

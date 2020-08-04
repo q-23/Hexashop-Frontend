@@ -21,7 +21,6 @@ const CategoryView = () => {
 					}
 				});
 				const result = await res.json()
-				console.log(result)
 				setCategoryData(result)
 			} catch (e) {
 			}

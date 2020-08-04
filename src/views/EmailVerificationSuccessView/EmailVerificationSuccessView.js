@@ -16,7 +16,6 @@ const EmailVerificationSuccessView = () => {
 		try {
 			const res = await get({url: `/user/verify/${id}`});
 			const response = await res.json();
-			console.log(response)
 			if (response.error) {
 				setMessage(response.error)
 			} else {

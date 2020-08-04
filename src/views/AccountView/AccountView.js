@@ -35,7 +35,6 @@ const AccountView = ({ match }) => {
 
 			const res = await patch({url: '/user', auth, body: JSON.stringify(changedFields)});
 			const resJSON = await res.json();
-			console.log(resJSON)
 			if(res.status === 200) {
 				return toast.success(resJSON.message, {
 					position: "bottom-right",

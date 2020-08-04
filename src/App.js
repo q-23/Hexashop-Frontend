@@ -10,11 +10,11 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 
 import { routes } from "routes";
+
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const ContainerWithLoader = WithLoader(FlexContainer);
 
   return (
     <>
@@ -22,7 +22,7 @@ function App() {
       <Header/>
       <Menu/>
       <Container main mx_auto test={'test'} position={'relative'} zIndex={2}>
-        <ContainerWithLoader isLoading={false} main_container wrap={'wrap'}>
+        <FlexContainer isLoading={false} main_container wrap={'wrap'}>
           <Switch>
             {
               routes.map((route, idx) =>
@@ -30,7 +30,7 @@ function App() {
               )
             }
           </Switch>
-        </ContainerWithLoader>
+        </FlexContainer>
         <ToastContainer />
       </Container>
       <Footer/>

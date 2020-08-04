@@ -12,47 +12,56 @@ Object {
           class="sc-AxirZ edtojf"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-bars"
-            color="#FFF"
-          />
-        </button>
-        <button
-          class="sc-AxirZ edtojf"
-        >
-          <i
-            class="sc-AxiKw sMAqB fa fa-github"
+            class="sc-AxiKw hemaxJ fa fa-bars"
             color="#FFF"
           />
         </button>
         <a
-          href="/login"
+          href="https://github.com/q-23/Hexashop-Frontend"
+          target="_blank"
         >
           <button
-            class="sc-AxirZ lojPWt"
+            class="sc-AxirZ edtojf"
           >
             <i
-              class="sc-AxiKw sMAqB fa fa-user"
+              class="sc-AxiKw hemaxJ fa fa-github"
               color="#FFF"
             />
           </button>
         </a>
-        <button
-          class="sc-AxirZ eqVsUa"
+        <a
+          href="/login"
         >
-          <div
-            class="sc-AxhUy dJvEOz"
+          <button
+            class="sc-AxirZ eqVsUa"
           >
             <i
-              class="sc-AxiKw sMAqB fa fa-shopping-basket"
+              class="sc-AxiKw hemaxJ fa fa-user"
               color="#FFF"
             />
-            <span
-              class="sc-AxhCb eGRRou"
+          </button>
+        </a>
+        <a
+          href="/cart"
+        >
+          <button
+            class="sc-AxirZ eqVsUa"
+          >
+            <div
+              class="sc-AxhUy gjrxrs"
             >
-              0
-            </span>
-          </div>
-        </button>
+              <i
+                class="sc-AxiKw hemaxJ fa fa-shopping-basket"
+                color="#FFF"
+              />
+              <span
+                class="sc-AxhCb eGRRou"
+              >
+                0
+              </span>
+            </div>
+          </button>
+        </a>
       </nav>
     </div>
   </body>,
@@ -64,47 +73,56 @@ Object {
         class="sc-AxirZ edtojf"
       >
         <i
-          class="sc-AxiKw sMAqB fa fa-bars"
-          color="#FFF"
-        />
-      </button>
-      <button
-        class="sc-AxirZ edtojf"
-      >
-        <i
-          class="sc-AxiKw sMAqB fa fa-github"
+          class="sc-AxiKw hemaxJ fa fa-bars"
           color="#FFF"
         />
       </button>
       <a
-        href="/login"
+        href="https://github.com/q-23/Hexashop-Frontend"
+        target="_blank"
       >
         <button
-          class="sc-AxirZ lojPWt"
+          class="sc-AxirZ edtojf"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-user"
+            class="sc-AxiKw hemaxJ fa fa-github"
             color="#FFF"
           />
         </button>
       </a>
-      <button
-        class="sc-AxirZ eqVsUa"
+      <a
+        href="/login"
       >
-        <div
-          class="sc-AxhUy dJvEOz"
+        <button
+          class="sc-AxirZ eqVsUa"
         >
           <i
-            class="sc-AxiKw sMAqB fa fa-shopping-basket"
+            class="sc-AxiKw hemaxJ fa fa-user"
             color="#FFF"
           />
-          <span
-            class="sc-AxhCb eGRRou"
+        </button>
+      </a>
+      <a
+        href="/cart"
+      >
+        <button
+          class="sc-AxirZ eqVsUa"
+        >
+          <div
+            class="sc-AxhUy gjrxrs"
           >
-            0
-          </span>
-        </div>
-      </button>
+            <i
+              class="sc-AxiKw hemaxJ fa fa-shopping-basket"
+              color="#FFF"
+            />
+            <span
+              class="sc-AxhCb eGRRou"
+            >
+              0
+            </span>
+          </div>
+        </button>
+      </a>
     </nav>
   </div>,
   "debug": [Function],

@@ -11,7 +11,6 @@ describe('[QUANTITY INPUT]', () => {
 			RenderWithForm()(<QuantityInput />)
 		);
 		const input = wrapper.container.querySelector('input');
-		console.log(input.value)
 	});
 })
 

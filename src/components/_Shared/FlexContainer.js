@@ -7,15 +7,16 @@ const FlexContainer = styled.div`
 	${({ wrap }) => wrap && `flex-wrap: ${wrap}`};
 	${({ align }) => align && `align-items: ${align}`};
 	${({ main_container }) => main_container && `
-		margin-top: -3.95em;
+		transform: translateY(-3.95em);
 		background-color: white;
+		min-height: 60vh;
 		box-shadow: 0px 0px 31px -6px rgba(0,0,0,0.62);
 	`};
 	${({ padding }) => !!padding && `padding: ${padding}`};
 	${({ direction }) => !!direction && `flex-direction: ${direction}`};
 	${({ m_auto }) => m_auto && 'margin: auto;'};
 	${({ styles }) => !!styles && styles};
-	${({spacing}) => spacing && `
+	${({ spacing }) => spacing && `
 		& > div {
 			padding: ${spacing * .5}em;
 		}

@@ -24,7 +24,6 @@ const AllProductsView = () => {
 				}
 			});
 			const result = await res.json();
-			console.log(result)
 			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
 			setProductsData(result.products);
 		} catch (e) {
@@ -47,7 +46,6 @@ const AllProductsView = () => {
 
 	return(
 		<>
-			{console.log((pagination.currentPage - 1) * 12)}
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
 			<Pagination
 				numberOfPages={pagination.numberOfPages}
