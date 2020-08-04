@@ -5,12 +5,11 @@ import {
 	SpinnerOverlay
 } from "./Loader.style";
 
-const Loader = ({ children, isLoading }) => {
+const Loader = ({ isLoading }) => {
 	return(
-		<SpinnerContainer>
-			<SpinnerOverlay isLoading={isLoading}/>
-			<SpinnerCircle  isLoading={isLoading}/>
-			{children}
+		<SpinnerContainer isLoading={isLoading}>
+			<SpinnerOverlay/>
+			<SpinnerCircle/>
 		</SpinnerContainer>
 	)
 };

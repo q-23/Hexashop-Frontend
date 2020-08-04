@@ -6,7 +6,9 @@ export const SpinnerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-	position: relative;
+	position: absolute;
+	height: 100%;
+	visibility: ${({isLoading}) => isLoading ? 'visible' : 'hidden'};
 `;
 
 export const SpinnerOverlay = styled.div`
@@ -14,8 +16,7 @@ export const SpinnerOverlay = styled.div`
 	width: 100%;
 	height: 100%;
 	z-index: 198;
-	background-color: red;
-	opacity: ${({ isLoading }) => isLoading ? 1 : 0};
+	background-color: rgba(255,255,255,.6);
 	transition: opacity .5s;
 `;
 
@@ -29,7 +30,6 @@ export const SpinnerCircle = styled.div`
   border-radius: 50%;
   border-top-color: ${palette.LIGHT_PURPLE};
   animation: spin 1s ease-in-out infinite;
-  opacity: ${({isLoading}) => isLoading ? 1 : 0};
 	transition: opacity .5s;
   @keyframes spin {
     to {

@@ -3,7 +3,6 @@ import {Switch, Route} from 'react-router-dom';
 
 import FlexContainer from "./components/_Shared/FlexContainer";
 import Container from "./components/_Shared/Container";
-import WithLoader from "components/_HOC/WithLoader";
 import Footer from "components/Footer/Footer";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -38,4 +37,4 @@ function App() {
   );
 }
 
-export default WithLoader(App);
+export default App;

@@ -10,7 +10,7 @@ export const FooterTopLine = styled.div`
 
 export const FooterWrapper = styled.footer`
 	background-color: ${palette.BLUE};
-	margin-top: -3.9em;
+	margin-top: -7.9em;
 	overflow: hidden;
 	position: relative;
 	min-height: 30vh;

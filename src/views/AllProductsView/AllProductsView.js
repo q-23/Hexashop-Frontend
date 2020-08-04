@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 
 import ProductPreview from "components/ProductPreview";
 import Pagination from "components/Pagination";
+import Loader from "components/Loader/Loader";
 
 import { useHistory, useRouteMatch } from 'react-router-dom';
 
@@ -10,11 +11,13 @@ import { setPagesCount, setPage } from "helperFunctions/pagination";
 const AllProductsView = () => {
 	const [pagination, setPagination] = useState({ currentPage: 1, numberOfPages: 1 });
 	const [productsData, setProductsData] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
 	const abortController = new AbortController();
 	const location = useRouteMatch();
 	const history = useHistory();
 
 	async function fetchData() {
+		setIsLoading(true)
 		try {
 			const res = await fetch(`${process.env.REACT_APP_API_URL}/product?sortBy=name:asc&limit=12&skip=${(pagination.currentPage - 1) * 12}`, {
 				signal: abortController.signal,
@@ -26,7 +29,9 @@ const AllProductsView = () => {
 			const result = await res.json();
 			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
 			setProductsData(result.products);
+			setIsLoading(false);
 		} catch (e) {
+			setIsLoading(false);
 		}
 	}
 
@@ -46,6 +51,7 @@ const AllProductsView = () => {
 
 	return(
 		<>
+			<Loader isLoading={isLoading}/>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
 			<Pagination
 				numberOfPages={pagination.numberOfPages}
