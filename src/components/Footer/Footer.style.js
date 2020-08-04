@@ -11,9 +11,15 @@ export const FooterTopLine = styled.div`
 export const FooterWrapper = styled.footer`
 	background-color: ${palette.BLUE};
 	margin-top: -7.9em;
-	overflow: hidden;
+	//overflow: hidden;
 	position: relative;
 	min-height: 30vh;
 	width: 100%;
 	top: 0;
+`;
+
+export const Image = styled.img`
+	position: absolute;
+	top: -350px;
+	right: 50px;
 `;
