@@ -27,7 +27,7 @@ const Navbar = () => {
 				</Button>
 			</a>
 			<Link to={!!auth && auth.token && auth.token.length ? '/account' : '/login'}>
-				<Button navbar_button float={'right'} nav_border_right>
+				<Button navbar_button float={'right'} nav_border_left>
 					<Icon className="fa fa-user" size={'1.7em'} color={'#FFF'}/>
 				</Button>
 			</Link>

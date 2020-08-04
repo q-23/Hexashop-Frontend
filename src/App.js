@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 import FlexContainer from "./components/_Shared/FlexContainer";
 import Container from "./components/_Shared/Container";
 import WithLoader from "components/_HOC/WithLoader";
+import Footer from "components/Footer/Footer";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
@@ -20,7 +21,7 @@ function App() {
       <Navbar/>
       <Header/>
       <Menu/>
-      <Container main mx_auto>
+      <Container main mx_auto test={'test'} position={'relative'} zIndex={2}>
         <ContainerWithLoader isLoading={false} main_container wrap={'wrap'}>
           <Switch>
             {
@@ -32,6 +33,7 @@ function App() {
         </ContainerWithLoader>
         <ToastContainer />
       </Container>
+      <Footer/>
     </>
   );
 }

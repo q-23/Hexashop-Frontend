@@ -191,12 +191,6 @@ W
 'src/tests/Pagination/Pagination.test.js,f/4/f42c3a880de9bc32adc79442786c55cee317cc04
 U
 %src/contexts/authorization/actions.js,9/f/9f1a0bb4726ac779e490817b6bedd3190ce4c69b
-R
-"src/contexts/pagination/actions.js,c/f/cf08c7d407cf221e3475750497be18e55035f77d
-S
-#src/contexts/pagination/reducers.js,d/9/d9d1dd62f6563613999c003ed5d5cb242c12a088
-U
-%src/contexts/pagination/pagination.js,0/a/0a1f913265a25170dbaffc73e8872160c48c7a0c
 P
  src/contexts/shopcart/actions.js,3/a/3a44f0fe0b0c772fd9cab5ab070f80b72d67b396
 P
@@ -207,8 +201,6 @@ Q
 !src/contexts/shopcart/shopcart.js,c/5/c5bf035149d36722914510a8f96f63c26b1c8d1f
 S
 #src/components/CartIcon/CartIcon.js,1/3/137d68143f29fccea1377203d5e75fc58933c18b
-f
-6src/tests/PaginationContext/PaginationContext.tests.js,7/a/7a7a224faa33122ebc5826f867e32b8b16cda681
 O
 src/views/HomePageView/index.js,5/2/526a2c47b2ebf9a792ae970c934ec98caa090b1a
 \
@@ -251,3 +243,5 @@ P
  coverage/lcov-report/prettify.js,c/c/cc4cfadeae2d3967d71b5728be357c976a3fc251
 A
 public/_redirects,2/3/23775fff9b8562e83258540491a380fe4b133207
+Q
+!src/helperFunctions/pagination.js,4/7/4782ee7b83aa8f5eaaaae8509d9b71449e174b99

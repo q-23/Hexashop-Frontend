@@ -1,11 +1,0 @@
-
-Zjavascript:S1128"7Remove this unused import of 'useStateValuePagination'.(¥…8»™ζΏ¶.
-Ljavascript:S1128")Remove this unused import of 'fireEvent'.(τωτα8η―θΏ¶.
-]javascript:S1481"5Remove the declaration of the unused 'skip' variable.(Κηϋÿÿÿÿ8Θ ΐ¶.
-Zjavascript:S1854"2Remove this useless assignment to variable "skip".(Κηϋÿÿÿÿ8Θ ΐ¶.
-^javascript:S1481"6Remove the declaration of the unused 'limit' variable.(Κηϋÿÿÿÿ8Θ ΐ¶.
-[javascript:S1854"3Remove this useless assignment to variable "limit".(Κηϋÿÿÿÿ8Θ ΐ¶.
-fjavascript:S1481">Remove the declaration of the unused 'numberOfPages' variable.(Κηϋÿÿÿÿ8Θ ΐ¶.
-cjavascript:S1854";Remove this useless assignment to variable "numberOfPages".(Κηϋÿÿÿÿ8Θ ΐ¶.
-djavascript:S1481"<Remove the declaration of the unused 'currentPage' variable.(Κηϋÿÿÿÿ8Θ ΐ¶.
-ajavascript:S1854"9Remove this useless assignment to variable "currentPage".(Κηϋÿÿÿÿ8Θ ΐ¶.
