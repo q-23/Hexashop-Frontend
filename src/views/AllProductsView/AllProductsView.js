@@ -39,6 +39,7 @@ const AllProductsView = () => {
 		if (!location.params.page || location.params.page === 'NaN') {
 			history.push('/all_products/1')
 		}
+	//	eslint-disable-next-line
 	}, [])
 
 	useEffect(() => {
@@ -47,6 +48,7 @@ const AllProductsView = () => {
 			history.push(`/all_products/${pagination.currentPage}`);
 		}
 		return () => abortController.abort();
+		//	eslint-disable-next-line
 	}, [pagination.currentPage]);
 
 	return(

@@ -15,13 +15,13 @@ import {useStateValueAuthorization} from "contexts/authorization/authorization";
 const Navbar = () => {
 	const { menuOpen, setMenuOpen } = useContext(MenuContext);
 	const [auth] = useStateValueAuthorization();
-	console.log(auth)
+
 	return(
 		<NavbarStyle>
 			<Button navbar_button nav_border_right onClick={() => setMenuOpen(!menuOpen)}>
 				<Icon className={`fa fa-${menuOpen ? 'times' : 'bars'}`} size={'1.7em'} color={'#FFF'}/>
 			</Button>
-			<a href={'https://github.com/q-23/Hexashop-Frontend'} target={'_blank'}>
+			<a href={'https://github.com/q-23/Hexashop-Frontend'} target={'_blank'} rel="noopener noreferrer">
 				<Button navbar_button  nav_border_right>
 					<Icon className="fa fa-github" size={'1.7em'} color={'#FFF'}/>
 				</Button>

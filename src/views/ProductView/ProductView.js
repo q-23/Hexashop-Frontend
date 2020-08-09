@@ -30,6 +30,7 @@ const ProductView = ({ match }) => {
 
 	useEffect(() => {
 		fetchData();
+		//	eslint-disable-next-line
 	}, [match.params.id])
 
 	return(

@@ -2,32 +2,37 @@ import React, {useEffect, useState} from "react";
 
 import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
-import BoxName from "components/_Shared/BoxName";
-import FlexItem from "components/_Shared/FlexItem";
-
-import { FormFullWidth } from "components/_Shared/Form";
-import { withRouter } from 'react-router-dom';
-import { Form } from 'react-final-form';
-import { CartEmptyImage } from "views/CartView/CartView.style";
-import CART_EMPTY_IMAGE from 'assets/images/shopcart_empty.jpg';
-
-import { useShopcart } from "contexts/shopcart/shopcart";
-import shopcartActions from "contexts/shopcart/actions";
-import Pagination from "components/Pagination";
-import {post} from "helperFunctions/fetchFunctions";
-import {useStateValueAuthorization} from "contexts/authorization/authorization";
-import { Link } from "react-router-dom";
 import CartProductsList from "components/CartProductsList";
+import FlexItem from "components/_Shared/FlexItem";
+import BoxName from "components/_Shared/BoxName";
+import Pagination from "components/Pagination";
+import Loader from "components/Loader/Loader";
+
+import CART_EMPTY_IMAGE from 'assets/images/shopcart_empty.jpg';
+import { CartEmptyImage } from "views/CartView/CartView.style";
+import { FormFullWidth } from "components/_Shared/Form";
+
+import { useStateValueAuthorization } from "contexts/authorization/authorization";
+import { useShopcart } from "contexts/shopcart/shopcart";
+import { post } from "helperFunctions/fetchFunctions";
+import { useHistory } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { Form } from 'react-final-form';
+
+import shopcartActions from "contexts/shopcart/actions";
 
 import { toast } from 'react-toastify';
 
-const CartView = ({ history }) => {
+const CartView = () => {
 	const [productData, setProductData] = useState({});
+	const [isLoading, setIsLoading] = useState(false);
 	const [shopcart, dispatch] = useShopcart();
 	const [auth] = useStateValueAuthorization();
+	const history = useHistory();
 
 	async function fetchData() {
 		try {
+			setIsLoading(true)
 			if(shopcart.products && !Object.keys(shopcart.products).length) {
 				return setProductData([])
 			}
@@ -38,9 +43,11 @@ const CartView = ({ history }) => {
 				}
 			});
 			const result = await res.json();
+			setIsLoading(false)
 			setProductData(result)
 		} catch (e) {
 			console.log(e)
+			setIsLoading(false)
 		}
 	};
 
@@ -57,36 +64,49 @@ const CartView = ({ history }) => {
 	const priceForStripe = totalPrice * 100;
 
 	const onToken = async (token) => {
-		const res = await post({ url: '/purchase', auth: auth.token, body: JSON.stringify({token: token, products: shopcart.products})});
-		const responseMessage = await res.json();
-		if (res.status === 200) {
-			toast.success(responseMessage.message, {
-				position: "bottom-right",
-				autoClose: 5000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
+		setIsLoading(true)
+		try {
+			const res = await post({
+				url: '/purchase',
+				auth: auth.token,
+				body: JSON.stringify({token: token, products: shopcart.products})
 			});
-			history.push('/all_products');
-			dispatch({ type: shopcartActions.CLEAR_CART });
-		}
-		if(res.status - 400 < 100) {
-			toast.error(responseMessage.error, {
-				position: "bottom-right",
-				autoClose: 5000,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
-			});
+			const responseMessage = await res.json();
+			if (res.status === 200) {
+				setIsLoading(false);
+				toast.success(responseMessage.message, {
+					position: "bottom-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+				history.push('/all_products');
+				dispatch({type: shopcartActions.CLEAR_CART});
+			}
+			if (res.status - 400 < 100) {
+				setIsLoading(false);
+				toast.error(responseMessage.error, {
+					position: "bottom-right",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+			}
+		} catch (e) {
+			console.log(e);
+			setIsLoading(false);
 		}
 	}
 
 	useEffect(() => {
 		fetchData();
+	//	eslint-disable-next-line
 	}, [Object.keys(shopcart.products).join(',')])
 
 	return(
@@ -97,6 +117,7 @@ const CartView = ({ history }) => {
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
+					{console.log(isLoading)}
 					<BoxHeaderContainer>
 						<BoxName>{shopcart.productsCount === 0 ? 'Your cart is empty...' : 'Your cart items'}</BoxName>
 					</BoxHeaderContainer>
@@ -119,10 +140,11 @@ const CartView = ({ history }) => {
 							/>
 						)}
 					<Pagination/>
+					<Loader isLoading={isLoading}/>
 				</FormFullWidth>
 			)}
 		/>
 	)
 };
 
-export default withRouter(CartView);
+export default CartView;

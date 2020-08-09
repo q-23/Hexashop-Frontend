@@ -31,6 +31,7 @@ const EmailVerificationSuccessView = () => {
 		const timeout = setTimeout(() => history.push('/login'), 5000);
 		verifyEmail(match.params.id);
 		return () => clearTimeout(timeout);
+		//	eslint-disable-next-line
 	}, [])
 
 	return(

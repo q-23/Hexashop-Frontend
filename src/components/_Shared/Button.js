@@ -22,15 +22,10 @@ const Button = styled.button`
 		padding: .5em .5em;
 		background-color: transparent;
 		height: 100%;
-		border-left: 1px solid white;
-		border: none;
 		border-top:    none;
 		border-bottom: none;
 		${nav_border_right && 'border-right: 1px solid white;'}		
 		${nav_border_left && 'border-left: 1px solid white;'}		
-		&:nth-of-type(1) {
-			border-left: none;
-		}
 	`};
 	${({ float }) => `float: ${float};`};
 	${({ with_gradient }) => with_gradient && `
@@ -57,7 +52,6 @@ const Button = styled.button`
 		&:hover {
 			transition: all .4s ease-in-out;
 			background-position: 100% 0;
-			// box-shadow: 0 4px 15px 0 rgba(209, 159, 228, 0.9);
 			animation: glow 1s infinite
 		}
 	`};	

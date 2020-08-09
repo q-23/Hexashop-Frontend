@@ -24,6 +24,7 @@ export const StateProviderShopcart = ({ children }) => {
 
 	useEffect(() => {
 		dispatch({ type: shopcartActions.CALCULATE_TOTAL_QUANTITY });
+		//	eslint-disable-next-line
 	}, [shopcart.products]);
 
 	return (

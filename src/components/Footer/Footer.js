@@ -22,7 +22,8 @@ const Footer = () => {
 	const getRandomNumber = max => Math.floor(Math.random() * max)
 
 	useEffect(() => {
-		setImage(imagesArray[getRandomNumber(imagesArray.length)])
+		setImage(imagesArray[getRandomNumber(imagesArray.length)]);
+		//	eslint-disable-next-line
 	}, [location.pathname])
 
 	return(

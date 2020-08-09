@@ -101,6 +101,7 @@ const AccountView = ({ match }) => {
 		if(!isViewTypeRegister){
 			fetchAccountData()
 		}
+		//	eslint-disable-next-line
 	}, []);
 
 	return(

@@ -53,6 +53,7 @@ const LoginView = ({ history }) => {
 		if (auth && auth.token && auth.token.length) {
 			history.push('/')
 		}
+		//	eslint-disable-next-line
 	}, [auth])
 
 	return(

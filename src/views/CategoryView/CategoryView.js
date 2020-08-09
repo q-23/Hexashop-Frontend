@@ -29,6 +29,7 @@ const CategoryView = () => {
 
 	useEffect(() => {
 		fetchData();
+		//	eslint-disable-next-line
 	}, [activeCategory])
 
 	return(

@@ -81,16 +81,10 @@ S
 #src/tests/FlexItem/FlexItem.test.js,b/9/b9f037940ab62493ab00f7284e485d22a46a80e8
 A
 public/robots.txt,d/a/dac799070c2d0c2fa24462b02c1f2dcc3fb3a1e9
-W
-'src/components/_HOC/WithLoader/index.js,0/8/08ab27b7a98f89caa65f6ffcb55ee49648b3ec61
 V
 &src/components/_HOC/WithWidth/index.js,9/d/9d53883b2ff633b92007b5354a0a7b30a29a412d
-\
-,src/components/_HOC/WithLoader/WithLoader.js,e/1/e1b32c0366d2c01e8e3a637059d66c5213967b3e
 Z
 *src/components/_HOC/WithWidth/WithWidth.js,e/7/e7a0fda5d162595f223c2ea1b6a5b3da3147b1b7
-W
-'src/tests/WithLoader/WithLoader.test.js,2/7/27b0e3eda1a2ae463c07afdd9745703d6a7ec80f
 U
 %src/components/Header/Header.style.js,1/1/11983430a1489a89c5404b3d699b208f5d01dcc1
 O
@@ -183,8 +177,6 @@ R
 "src/components/Pagination/index.js,d/2/d2f09f66055ffb19d543b3f8a52628654b90b4aa
 W
 'src/components/Pagination/Pagination.js,8/7/87a2040e4e91d8cce0617aedd0b40caaa6481e87
-b
-2src/components/_HOC/WithLoader/WithLoader.style.js,e/a/ea94a10736a86dc609dc41800d0dd30fe289488c
 ]
 -src/components/Pagination/Pagination.style.js,3/e/3eb5fc0b0489a61f88d469ae6c888033afa7317f
 W
@@ -245,3 +237,17 @@ A
 public/_redirects,2/3/23775fff9b8562e83258540491a380fe4b133207
 Q
 !src/helperFunctions/pagination.js,4/7/4782ee7b83aa8f5eaaaae8509d9b71449e174b99
+N
+src/components/Footer/index.js,0/4/046d57f5d0e29b384a7a9e7fc6409d5b3b207982
+N
+src/components/Loader/index.js,c/d/cda572585d8b0bc6bf79e333f1f9485d32738bee
+O
+src/tests/Loader/Loader.test.js,b/5/b54d96c06b3a214c1a78b6e76c766121bdc94b0e
+O
+src/components/Loader/Loader.js,c/7/c75b86e9ba4f88d6a7064a7894e66e9f499f0f16
+U
+%src/components/Loader/Loader.style.js,6/e/6ebdfffaa342c9fe65d7e0a0d4820c0afb2396ae
+U
+%src/components/Footer/Footer.style.js,7/8/78187fef49a5a23dc0f0ac35afd43a0656449046
+O
+src/components/Footer/Footer.js,7/4/74666642fa5562fe777207b5a96d7dadad77ce22
