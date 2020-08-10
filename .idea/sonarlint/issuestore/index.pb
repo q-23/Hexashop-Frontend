@@ -251,3 +251,5 @@ U
 %src/components/Footer/Footer.style.js,7/8/78187fef49a5a23dc0f0ac35afd43a0656449046
 O
 src/components/Footer/Footer.js,7/4/74666642fa5562fe777207b5a96d7dadad77ce22
+V
+&src/views/HomePageView/HomePageView.js,1/1/11bef3fdf3431f73cf5e9570a91682e3be15b503
