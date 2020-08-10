@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 
 import FlexContainer from "./components/_Shared/FlexContainer";
 import Container from "./components/_Shared/Container";
@@ -28,6 +28,7 @@ function App() {
                 <Route exact={route.exact} path={route.path} component={route.component} key={route.path + idx}/>
               )
             }
+            <Route render={() => <Redirect to="/" />} />
           </Switch>
         </FlexContainer>
         <ToastContainer />
