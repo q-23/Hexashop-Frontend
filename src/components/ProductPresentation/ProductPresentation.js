@@ -11,6 +11,7 @@ import BoxName from "components/_Shared/BoxName";
 import HRLine from  'components/_Shared/HRLine';
 import Button from "components/_Shared/Button";
 
+import ReactHtmlParser from 'react-html-parser';
 import { Field } from 'react-final-form';
 import { Link } from "react-router-dom";
 
@@ -59,7 +60,7 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 									</Link>
 								</BrandLabel>)
 							}
-							<Typography size={'1.3em'} align={'justify'}>{product.description}</Typography>
+							<Typography align={'justify'}>{ReactHtmlParser(product.description)}</Typography>
 							<br/>
 							<HRLine/>
 							<Field name={'quantity'} initialValue={1}>
