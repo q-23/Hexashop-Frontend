@@ -27,6 +27,7 @@ const AllProductsView = () => {
 				}
 			});
 			const result = await res.json();
+			console.log('json', result)
 			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
 			setProductsData(result.products);
 			setIsLoading(false);
@@ -36,7 +37,11 @@ const AllProductsView = () => {
 	}
 
 	useEffect(() => {
+		if (Number(location.params.page)) {
+			setPagination({...pagination, currentPage: Number(location.params.page)})
+		}
 		if (!location.params.page || location.params.page === 'NaN') {
+			console.log('page', location.params)
 			history.push('/all_products/1')
 		}
 	//	eslint-disable-next-line
@@ -44,6 +49,7 @@ const AllProductsView = () => {
 
 	useEffect(() => {
 		fetchData();
+		console.log('currpa', pagination.currentPage)
 		if (!isNaN(pagination.currentPage)) {
 			history.push(`/all_products/${pagination.currentPage}`);
 		}
@@ -51,8 +57,16 @@ const AllProductsView = () => {
 		//	eslint-disable-next-line
 	}, [pagination.currentPage]);
 
+	useEffect(() => {
+		if(Number(location.params.page) > pagination.numberOfPages) {
+			history.push('/all_products/1');
+			setPagination({...pagination, currentPage: 1});
+		}
+	}, [pagination.numberOfPages])
+
 	return(
 		<>
+			{console.log('prod', productsData)}
 			<Loader isLoading={isLoading}/>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
 			<Pagination
