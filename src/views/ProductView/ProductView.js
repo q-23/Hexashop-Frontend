@@ -9,6 +9,9 @@ import { Form } from 'react-final-form';
 
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
+import Image from "components/_Shared/Image";
+
+import NO_PRODUCTS_IMAGE from "assets/images/no_products.png";
 
 const ProductView = ({ match }) => {
 	const [productData, setProductData] = useState(undefined);
@@ -42,7 +45,7 @@ const ProductView = ({ match }) => {
 					onSubmit={handleSubmit}
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
-						{ productData && <ProductPresentation form={form} values={values} product={productData}/> }
+						{productData && productData._id ? <ProductPresentation form={form} values={values} product={productData}/> : <Image src={NO_PRODUCTS_IMAGE} styles={'height: 100%; margin: 0 auto;'}/>}
 					</FlexContainer>
 				</FormFullWidth>
 			)}

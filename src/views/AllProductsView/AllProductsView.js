@@ -27,7 +27,6 @@ const AllProductsView = () => {
 				}
 			});
 			const result = await res.json();
-			console.log('json', result)
 			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
 			setProductsData(result.products);
 			setIsLoading(false);
@@ -62,11 +61,11 @@ const AllProductsView = () => {
 			history.push('/all_products/1');
 			setPagination({...pagination, currentPage: 1});
 		}
+	//	eslint-disable-next-line
 	}, [pagination.numberOfPages])
 
 	return(
 		<>
-			{console.log('prod', productsData)}
 			<Loader isLoading={isLoading}/>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
 			<Pagination

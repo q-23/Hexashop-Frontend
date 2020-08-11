@@ -43,7 +43,7 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 						}}
 					/>
 					<FlexContainer wrap={'wrap'}>
-						{product.images.map((image, index) => (
+						{product.images.length > 1 && product.images.map((image, index) => (
 							<FlexItem xs={3} lg={4} xl={3} key={image._id}>
 								<Image miniature src={image.link} onClick={() => setCurrentPhotoIndex(index)}/>
 							</FlexItem>
