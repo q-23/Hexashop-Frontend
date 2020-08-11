@@ -16,7 +16,7 @@ const CategoryView = () => {
 	const { activeCategory } = useContext(MenuContext);
 
 	async function fetchData() {
-		setIsLoading(true)
+		setIsLoading(true);
 		if (typeof activeCategory === 'object') {
 			const { _id } = { ...activeCategory }
 			try {
@@ -26,8 +26,8 @@ const CategoryView = () => {
 						'Accept': 'application/json'
 					}
 				});
-				const result = await res.json()
-				setCategoryData(result)
+				const result = await res.json();
+				setCategoryData(result);
 				setIsLoading(false);
 			} catch (e) {
 				setIsLoading(false);
