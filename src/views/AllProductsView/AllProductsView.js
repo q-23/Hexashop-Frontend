@@ -27,7 +27,7 @@ const AllProductsView = () => {
 				}
 			});
 			const result = await res.json();
-			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
+			setPagination(pagination => ({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
 			setProductsData(result.products);
 			setIsLoading(false);
 		} catch (e) {
@@ -37,10 +37,9 @@ const AllProductsView = () => {
 
 	useEffect(() => {
 		if (Number(location.params.page)) {
-			setPagination({...pagination, currentPage: Number(location.params.page)})
+			setPagination(pagination => ({...pagination, currentPage: Number(location.params.page)}))
 		}
 		if (!location.params.page || location.params.page === 'NaN') {
-			console.log('page', location.params)
 			history.push('/all_products/1')
 		}
 	//	eslint-disable-next-line
@@ -48,7 +47,6 @@ const AllProductsView = () => {
 
 	useEffect(() => {
 		fetchData();
-		console.log('currpa', pagination.currentPage)
 		if (!isNaN(pagination.currentPage)) {
 			history.push(`/all_products/${pagination.currentPage}`);
 		}

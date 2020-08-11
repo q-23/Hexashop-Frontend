@@ -15,6 +15,10 @@ export const routes = [
 		exact: true
 	},
 	{
+		path: '/category/:category_name/:page',
+		component: CategoryView
+	},
+	{
 		path: '/category/:category_name',
 		component: CategoryView
 	},
