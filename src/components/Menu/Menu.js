@@ -20,8 +20,8 @@ const Menu = ({ location }) => {
 							.map(el =>
 							<List key={`${el.category_path} - ${el.category_name}`}>
 								<Link
+									activelink={pathname.split('/')[pathname.includes('all_products') ? 1 : 2] === el.category_path.split('/')[pathname.includes('all_products') ? 1 : 2] ? 1 : 0}
 									to={`${el.category_path}`}
-									activelink={pathname === el.category_path ? 1 : 0}
 									onClick={() => {
 										setMenuOpen(false)
 									}}

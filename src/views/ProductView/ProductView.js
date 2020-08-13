@@ -20,7 +20,7 @@ const ProductView = ({ match }) => {
 
 	async function fetchData() {
 		try {
-			const res = await get({ url: `/product/${match.params.id}` g});
+			const res = await get({ url: `/product/${match.params.id}`});
 			const result = await res.json()
 			setProductData(result)
 		} catch (e) {

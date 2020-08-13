@@ -40,7 +40,6 @@ const AllProductsView = () => {
 			setPagination({...pagination, currentPage: Number(location.params.page)})
 		}
 		if (!location.params.page || location.params.page === 'NaN') {
-			console.log('page', location.params)
 			history.push('/all_products/1')
 		}
 	//	eslint-disable-next-line
