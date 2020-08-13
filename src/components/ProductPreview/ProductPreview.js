@@ -9,10 +9,13 @@ import FlexItem from "components/_Shared/FlexItem";
 import Button from "components/_Shared/Button";
 import Image from "components/_Shared/Image";
 
+import { useShopcart } from "contexts/shopcart/shopcart";
+import shopcartActions from "contexts/shopcart/actions";
 import * as styles from './ProductPreview.styles'
 
 const ProductPreview = ({ product = {}, width = 1 }) => {
 	const { name, price, image_thumbnail, _id } = product;
+	const [,dispatch] = useShopcart()
 
 	return (
 		<FlexItem flex_width={width} xl={3} lg={4} sm={6} xs={12} styles={styles.FLEX_ITEM_STYLES}>
@@ -25,7 +28,13 @@ const ProductPreview = ({ product = {}, width = 1 }) => {
 						<Typography styles={styles.PRODUCT_NAME_STYLES}>{name}</Typography>
 					</Link>
 					<Typography styles={styles.PRODUCT_PRICE_STYLES} color={'gray'}>{price}$</Typography>
-					<Button with_gradient style={{bottom: 0}}>Add to cart</Button>
+					<Button
+						with_gradient
+						style={{bottom: 0}}
+						onClick={() => dispatch({ type: shopcartActions.ADD_ITEM_TO_CART, payload: { product_id: _id, quantity: 1 } })}
+					>
+						Add to cart
+					</Button>
 				</Container>
 			</PreviewWrapper>
 		</FlexItem>

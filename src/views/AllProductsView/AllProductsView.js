@@ -48,7 +48,6 @@ const AllProductsView = () => {
 
 	useEffect(() => {
 		fetchData();
-		console.log('currpa', pagination.currentPage)
 		if (!isNaN(pagination.currentPage)) {
 			history.push(`/all_products/${pagination.currentPage}`);
 		}
