@@ -11,6 +11,7 @@ import Image from "components/_Shared/Image";
 
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
+
 import * as styles from './ProductPreview.styles'
 
 const ProductPreview = ({ product = {}, width = 1 }) => {

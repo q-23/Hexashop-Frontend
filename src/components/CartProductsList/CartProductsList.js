@@ -56,11 +56,9 @@ const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, on
 						</>
 					) :
 					(
-						<>
-							<Link to={'/register'}>
-								<Button with_gradient type={'button'}>Register to complete your purchase</Button>
-							</Link>
-						</>
+						<Typography>
+							<Link to={'/login'}>Login</Link> or <Link to={'/register'}>register</Link> to complete your purchase.
+						</Typography>
 					)
 				}
 			</FlexItem>
