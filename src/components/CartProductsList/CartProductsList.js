@@ -1,14 +1,22 @@
 import React from "react";
 
 import FlexContainer from "components/_Shared/FlexContainer";
+import Typography from "components/_Shared/Typography";
 import CartItem from "components/CartItem/CartItem";
 import FlexItem from "components/_Shared/FlexItem";
-import StripeCheckout from "react-stripe-checkout";
 import Button from "components/_Shared/Button";
-import Typography from "components/_Shared/Typography";
+
 import { Link } from "react-router-dom";
 
-const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, onToken, auth}) => {
+import StripeCheckout from "react-stripe-checkout";
+
+const CartProductsList = ({
+	productData,
+	shopcart,
+	totalPrice,
+	priceForStripe,
+	onToken,
+	auth }) => {
 
 	return (
 		<>

@@ -2,10 +2,11 @@ import React, {useContext, useEffect, useState} from "react";
 
 import ProductPreview from "components/ProductPreview";
 import Pagination from "components/Pagination";
-import Image from "components/_Shared/Image";
 import Loader from "components/Loader/Loader";
+import Image from "components/_Shared/Image";
 
 import { MenuContext } from "contexts/menu/menu";
+
 import { withRouter } from 'react-router-dom';
 
 import NO_PRODUCTS_IMAGE from 'assets/images/no_products.png';

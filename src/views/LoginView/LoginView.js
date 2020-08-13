@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 
 import FlexContainer from "components/_Shared/FlexContainer";
+import FormFullWidth from "components/_Shared/Form";
 import LoginPanel from "components/LoginPanel";
-import authorizationActions from "contexts/authorization/actions";
 
 import { useStateValueAuthorization } from 'contexts/authorization/authorization'
-import { FormFullWidth } from "components/_Shared/Form";
+import authorizationActions from "contexts/authorization/actions";
 import { post } from "helperFunctions/fetchFunctions";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 const LoginView = ({ history }) => {
 	const [auth, dispatch] = useStateValueAuthorization();

@@ -2,14 +2,15 @@ import React, {useEffect, useState} from "react";
 
 import ProductPresentation from "components/ProductPresentation";
 import FlexContainer from "components/_Shared/FlexContainer";
+import FormFullWidth from "components/_Shared/Form";
+import Image from "components/_Shared/Image";
 
-import { FormFullWidth } from "components/_Shared/Form";
+import { get } from "helperFunctions/fetchFunctions";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
 
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
-import Image from "components/_Shared/Image";
 
 import NO_PRODUCTS_IMAGE from "assets/images/no_products.png";
 
@@ -19,12 +20,7 @@ const ProductView = ({ match }) => {
 
 	async function fetchData() {
 		try {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/product/${match.params.id}`, {
-				headers: {
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				}
-			});
+			const res = await get({ url: `/product/${match.params.id}` g});
 			const result = await res.json()
 			setProductData(result)
 		} catch (e) {

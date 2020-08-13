@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import FlexContainer from "components/_Shared/FlexContainer";
+import FormFullWidth from "components/_Shared/Form";
 import AccountPanel from "components/AccountPanel";
 
 import { useStateValueAuthorization } from 'contexts/authorization/authorization'
-import { FormFullWidth } from "components/_Shared/Form";
+import { get, patch, post } from "helperFunctions/fetchFunctions";
 import { useHistory, withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
-import { get, patch, post } from "helperFunctions/fetchFunctions";
 import { diff } from 'deep-object-diff';
 import { toast } from "react-toastify";
 
