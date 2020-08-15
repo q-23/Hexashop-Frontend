@@ -17,13 +17,14 @@ import {
 import ACCOUNT_IMAGE from 'assets/images/account_image.jpg';
 
 import {useStateValueAuthorization} from "contexts/authorization/authorization";
+import {composeValidators} from "components/Validation/Validation";
 import {Spacer} from "components/AccountPanel/AccountPanel.style";
 import { withRouter } from 'react-router-dom';
 import { Field } from 'react-final-form';
 
 import authorizationActions from "contexts/authorization/actions";
 
-const AccountPanel = ({ isViewTypeRegister, history }) => {
+const AccountPanel = ({ isViewTypeRegister, history, values }) => {
 	const [,dispatch] = useStateValueAuthorization();
 
 	const logout = () => {
@@ -31,6 +32,8 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 		history.push('/')
 	}
 
+	const doPasswordsMatch = values.password === values.confirm_password;
+	console.log('asa', doPasswordsMatch)
 	return (
 		<>
 			<BoxHeaderContainer>
@@ -41,11 +44,12 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 				<FlexItem xs={12} align={'center'}>
 					<InputWrapper>
 					<Field
-						validate={validations.required}
+						validate={composeValidators(validations.required, validations.mustBeEmail)}
 						name={'email'}
 					>
 						{({ input, meta }) => (
 							<Input
+								error={meta.touched && !meta.active && meta.error}
 								invalid={meta.error && meta.touched}
 								label={'E-mail'}
 								key={'email'}
@@ -60,11 +64,12 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 				<FlexItem xs={12} md={6} align={'center'}>
 					<InputWrapper>
 						<Field
-							// validate={validations.required}
+							validate={composeValidators(validations.required, validations.mustBePassword)}
 							name={'password'}
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && !meta.active && meta.error}
 									invalid={meta.error && meta.touched}
 									label={'Password'}
 									type={'password'}
@@ -77,11 +82,12 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 				<FlexItem xs={12} md={6} align={'center'}>
 					<InputWrapper>
 						<Field
-							// validate={validations.required}
+							validate={composeValidators(validations.required, validations.mustBePassword)}
 							name={'confirm_password'}
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && !meta.active && meta.error}
 									invalid={meta.error && meta.touched}
 									label={'Confirm password'}
 									type={'password'}
@@ -100,6 +106,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && !meta.active && meta.error}
 									invalid={meta.error && meta.touched}
 									label={'Name'}
 									{...input}
@@ -116,6 +123,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && !meta.active && meta.error}
 									invalid={meta.error && meta.touched}
 									label={'Surname'}
 									{...input}
@@ -132,6 +140,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 							>
 								{({ input, meta }) => (
 									<Input
+										error={meta.touched && !meta.active && meta.error}
 										invalid={meta.error && meta.touched}
 										label={'City'}
 										{...input}
@@ -148,6 +157,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && !meta.active && meta.error}
 									invalid={meta.error && meta.touched}
 									label={'Street'}
 									{...input}
@@ -164,6 +174,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && !meta.active && meta.error}
 									invalid={meta.error && meta.touched}
 									label={'House number'}
 									{...input}
@@ -180,6 +191,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && !meta.active && meta.error}
 									invalid={meta.error && meta.touched}
 									label={'Postal code'}
 									{...input}

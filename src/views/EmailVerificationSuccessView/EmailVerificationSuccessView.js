@@ -4,7 +4,7 @@ import RegistrationSuccessPanel from "components/RegistrationSuccessPanel";
 import FlexContainer from "components/_Shared/FlexContainer";
 
 import { useHistory, useRouteMatch } from 'react-router-dom';
-import {get} from "helperFunctions/fetchFunctions";
+import { get } from "helperFunctions/fetchFunctions";
 import { withRouter } from 'react-router-dom';
 
 const EmailVerificationSuccessView = () => {

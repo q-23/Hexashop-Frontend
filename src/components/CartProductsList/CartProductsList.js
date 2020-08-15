@@ -1,14 +1,28 @@
 import React from "react";
 
 import FlexContainer from "components/_Shared/FlexContainer";
+import Typography from "components/_Shared/Typography";
 import CartItem from "components/CartItem/CartItem";
 import FlexItem from "components/_Shared/FlexItem";
-import StripeCheckout from "react-stripe-checkout";
 import Button from "components/_Shared/Button";
-import Typography from "components/_Shared/Typography";
+
 import { Link } from "react-router-dom";
 
-const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, onToken, auth}) => {
+import StripeCheckout from "react-stripe-checkout";
+
+const CartProductsList = ({
+	productData,
+	shopcart,
+	totalPrice,
+	priceForStripe,
+	onToken,
+	auth }) => {
+
+	React.useEffect(() => {
+		console.log(productData.products)
+		console.log(shopcart)
+
+	}, [shopcart, productData.products])
 
 	return (
 		<>
@@ -18,7 +32,7 @@ const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, on
 				wrap={'wrap'}
 			>
 				{productData.products &&
-				productData.products
+					productData.products
 					.filter(el => Object.keys(shopcart.products).includes(el._id))
 					.map(({image_thumbnail, _id, price, name}, idx) =>
 						<CartItem
@@ -56,11 +70,9 @@ const CartProductsList = ({productData, shopcart, totalPrice, priceForStripe, on
 						</>
 					) :
 					(
-						<>
-							<Link to={'/register'}>
-								<Button with_gradient type={'button'}>Register to complete your purchase</Button>
-							</Link>
-						</>
+						<Typography>
+							<Link to={'/login'}>Login</Link> or <Link to={'/register'}>register</Link> to complete your purchase.
+						</Typography>
 					)
 				}
 			</FlexItem>

@@ -21,7 +21,7 @@ function App() {
       <Header/>
       <Menu/>
       <Container main mx_auto test={'test'} position={'relative'} zIndex={2}>
-        <FlexContainer isLoading={false} main_container wrap={'wrap'}>
+        <FlexContainer main_container wrap={'wrap'}>
           <Switch>
             {
               routes.map((route, idx) =>

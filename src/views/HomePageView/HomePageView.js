@@ -21,9 +21,9 @@ const HomePageView = () => {
 			<FlexItem>
 				<Link to={'/all_products'}>
 					<Button
-						with_gradient
 						styles={`margin-bottom: 2em`}
 						type={'submit'}
+						with_gradient
 					>
 						See our items
 					</Button>

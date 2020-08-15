@@ -2,39 +2,41 @@ import React, {useContext, useEffect, useState} from "react";
 
 import ProductPreview from "components/ProductPreview";
 import Pagination from "components/Pagination";
-import Image from "components/_Shared/Image";
 import Loader from "components/Loader/Loader";
+import Image from "components/_Shared/Image";
 
-import { MenuContext } from "contexts/menu/menu";
 import {useHistory, useRouteMatch, withRouter} from 'react-router-dom';
+import { setPagesCount, setPage } from "helperFunctions/pagination";
+import { MenuContext } from "contexts/menu/menu";
 
 import NO_PRODUCTS_IMAGE from 'assets/images/no_products.png';
-import {setPage, setPagesCount} from "helperFunctions/pagination";
 
 const CategoryView = () => {
-	const [pagination, setPagination] = useState({ currentPage: 1, numberOfPages: 1 });
-	const [categoryData, setCategoryData] = useState({});
+	const [pagination, setPagination] = useState({ currentPage: undefined, numberOfPages: undefined });
+	const [categoryData, setCategoryData] = useState(undefined);
 	const [isLoading, setIsLoading] = useState(false);
 	const { activeCategory } = useContext(MenuContext);
+	const abortController = new AbortController();
 	const location = useRouteMatch();
 	const history = useHistory();
 
-	const abortController = new AbortController();
+	const [category, categoryName, page] = location.url.split('/').filter(e => !!e);
 
 	async function fetchData() {
-		setIsLoading(true)
+		setIsLoading(true);
 		if (typeof activeCategory === 'object') {
 			const { _id } = { ...activeCategory }
 			try {
 				const res = await fetch(`${process.env.REACT_APP_API_URL}/category/${_id}?sortBy=price:desc&limit=12&skip=${(pagination.currentPage - 1) * 12}`, {
+					signal: abortController.signal,
 					headers: {
 						'Content-Type': 'application/json',
 						'Accept': 'application/json'
 					}
 				});
 				const result = await res.json();
-				setPagination(pagination => ({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }))
-				setCategoryData(result);
+				setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }));
+				setCategoryData(result.products);
 				setIsLoading(false);
 			} catch (e) {
 				setIsLoading(false);
@@ -44,26 +46,27 @@ const CategoryView = () => {
 
 	useEffect(() => {
 		if (Number(location.params.page)) {
-			setPagination(pagination => ({...pagination, currentPage: Number(location.params.page)}))
+			setPagination({...pagination, currentPage: Number(location.params.page)})
 		}
-		if (activeCategory && (!location.params.page || location.params.page === 'NaN')) {
-			history.push(activeCategory.category_path + '/1')
+		if (!location.params.page || isNaN(Number(location.params.page))) {
+			history.push(`/${category}/${categoryName}/1`)
 		}
 		//	eslint-disable-next-line
-	}, [])
+	}, [location.path])
 
 	useEffect(() => {
-		if(Number(location.params.page) > pagination.numberOfPages) {
-			history.push(location.pathname + '/1');
+
+		if(pagination.numberOfPages && (Number(location.params.page) > pagination.numberOfPages)) {
+			history.push(`/${category}/${categoryName}/${page && page < pagination.numberOfPages ? page : '/1'}`);
 			setPagination({...pagination, currentPage: 1});
 		}
 		//	eslint-disable-next-line
-	}, [pagination.numberOfPages])
+	}, [pagination.numberOfPages, activeCategory])
 
 	useEffect(() => {
 		fetchData();
 		if (activeCategory && !isNaN(pagination.currentPage)) {
-			history.push(activeCategory.category_path + '/' + pagination.currentPage);
+			history.push(`/${category}/${categoryName}/${pagination.currentPage}`)
 		}
 		return () => abortController.abort();
 		//	eslint-disable-next-line
@@ -72,17 +75,16 @@ const CategoryView = () => {
 	return(
 		<>
 			<Loader isLoading={isLoading}/>
-			{!!categoryData.products &&
-				categoryData.products.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>
+			{categoryData &&
+				categoryData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>
 			)}
-			{categoryData.products && !categoryData.products.length &&(
+			{categoryData && !isLoading && !categoryData.length &&(
 				<Image src={NO_PRODUCTS_IMAGE} styles={'height: 100%; margin: 0 auto;'}/>
 			)}
-			{		console.log(location,'asd')}
 			<Pagination
+				setPage={setPage({ pagination, setPagination })}
 				numberOfPages={pagination.numberOfPages}
 				currentPage={pagination.currentPage}
-				setPage={setPage({ pagination, setPagination })}
 			/>
 		</>
 	)

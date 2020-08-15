@@ -6,4 +6,4 @@ const FormFullWidth = styled.form`
 	width: 100%;
 `;
 
-export { FormFullWidth };
+export default FormFullWidth

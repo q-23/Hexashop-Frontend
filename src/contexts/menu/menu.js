@@ -25,7 +25,9 @@ export const StateProviderMenu = ({ children, location }) => {
 	}, []);
 
 	useEffect(() => {
-		const foundCategory = menuCategories.find(category => category.category_path.split('/')[2] === location.pathname.split('/')[2]);
+		const foundCategory =
+			menuCategories.find(category => category.category_path.split('/')[2] === location.pathname.split('/')[2]);
+
 		if (foundCategory) {
 			setActiveCategory(foundCategory)
 		}

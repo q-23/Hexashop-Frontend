@@ -15,15 +15,15 @@ const shopcartReducers = (state, action) => {
 			return { ...state, products: { ...state.products, [product_id]: quantity } }
 		}
 		case shopcartActions.REMOVE_ITEM: {
-			delete state.products[payload];
-			return state;
+			const stateFiltered = Object.entries(state.products).filter(el => el[0] !== payload);
+			return { ...state, products: Object.fromEntries(stateFiltered) };
 		}
 		case shopcartActions.CLEAR_CART: {
 			return { products: { }, productsCount: 0 }
 		}
 		case shopcartActions.CALCULATE_TOTAL_QUANTITY: {
 			const { products } = state;
-			const productsCount = Object.values(products).reduce((acc, val) => {
+			const productsCount = products && Object.values(products).reduce((acc, val) => {
 				return acc + val
 			}, 0)
 			return { ...state, productsCount }

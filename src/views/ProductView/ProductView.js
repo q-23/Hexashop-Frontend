@@ -2,32 +2,33 @@ import React, {useEffect, useState} from "react";
 
 import ProductPresentation from "components/ProductPresentation";
 import FlexContainer from "components/_Shared/FlexContainer";
+import FormFullWidth from "components/_Shared/Form";
+import Loader from "components/Loader/Loader";
+import Image from "components/_Shared/Image";
 
-import { FormFullWidth } from "components/_Shared/Form";
+import { get } from "helperFunctions/fetchFunctions";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
 
 import { useShopcart } from "contexts/shopcart/shopcart";
 import shopcartActions from "contexts/shopcart/actions";
-import Image from "components/_Shared/Image";
 
 import NO_PRODUCTS_IMAGE from "assets/images/no_products.png";
 
 const ProductView = ({ match }) => {
 	const [productData, setProductData] = useState(undefined);
+	const [isLoading, setIsLoading] = useState(false);
 	const [,dispatch] = useShopcart()
 
 	async function fetchData() {
+		setIsLoading(true);
 		try {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/product/${match.params.id}`, {
-				headers: {
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				}
-			});
+			const res = await get({ url: `/product/${match.params.id}`});
 			const result = await res.json()
-			setProductData(result)
+			setProductData(result);
+			setIsLoading(false);
 		} catch (e) {
+			setIsLoading(false);
 		}
 	}
 
@@ -45,8 +46,9 @@ const ProductView = ({ match }) => {
 					onSubmit={handleSubmit}
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
-						{productData && productData._id ? <ProductPresentation form={form} values={values} product={productData}/> : <Image src={NO_PRODUCTS_IMAGE} styles={'height: 100%; margin: 0 auto;'}/>}
+						{productData && productData._id ? <ProductPresentation form={form} values={values} product={productData}/> : (!isLoading && <Image src={NO_PRODUCTS_IMAGE} styles={'height: 100%; margin: 0 auto;'}/>)}
 					</FlexContainer>
+					<Loader isLoading={isLoading}/>
 				</FormFullWidth>
 			)}
 		/>

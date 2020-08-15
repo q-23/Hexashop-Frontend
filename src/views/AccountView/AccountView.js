@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 
 import FlexContainer from "components/_Shared/FlexContainer";
+import FormFullWidth from "components/_Shared/Form";
 import AccountPanel from "components/AccountPanel";
 
 import { useStateValueAuthorization } from 'contexts/authorization/authorization'
-import { FormFullWidth } from "components/_Shared/Form";
+import { get, patch, post } from "helperFunctions/fetchFunctions";
 import { useHistory, withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
-import { get, patch, post } from "helperFunctions/fetchFunctions";
 import { diff } from 'deep-object-diff';
 import { toast } from "react-toastify";
+
+import validations from "components/Validation";
 
 const AccountView = ({ match }) => {
 	const [accountData, setAccountData] = useState({});
@@ -114,13 +116,28 @@ const AccountView = ({ match }) => {
 					editAccountData(accData)
 				}
 			}}
+			validate={values => {
+				const errors = {};
+				if (values.password && values.confirm_password) {
+					const passwordErrors = validations.passwordsMustMatch(
+						values.password,
+						values.confirm_password
+					);
+					if (passwordErrors) {
+						errors.confirm_password = passwordErrors;
+						errors.password = passwordErrors;
+					}
+				}
+				console.log(errors)
+				return errors;
+			}}
 			initialValues={accountData}
-			render={({ handleSubmit}) => (
+			render={({ handleSubmit, values }) => (
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
-						<AccountPanel isViewTypeRegister={isViewTypeRegister}/>
+						<AccountPanel values={values} isViewTypeRegister={isViewTypeRegister}/>
 					</FlexContainer>
 				</FormFullWidth>
 			)}
