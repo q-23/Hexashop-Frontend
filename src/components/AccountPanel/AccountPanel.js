@@ -46,6 +46,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 					>
 						{({ input, meta }) => (
 							<Input
+								error={meta.touched && meta.error && 'Field required.'}
 								invalid={meta.error && meta.touched}
 								label={'E-mail'}
 								key={'email'}
@@ -65,6 +66,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && meta.error && 'Field required.'}
 									invalid={meta.error && meta.touched}
 									label={'Password'}
 									type={'password'}
@@ -82,6 +84,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && meta.error && 'Field required.'}
 									invalid={meta.error && meta.touched}
 									label={'Confirm password'}
 									type={'password'}
@@ -100,6 +103,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && meta.error && 'Field required.'}
 									invalid={meta.error && meta.touched}
 									label={'Name'}
 									{...input}
@@ -116,6 +120,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && meta.error && 'Field required.'}
 									invalid={meta.error && meta.touched}
 									label={'Surname'}
 									{...input}
@@ -132,6 +137,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 							>
 								{({ input, meta }) => (
 									<Input
+										error={meta.touched && meta.error && 'Field required.'}
 										invalid={meta.error && meta.touched}
 										label={'City'}
 										{...input}
@@ -148,6 +154,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && meta.error && 'Field required.'}
 									invalid={meta.error && meta.touched}
 									label={'Street'}
 									{...input}
@@ -164,6 +171,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && meta.error && 'Field required.'}
 									invalid={meta.error && meta.touched}
 									label={'House number'}
 									{...input}
@@ -180,6 +188,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 						>
 							{({ input, meta }) => (
 								<Input
+									error={meta.touched && meta.error && 'Field required.'}
 									invalid={meta.error && meta.touched}
 									label={'Postal code'}
 									{...input}

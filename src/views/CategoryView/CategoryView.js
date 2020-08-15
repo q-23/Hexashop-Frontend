@@ -78,7 +78,7 @@ const CategoryView = () => {
 			{categoryData &&
 				categoryData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>
 			)}
-			{categoryData && !categoryData.length &&(
+			{categoryData && !isLoading && !categoryData.length &&(
 				<Image src={NO_PRODUCTS_IMAGE} styles={'height: 100%; margin: 0 auto;'}/>
 			)}
 			<Pagination

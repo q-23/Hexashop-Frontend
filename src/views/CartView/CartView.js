@@ -117,11 +117,10 @@ const CartView = () => {
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
-					{console.log(isLoading)}
 					<BoxHeaderContainer>
 						<BoxName>{shopcart.productsCount === 0 ? 'Your cart is empty...' : 'Your cart items'}</BoxName>
 					</BoxHeaderContainer>
-						{shopcart.productsCount === 0 ? (
+						{shopcart.productsCount === 0 && !isLoading ? (
 							<FlexContainer justify={'center'}>
 								<FlexItem>
 									<Link to={'/all_products'}>
