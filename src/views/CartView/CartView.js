@@ -33,6 +33,7 @@ const CartView = () => {
 		try {
 			setIsLoading(true)
 			if(shopcart.products && !Object.keys(shopcart.products).length) {
+				setIsLoading(false)
 				return setProductData([])
 			}
 			const res = await fetch(`${process.env.REACT_APP_API_URL}/product/cart_items/${Object.keys(shopcart.products).join(':')}`, {

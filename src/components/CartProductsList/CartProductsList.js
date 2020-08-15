@@ -18,6 +18,12 @@ const CartProductsList = ({
 	onToken,
 	auth }) => {
 
+	React.useEffect(() => {
+		console.log(productData.products)
+		console.log(shopcart)
+
+	}, [shopcart, productData.products])
+
 	return (
 		<>
 			<FlexContainer
@@ -26,7 +32,7 @@ const CartProductsList = ({
 				wrap={'wrap'}
 			>
 				{productData.products &&
-				productData.products
+					productData.products
 					.filter(el => Object.keys(shopcart.products).includes(el._id))
 					.map(({image_thumbnail, _id, price, name}, idx) =>
 						<CartItem
