@@ -43,7 +43,7 @@ const ValidationError = styled.div`
 	border: 1px solid ${palette.LIGHT_GRAY};
 	border-radius: 5px;
 	opacity: ${props => props.visible ? 1 : 0};
-	${props => console.log(props)}
+	transition: opacity .5s ease-in-out;
 	&:after {
 		display: inline-block;
 		position: absolute;
