@@ -24,7 +24,7 @@ import { Field } from 'react-final-form';
 
 import authorizationActions from "contexts/authorization/actions";
 
-const AccountPanel = ({ isViewTypeRegister, history, values }) => {
+const AccountPanel = ({ isViewTypeRegister, history }) => {
 	const [,dispatch] = useStateValueAuthorization();
 
 	const logout = () => {
@@ -32,8 +32,6 @@ const AccountPanel = ({ isViewTypeRegister, history, values }) => {
 		history.push('/')
 	}
 
-	const doPasswordsMatch = values.password === values.confirm_password;
-	console.log('asa', doPasswordsMatch)
 	return (
 		<>
 			<BoxHeaderContainer>

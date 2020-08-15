@@ -35,7 +35,7 @@ const AccountView = ({ match }) => {
 			const changedFields = diff(accountData, accData);
 			delete changedFields.email;
 
-			const res = await patch({url: '/user', auth, body: JSON.stringify(changedFields)});
+			const res = await patch({url: '/user', auth: auth.token, body: JSON.stringify(changedFields)});
 			const resJSON = await res.json();
 			if(res.status === 200) {
 				return toast.success(resJSON.message, {
@@ -128,16 +128,15 @@ const AccountView = ({ match }) => {
 						errors.password = passwordErrors;
 					}
 				}
-				console.log(errors)
 				return errors;
 			}}
 			initialValues={accountData}
-			render={({ handleSubmit, values }) => (
+			render={({ handleSubmit }) => (
 				<FormFullWidth
 					onSubmit={handleSubmit}
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
-						<AccountPanel values={values} isViewTypeRegister={isViewTypeRegister}/>
+						<AccountPanel isViewTypeRegister={isViewTypeRegister}/>
 					</FlexContainer>
 				</FormFullWidth>
 			)}
