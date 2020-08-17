@@ -253,3 +253,5 @@ O
 src/components/Footer/Footer.js,7/4/74666642fa5562fe777207b5a96d7dadad77ce22
 V
 &src/views/HomePageView/HomePageView.js,1/1/11bef3fdf3431f73cf5e9570a91682e3be15b503
+R
+"src/components/Validation/index.js,b/2/b20883efa60de52231717477f52af6b4f50b0b87

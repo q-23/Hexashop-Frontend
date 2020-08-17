@@ -34,6 +34,9 @@ const AccountView = ({ match }) => {
 		try {
 			const changedFields = diff(accountData, accData);
 			delete changedFields.email;
+			if(accData.confirm_password) {
+				delete changedFields.confirm_password;
+			}
 
 			const res = await patch({url: '/user', auth: auth.token, body: JSON.stringify(changedFields)});
 			const resJSON = await res.json();
@@ -59,7 +62,6 @@ const AccountView = ({ match }) => {
 					progress: undefined,
 				});
 			}
-
 			fetchAccountData()
 		} catch (e) {
 			console.log(e);
@@ -110,7 +112,6 @@ const AccountView = ({ match }) => {
 		<Form
 			onSubmit={accData => {
 				if(isViewTypeRegister) {
-					console.log('register')
 					registerAccount(accData)
 				} else {
 					editAccountData(accData)

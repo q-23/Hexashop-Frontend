@@ -62,7 +62,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 				<FlexItem xs={12} md={6} align={'center'}>
 					<InputWrapper>
 						<Field
-							validate={composeValidators(validations.required, validations.mustBePassword)}
+							validate={isViewTypeRegister ? composeValidators(validations.required, validations.mustBePassword) : validations.mustBePassword}
 							name={'password'}
 						>
 							{({ input, meta }) => (
@@ -80,7 +80,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 				<FlexItem xs={12} md={6} align={'center'}>
 					<InputWrapper>
 						<Field
-							validate={composeValidators(validations.required, validations.mustBePassword)}
+							validate={isViewTypeRegister ? composeValidators(validations.required, validations.mustBePassword) : validations.mustBePassword}
 							name={'confirm_password'}
 						>
 							{({ input, meta }) => (
