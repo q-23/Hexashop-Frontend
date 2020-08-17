@@ -14,7 +14,7 @@ const Wrapper = styled.nav`
   z-index: 90;
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
   overflow: scroll;
-  transform: translate3d(-100vw , 0, 0);
+	transform: translate3d(-100vw , 0, 0);
 	box-shadow: ${({ visible }) => visible ? '10px 2px 23px -1px rgba(0,0,0,0.62)' : 'none'};
 	${({ visible }) => visible && `
 	  transform: translate3d(0vw, 0, 0);
@@ -40,22 +40,28 @@ const MenuOverlay = styled.div`
   overflow: hidden;
   position: fixed;
   height: 100vh;
-  width: 100vw;
+	width: 100vw;
   z-index: 89;
   left: 0;
   top: 0;
   
 	${({ visible }) => visible && `
 	visibility: visible;
-	  transform: translate3d(0vw, 0, 0);
+	transform: translate3d(0vw, 0, 0);
 	`};
 `;
 
 const List = styled.ul`
-		margin: 10px 0;
+		padding-left: 20px;
+		list-style: none;
 		width: 100%;
-		padding: 0;
+		height: 95%;
 `;
+
+const ListItem = styled.li`
+	margin: 10px 0;
+	width: 100%;
+`
 
 
 const Link = styled(RouterLink)`
@@ -73,11 +79,13 @@ const Link = styled(RouterLink)`
 		color: white;
 `;
 
+
 const MenuWrapper = WithWidth(Wrapper);
 
 export {
 	MenuWrapper,
 	MenuOverlay,
+	ListItem,
 	Link,
 	List
 }

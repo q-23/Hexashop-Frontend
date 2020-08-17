@@ -4,6 +4,7 @@ import ProductView from "views/ProductView/ProductView";
 import AllProductsView from "./views/AllProductsView";
 import HomePageView from "./views/HomePageView";
 import CategoryView from "./views/CategoryView";
+import AllBrandsView from "views/AllBrandsView";
 import AccountView from "views/AccountView";
 import LoginView from "views/LoginView";
 import CartView from "views/CartView";
@@ -29,6 +30,14 @@ export const routes = [
 	{
 		path: '/all_products/',
 		component: AllProductsView
+	},
+	{
+		path: '/brands/',
+		component: AllBrandsView
+	},
+	{
+		path: '/brands/:page',
+		component: AllBrandsView
 	},
 	{
 		path: '/product/:id',
