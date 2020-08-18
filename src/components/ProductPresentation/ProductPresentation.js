@@ -30,7 +30,7 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 	const [lightboxOpen, setLightboxOpen] = useState(false);
 	const { brands } = useContext(MenuContext);
 
-	const currentBrand = brands && brands.find(brand => brand._id === product.brand._id);
+	const currentBrand = brands && product.brand && brands.find(brand => brand._id === product.brand._id);
 
 	return (
 		<>
@@ -80,7 +80,7 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 							>
 								Add to cart
 							</Button>
-							<Typography align={'center'} size={'1.5em'} color={LIGHT_DARK}>{product.price * values.quantity} $</Typography>
+							<Typography align={'center'} size={'1.5em'} color={LIGHT_DARK}>{(product.price * values.quantity).toFixed(2)} $</Typography>
 						</FlexItem>
 					</FlexContainer>
 				</FlexItem>

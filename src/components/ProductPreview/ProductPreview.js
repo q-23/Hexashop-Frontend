@@ -28,7 +28,7 @@ const ProductPreview = ({ product = {}, width = 1 }) => {
 					<Link to={`/product/${_id}`} >
 						<Typography styles={styles.PRODUCT_NAME_STYLES}>{name}</Typography>
 					</Link>
-					<Typography styles={styles.PRODUCT_PRICE_STYLES} color={'gray'}>{price}$</Typography>
+					<Typography styles={styles.PRODUCT_PRICE_STYLES} color={'gray'}>{price.toFixed(2)}$</Typography>
 					<Button
 						with_gradient
 						style={{bottom: 0}}
