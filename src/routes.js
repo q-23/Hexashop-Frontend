@@ -33,11 +33,11 @@ export const routes = [
 		component: AllProductsView
 	},
 	{
-		path: '/brands/',
+		path: '/brands/:page',
 		component: AllBrandsView
 	},
 	{
-		path: '/brands/:page',
+		path: '/brands/',
 		component: AllBrandsView
 	},
 	{

@@ -47,13 +47,13 @@ const BrandView = () => {
 			setPagination({...pagination, currentPage: Number(location.params.page)})
 		}
 		// if (!location.params.page || isNaN(Number(location.params.page))) {
-		// 	history.push(`/${category}/${categoryName}/1`)
+		// 	history.push(`/brand${currentBrand.brand_path}/1`)
 		// }
 		//	eslint-disable-next-line
 	}, [location.path])
 
 	useEffect(() => {
-		console.log(currentBrand)
+		console.log(location.params)
 		if(pagination.numberOfPages && (Number(location.params.page) > pagination.numberOfPages)) {
 			history.push(`/brand${currentBrand.brand_path}/${1 && 1 < pagination.numberOfPages ? 1 : '/1'}`);
 			setPagination({...pagination, currentPage: 1});

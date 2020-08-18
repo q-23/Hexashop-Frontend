@@ -41,6 +41,8 @@ const AllBrandsView = () => {
 		if (Number(location.params.page)) {
 			setPagination({...pagination, currentPage: Number(location.params.page)})
 		}
+		console.log(location.params)
+		console.log(!location.params.page, isNaN(Number(location.params.page)))
 		if (!location.params.page || isNaN(Number(location.params.page))) {
 			history.push(`/brands/1`)
 		}
@@ -48,9 +50,8 @@ const AllBrandsView = () => {
 	}, [location.path])
 
 	useEffect(() => {
-
 		if(pagination.numberOfPages && (Number(location.params.page) > pagination.numberOfPages)) {
-			// history.push(`/brands/${page && page < pagination.numberOfPages ? page : '/1'}`);
+			history.push(`/brands/${location.params.page && location.params.page < pagination.numberOfPages ? location.params.page : '/1'}`);
 			setPagination({...pagination, currentPage: 1});
 		}
 		//	eslint-disable-next-line
@@ -68,7 +69,6 @@ const AllBrandsView = () => {
 	return(
 		<>
 			<Loader isLoading={isLoading}/>
-			{console.log(brandsData)}
 			{brandsData &&
 				brandsData.map((brand, idx) => <BrandPreview key={`${brand.brand_name} - ${brand.brand_path} - ${idx}`} brand={brand}/>
 			)}
