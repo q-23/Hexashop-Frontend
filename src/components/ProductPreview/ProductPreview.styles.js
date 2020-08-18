@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import Container from "components/_Shared/Container";
+
 export const IMAGE_STYLES = css`
 	max-width: 250px; 
 	width: 100%;
@@ -32,4 +34,15 @@ export const PRODUCT_PRICE_STYLES = css`
 
 export const PreviewWrapper = styled.div`
 	margin: 1.5em;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+`;
+
+export const PreviewContainer = styled(Container)`
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-content: center;
+	justify-content: space-between;
 `;

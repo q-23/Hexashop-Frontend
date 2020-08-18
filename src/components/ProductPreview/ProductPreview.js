@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { PreviewWrapper } from "./ProductPreview.styles";
+import { PreviewWrapper, PreviewContainer } from "./ProductPreview.styles";
 import Typography from "components/_Shared/Typography";
 import Container from "components/_Shared/Container";
 import FlexItem from "components/_Shared/FlexItem";
@@ -24,19 +24,21 @@ const ProductPreview = ({ product = {}, width = 1 }) => {
 				<Link to={`/product/${_id}`} >
 					<Image styles={styles.IMAGE_STYLES} src={image_thumbnail && image_thumbnail.link}/>
 				</Link>
-				<Container styles={'height: 100%'}>
+				<PreviewContainer>
 					<Link to={`/product/${_id}`} >
 						<Typography styles={styles.PRODUCT_NAME_STYLES}>{name}</Typography>
 					</Link>
-					<Typography styles={styles.PRODUCT_PRICE_STYLES} color={'gray'}>{price.toFixed(2)}$</Typography>
-					<Button
-						with_gradient
-						style={{bottom: 0}}
-						onClick={() => dispatch({ type: shopcartActions.ADD_ITEM_TO_CART, payload: { product_id: _id, quantity: 1 } })}
-					>
-						Add to cart
-					</Button>
-				</Container>
+					<div>
+						<Typography styles={styles.PRODUCT_PRICE_STYLES} color={'gray'}>{price.toFixed(2)}$</Typography>
+						<Button
+							with_gradient
+							style={{bottom: 0}}
+							onClick={() => dispatch({ type: shopcartActions.ADD_ITEM_TO_CART, payload: { product_id: _id, quantity: 1 } })}
+						>
+							Add to cart
+						</Button>
+					</div>
+				</PreviewContainer>
 			</PreviewWrapper>
 		</FlexItem>
 	)
