@@ -10,6 +10,7 @@ const FlexContainer = styled.div`
 		transform: translateY(-3.95em);
 		background-color: white;
 		min-height: 60vh;
+		align-items: last baseline;
 		box-shadow: 0px 0px 31px -6px rgba(0,0,0,0.62);
 	`};
 	${({ padding }) => !!padding && `padding: ${padding}`};

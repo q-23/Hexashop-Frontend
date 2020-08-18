@@ -255,3 +255,13 @@ V
 &src/views/HomePageView/HomePageView.js,1/1/11bef3fdf3431f73cf5e9570a91682e3be15b503
 R
 "src/components/Validation/index.js,b/2/b20883efa60de52231717477f52af6b4f50b0b87
+X
+(src/views/AllBrandsView/AllBrandsView.js,4/e/4ec6317ff3746b56bb4dee8f1b11f7f3d422ec0c
+T
+$src/components/BrandPreview/index.js,8/5/857028ddaf3127b908bdb39f4473f09d0640b313
+P
+ src/views/AllBrandsView/index.js,2/6/2649e0baf39eebc360e02520eceb4e94db52c03e
+b
+2src/components/BrandPreview/BrandPreview.styles.js,4/1/41eef0f7e5b74587a5923bad817e4c7f6b7c4b41
+[
++src/components/BrandPreview/BrandPreview.js,c/0/c0665361e4a1a6a2d4509f43d16f7579ebd4877b

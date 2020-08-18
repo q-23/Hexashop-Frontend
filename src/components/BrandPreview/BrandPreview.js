@@ -12,7 +12,6 @@ import * as styles from 'components/BrandPreview/BrandPreview.styles'
 
 const BrandPreview = ({ brand = {}, width = 1 }) => {
 	const { brand_name, brand_path, brand_image_link } = brand;
-	console.log(brand_image_link)
 
 	return (
 		<FlexItem flex_width={width} xl={3} lg={4} sm={6} xs={12} styles={styles.FLEX_ITEM_STYLES}>

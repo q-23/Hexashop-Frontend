@@ -29,9 +29,8 @@ const AllBrandsView = () => {
 				}
 			});
 			const result = await res.json();
-			console.log(result)
 			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }));
-			setBrandsData(result);
+			setBrandsData(result.brands);
 			setIsLoading(false);
 		} catch (e) {
 			setIsLoading(false);
