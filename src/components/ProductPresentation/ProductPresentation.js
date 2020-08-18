@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 
 import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import QuantityInput from "components/QuantityInput/QuantityInput";
@@ -18,6 +18,8 @@ import { Link } from "react-router-dom";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
+import {MenuContext} from "contexts/menu/menu";
+
 const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 
 	const findMainImageIndex = product =>
@@ -26,6 +28,9 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(findMainImageIndex(product));
 	const [lightboxPhotoIndex, setLightboxPhotoIndex] = useState(currentPhotoIndex)
 	const [lightboxOpen, setLightboxOpen] = useState(false);
+	const { brands } = useContext(MenuContext);
+
+	const currentBrand = brands && brands.find(brand => brand._id === product.brand._id);
 
 	return (
 		<>
@@ -55,7 +60,7 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 						<FlexItem xs={12} padding={'0 1em'} align={'center'}>
 							{product.brand &&
 								(<BrandLabel><span>Brand: </span>
-									<Link to={`/brand/${product.brand && product.brand._id}`}>
+									<Link to={`/brand${currentBrand && currentBrand.brand_path}/1`}>
 										{product.brand.brand_name}
 									</Link>
 								</BrandLabel>)

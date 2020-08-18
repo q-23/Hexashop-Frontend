@@ -7,6 +7,7 @@ import CategoryView from "./views/CategoryView";
 import AllBrandsView from "views/AllBrandsView";
 import AccountView from "views/AccountView";
 import LoginView from "views/LoginView";
+import BrandView from "views/BrandView";
 import CartView from "views/CartView";
 
 export const routes = [
@@ -38,6 +39,14 @@ export const routes = [
 	{
 		path: '/brands/:page',
 		component: AllBrandsView
+	},
+	{
+		path: '/brand/:brand_name/:page',
+		component: BrandView
+	},
+	{
+		path: '/brand/:brand_name/',
+		component: BrandView
 	},
 	{
 		path: '/product/:id',
