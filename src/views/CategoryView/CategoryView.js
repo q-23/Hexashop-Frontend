@@ -55,8 +55,8 @@ const CategoryView = () => {
 	}, [location.path])
 
 	useEffect(() => {
-
-		if(pagination.numberOfPages && (Number(location.params.page) > pagination.numberOfPages)) {
+		const pageNumber = Number(location.params.page);
+		if (pageNumber < 1 || isNaN(pageNumber) || (pagination.numberOfPages && (pageNumber > pagination.numberOfPages))) {
 			history.push(`/${category}/${categoryName}/${page && page < pagination.numberOfPages ? page : '/1'}`);
 			setPagination({...pagination, currentPage: 1});
 		}

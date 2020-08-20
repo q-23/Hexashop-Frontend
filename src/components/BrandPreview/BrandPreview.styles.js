@@ -24,9 +24,25 @@ export const PRODUCT_NAME_STYLES = css`
 	font-size: 1.2em;
 `;
 
-export const PRODUCT_PRICE_STYLES = css`
-	text-align: center;
-	font-size: .9em;
+export const Image = styled.div`
+	width: 100%;
+	background-image: ${({ src }) => `url("${src}")`};
+	background-position: center;
+	background-size: cover;
+	cursor: ${({pointer}) => pointer && 'pointer'};
+	${({miniature}) => miniature && `
+		cursor: pointer;
+		filter: saturation(.7);
+		transition: .2s ease-in-out;
+		&:hover {
+			filter: saturation(1)
+		}
+	`};
+	&:after {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+	}
 `;
 
 export const PreviewWrapper = styled.div`

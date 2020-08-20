@@ -15,8 +15,8 @@ const BrandView = () => {
 	const [pagination, setPagination] = useState({ currentPage: undefined, numberOfPages: undefined });
 	const [brandData, setBrandData] = useState(undefined);
 	const [isLoading, setIsLoading] = useState(false);
-	const { brands } = useContext(MenuContext);
 	const abortController = new AbortController();
+	const { brands } = useContext(MenuContext);
 	const location = useRouteMatch();
 	const history = useHistory();
 
@@ -33,7 +33,6 @@ const BrandView = () => {
 				}
 			});
 			const result = await res.json();
-			console.log(result)
 			setPagination(({ ...pagination, numberOfPages: setPagesCount({ count: result.count }) }));
 			setBrandData(result.products);
 			setIsLoading(false);
@@ -46,16 +45,13 @@ const BrandView = () => {
 		if (Number(location.params.page)) {
 			setPagination({...pagination, currentPage: Number(location.params.page)})
 		}
-		// if (!location.params.page || isNaN(Number(location.params.page))) {
-		// 	history.push(`/brand${currentBrand.brand_path}/1`)
-		// }
 		//	eslint-disable-next-line
 	}, [location.path])
 
 	useEffect(() => {
-		console.log(location.params)
-		if(pagination.numberOfPages && (Number(location.params.page) > pagination.numberOfPages)) {
-			history.push(`/brand${currentBrand.brand_path}/${1 && 1 < pagination.numberOfPages ? 1 : '/1'}`);
+		const pageNumber = Number(location.params.page);
+		if(isNaN(pageNumber) || pageNumber < 1 || (pagination.numberOfPages && (pageNumber > pagination.numberOfPages))) {
+			history.push(`/brand${currentBrand.brand_path}/${1 && 1 < pagination.numberOfPages ? 1 : '1'}`);
 			setPagination({...pagination, currentPage: 1});
 		}
 		//	eslint-disable-next-line
@@ -65,15 +61,13 @@ const BrandView = () => {
 		if (brands && !currentBrand) {
 			history.push('/brands/1');
 		}
+	//	eslint-disable-next-line
 	}, [brands, currentBrand])
 
 	useEffect(() => {
 		if (currentBrand) {
 			fetchData();
 		}
-		// if (activeCategory && !isNaN(pagination.currentPage)) {
-		// 	history.push(`/${category}/${categoryName}/${pagination.currentPage}`)
-		// }
 		return () => abortController.abort();
 		//	eslint-disable-next-line
 	}, [brands, currentBrand, pagination.currentPage])

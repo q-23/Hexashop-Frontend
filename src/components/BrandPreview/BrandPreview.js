@@ -2,11 +2,10 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { PreviewWrapper } from "components/BrandPreview/BrandPreview.styles";
+import { PreviewWrapper, Image } from "components/BrandPreview/BrandPreview.styles";
 import Typography from "components/_Shared/Typography";
 import Container from "components/_Shared/Container";
 import FlexItem from "components/_Shared/FlexItem";
-import Image from "components/_Shared/Image";
 
 import * as styles from 'components/BrandPreview/BrandPreview.styles'
 

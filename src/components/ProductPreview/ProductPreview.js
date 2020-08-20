@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import { PreviewWrapper, PreviewContainer } from "./ProductPreview.styles";
 import Typography from "components/_Shared/Typography";
-import Container from "components/_Shared/Container";
 import FlexItem from "components/_Shared/FlexItem";
 import Button from "components/_Shared/Button";
 import Image from "components/_Shared/Image";

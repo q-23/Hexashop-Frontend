@@ -18,12 +18,6 @@ const CartProductsList = ({
 	onToken,
 	auth }) => {
 
-	React.useEffect(() => {
-		console.log(productData.products)
-		console.log(shopcart)
-
-	}, [shopcart, productData.products])
-
 	return (
 		<>
 			<FlexContainer
@@ -51,9 +45,9 @@ const CartProductsList = ({
 					(
 						<>
 							<StripeCheckout
+								stripeKey={process.env.REACT_APP_STRIPE_KEY}
 								description={`your total is ${totalPrice}$`}
 								image={'https://svgshare.com/i/CUz.svg'}
-								stripeKey={process.env.REACT_APP_STRIPE_KEY}
 								style={{display: 'none'}}
 								amount={priceForStripe}
 								name={'Hexashop Ltd.'}

@@ -265,3 +265,7 @@ b
 2src/components/BrandPreview/BrandPreview.styles.js,4/1/41eef0f7e5b74587a5923bad817e4c7f6b7c4b41
 [
 +src/components/BrandPreview/BrandPreview.js,c/0/c0665361e4a1a6a2d4509f43d16f7579ebd4877b
+L
+src/views/BrandView/index.js,2/9/29d10742988c510af3394d78991d66a26e9093fd
+P
+ src/views/BrandView/BrandView.js,1/2/12cb709bf5304f9786e5fadbf63e9cb1fa6c7926

@@ -55,7 +55,8 @@ const AllProductsView = () => {
 	}, [pagination.currentPage]);
 
 	useEffect(() => {
-		if(Number(location.params.page) > pagination.numberOfPages) {
+		const pageNumber = Number(location.params.page);
+		if(isNaN(pageNumber) || pageNumber < 1 ||pageNumber > pagination.numberOfPages) {
 			history.push('/all_products/1');
 			setPagination({...pagination, currentPage: 1});
 		}
