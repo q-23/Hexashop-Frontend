@@ -59,7 +59,7 @@ const CartView = () => {
 		return totalPrice;
 	}
 
-	const totalPrice = calculateTotalPrice({ productsCountObj: shopcart.products, productsPricesArr: productData.products });
+	const totalPrice = calculateTotalPrice({ productsCountObj: shopcart.products, productsPricesArr: productData.products }).toFixed(2);
 
 	const priceForStripe = totalPrice * 100;
 

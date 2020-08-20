@@ -11,12 +11,12 @@ import { Link } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 
 const CartProductsList = ({
-	productData,
-	shopcart,
-	totalPrice,
-	priceForStripe,
-	onToken,
-	auth }) => {
+	productData = {},
+	shopcart = {},
+	totalPrice = 0,
+	priceForStripe = 0,
+	onToken = () => {},
+	auth = {} }) => {
 
 	return (
 		<>
@@ -44,6 +44,7 @@ const CartProductsList = ({
 				{auth.token ?
 					(
 						<>
+							{console.log(priceForStripe)}
 							<StripeCheckout
 								stripeKey={process.env.REACT_APP_STRIPE_KEY}
 								description={`your total is ${totalPrice}$`}
