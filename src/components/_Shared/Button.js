@@ -12,20 +12,11 @@ const Button = styled.button`
 		background-color: transparent;
 		border: none;
 	`};
-	${({ navbar_border_left }) => navbar_border_left && `
-			border-left:   1px solid #fff;
-	`};
-	${({ navbar_border_right }) => navbar_border_right && `
-			border-right:   1px solid #fff;
-	`};
-	${({ navbar_button, nav_border_right, nav_border_left }) => navbar_button && `
+	${({ navbar_button }) => navbar_button && `
 		padding: .5em .5em;
 		background-color: transparent;
 		height: 100%;
-		border-top:    none;
-		border-bottom: none;
-		${nav_border_right && 'border-right: 1px solid white;'}		
-		${nav_border_left && 'border-left: 1px solid white;'}		
+		border: none;
 	`};
 	${({ float }) => `float: ${float};`};
 	${({ with_gradient }) => with_gradient && `
