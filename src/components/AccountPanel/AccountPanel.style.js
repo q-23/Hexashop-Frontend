@@ -9,7 +9,7 @@ export const Spacer = styled.div`
 export const InputWrapper = styled.div`
 	margin: 1rem;
 	z-index: 2;
-	//width: 100%;
+	width: ${({width, button}) => button? 'unset' : width ? width : '80%'};
 `
 
 export const AccountImage = styled.img`

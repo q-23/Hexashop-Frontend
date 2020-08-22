@@ -19,19 +19,20 @@ import ACCOUNT_IMAGE from 'assets/images/account_image.jpg';
 import {useStateValueAuthorization} from "contexts/authorization/authorization";
 import {composeValidators} from "components/Validation/Validation";
 import {Spacer} from "components/AccountPanel/AccountPanel.style";
+import WithWidth from "components/_HOC/WithWidth";
 import { withRouter } from 'react-router-dom';
 import { Field } from 'react-final-form';
 
 import authorizationActions from "contexts/authorization/actions";
 
-const AccountPanel = ({ isViewTypeRegister, history }) => {
+const AccountPanel = ({ isViewTypeRegister, history, width }) => {
 	const [,dispatch] = useStateValueAuthorization();
 
 	const logout = () => {
 		dispatch({ type: authorizationActions.LOGOUT });
 		history.push('/')
 	}
-
+	console.log(width)
 	return (
 		<>
 			<BoxHeaderContainer>
@@ -40,7 +41,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 			<FlexContainer wrap={'wrap'} padding={'1em'} justify={'flex-start'} styles={'margin: 2em 0; position: relative'}>
 				<AccountImage src={ACCOUNT_IMAGE}/>
 				<FlexItem xs={12} align={'center'}>
-					<InputWrapper>
+					<InputWrapper width={width === 'md' || width === 'lg' || width === 'xl' ? '90%' : '80%'}>
 					<Field
 						validate={composeValidators(validations.required, validations.mustBeEmail)}
 						name={'email'}
@@ -200,7 +201,7 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 				</FlexItem>
 				<Spacer/>
 				<FlexItem xs={12} align={'center'}>
-					<InputWrapper>
+					<InputWrapper button>
 						<Button with_gradient type={'submit'}>{isViewTypeRegister ? 'Register' : 'Save account'}</Button>
 						<br/>
 						{!isViewTypeRegister && <BasicLink align={'center'} onClick={logout}>Log out</BasicLink>}
@@ -211,4 +212,4 @@ const AccountPanel = ({ isViewTypeRegister, history }) => {
 	)
 };
 
-export default withRouter(AccountPanel);
+export default WithWidth(withRouter(AccountPanel));

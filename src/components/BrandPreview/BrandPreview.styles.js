@@ -22,13 +22,15 @@ export const PRODUCT_NAME_STYLES = css`
 	text-align: center;
 	cursor: pointer;
 	font-size: 1.2em;
+	text-decoration: none;
 `;
 
 export const Image = styled.div`
 	width: 100%;
 	background-image: ${({ src }) => `url("${src}")`};
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 	cursor: ${({pointer}) => pointer && 'pointer'};
 	${({miniature}) => miniature && `
 		cursor: pointer;
