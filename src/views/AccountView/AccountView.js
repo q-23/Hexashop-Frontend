@@ -12,6 +12,7 @@ import { diff } from 'deep-object-diff';
 import { toast } from "react-toastify";
 
 import validations from "components/Validation";
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 
 const AccountView = ({ match }) => {
 	const [accountData, setAccountData] = useState({});
@@ -138,6 +139,7 @@ const AccountView = ({ match }) => {
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						<AccountPanel isViewTypeRegister={isViewTypeRegister}/>
+						<BoxHeaderContainer variant_down no_margin_top/>
 					</FlexContainer>
 				</FormFullWidth>
 			)}

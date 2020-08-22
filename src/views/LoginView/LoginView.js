@@ -10,6 +10,7 @@ import { post } from "helperFunctions/fetchFunctions";
 import { withRouter } from 'react-router-dom';
 import { Form } from 'react-final-form';
 import { toast } from "react-toastify";
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 
 const LoginView = ({ history }) => {
 	const [auth, dispatch] = useStateValueAuthorization();
@@ -65,6 +66,7 @@ const LoginView = ({ history }) => {
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						<LoginPanel/>
+						<BoxHeaderContainer variant_down/>
 					</FlexContainer>
 				</FormFullWidth>
 			)}

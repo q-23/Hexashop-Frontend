@@ -22,7 +22,7 @@ const Image = styled.div`
 	}
 `;
 
-const BrandLabel = styled(Typography)`
+const AdditionalInfoLabel = styled(Typography)`
 	color: #555555 !important;
 	transition: .2s ease-in-out;
 	text-align: left;
@@ -45,5 +45,5 @@ const BrandLabel = styled(Typography)`
 
 export {
 	Image,
-	BrandLabel
+	AdditionalInfoLabel
 }

@@ -12,6 +12,7 @@ const FlexContainer = styled.div`
 		min-height: 60vh;
 		align-items: normal;
 		box-shadow: 0px 0px 31px -6px rgba(0,0,0,0.62);
+		overflow: hidden;
 	`};
 	${({ padding }) => !!padding && `padding: ${padding}`};
 	${({ direction }) => !!direction && `flex-direction: ${direction}`};

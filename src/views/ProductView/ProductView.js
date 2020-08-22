@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import ProductPresentation from "components/ProductPresentation";
 import FlexContainer from "components/_Shared/FlexContainer";
 import FormFullWidth from "components/_Shared/Form";
@@ -47,6 +48,7 @@ const ProductView = ({ match }) => {
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						{productData && productData._id ? <ProductPresentation form={form} values={values} product={productData}/> : (!isLoading && <Image src={NO_PRODUCTS_IMAGE} styles={'height: 100%; margin: 0 auto;'}/>)}
+						<BoxHeaderContainer variant_down/>
 					</FlexContainer>
 					<Loader isLoading={isLoading}/>
 				</FormFullWidth>

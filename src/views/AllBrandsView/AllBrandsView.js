@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import BrandPreview from "components/BrandPreview";
+import BoxName from "components/_Shared/BoxName";
 import Pagination from "components/Pagination";
 import Loader from "components/Loader/Loader";
 import Image from "components/_Shared/Image";
-
 import {useHistory, useRouteMatch, withRouter} from 'react-router-dom';
 import { setPagesCount, setPage } from "helperFunctions/pagination";
 
@@ -68,6 +69,11 @@ const AllBrandsView = () => {
 
 	return(
 		<>
+			<BoxHeaderContainer>
+				<BoxName>
+					All brands
+				</BoxName>
+			</BoxHeaderContainer>
 			<Loader isLoading={isLoading}/>
 			{brandsData &&
 				brandsData.map((brand, idx) => <BrandPreview key={`${brand.brand_name} - ${brand.brand_path} - ${idx}`} brand={brand}/>

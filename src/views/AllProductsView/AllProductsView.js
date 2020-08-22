@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import ProductPreview from "components/ProductPreview";
+import BoxName from "components/_Shared/BoxName";
 import Pagination from "components/Pagination";
 import Loader from "components/Loader/Loader";
 
@@ -65,6 +67,11 @@ const AllProductsView = () => {
 
 	return(
 		<>
+			<BoxHeaderContainer>
+				<BoxName>
+					All products
+				</BoxName>
+			</BoxHeaderContainer>
 			<Loader isLoading={isLoading}/>
 			{productsData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>)}
 			<Pagination

@@ -1,6 +1,8 @@
 import React, {useContext, useEffect, useState} from "react";
 
+import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import ProductPreview from "components/ProductPreview";
+import BoxName from "components/_Shared/BoxName";
 import Pagination from "components/Pagination";
 import Loader from "components/Loader/Loader";
 import Image from "components/_Shared/Image";
@@ -74,6 +76,11 @@ const CategoryView = () => {
 
 	return(
 		<>
+			<BoxHeaderContainer>
+				<BoxName>
+					{activeCategory && activeCategory.category_name}
+				</BoxName>
+			</BoxHeaderContainer>
 			<Loader isLoading={isLoading}/>
 			{categoryData &&
 				categoryData.map((product, idx) => <ProductPreview key={`${product.name} - ${product.price} - ${idx}`} product={product}/>

@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 
 import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import QuantityInput from "components/QuantityInput/QuantityInput";
-import { Image, BrandLabel } from "./ProductPresentation.style";
+import { Image, AdditionalInfoLabel } from "./ProductPresentation.style";
 import FlexContainer from "components/_Shared/FlexContainer";
 import { LIGHT_DARK } from 'assets/css_variables/colors';
 import Typography from "components/_Shared/Typography";
@@ -28,10 +28,13 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 	const [currentPhotoIndex, setCurrentPhotoIndex] = useState(findMainImageIndex(product));
 	const [lightboxPhotoIndex, setLightboxPhotoIndex] = useState(currentPhotoIndex)
 	const [lightboxOpen, setLightboxOpen] = useState(false);
-	const { brands } = useContext(MenuContext);
+	const { brands, menuCategories } = useContext(MenuContext);
 
 	const currentBrand = brands && product.brand && brands.find(brand => brand._id === product.brand._id);
 
+	const currentCategory = menuCategories && menuCategories.find(category => category._id === product.category[0]._id);
+
+	console.log(currentCategory)
 	return (
 		<>
 			<BoxHeaderContainer>
@@ -59,11 +62,18 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 					<FlexContainer wrap={'wrap'} direction={'row'}>
 						<FlexItem xs={12} padding={'0 1em'} align={'center'}>
 							{product.brand &&
-								(<BrandLabel><span>Brand: </span>
+								(<AdditionalInfoLabel><span>Brand: </span>
 									<Link to={`/brand${currentBrand && currentBrand.brand_path}/1`}>
 										{product.brand.brand_name}
 									</Link>
-								</BrandLabel>)
+								</AdditionalInfoLabel>)
+							}
+							{currentCategory &&
+							(<AdditionalInfoLabel><span>Category: </span>
+								<Link to={currentCategory.category_path}>
+									{currentCategory.category_name}
+								</Link>
+							</AdditionalInfoLabel>)
 							}
 							<Typography align={'justify'}>{ReactHtmlParser(product.description)}</Typography>
 							<br/>
