@@ -1,4 +1,5 @@
 import EmailVerificationSuccessView from "views/EmailVerificationSuccessView/EmailVerificationSuccessView";
+import PasswordResetView from "views/PasswordResetView/PasswordResetView";
 import RegistrationSuccessView from "views/RegistrationSuccessView";
 import ProductView from "views/ProductView/ProductView";
 import AllProductsView from "./views/AllProductsView";
@@ -23,6 +24,10 @@ export const routes = [
 	{
 		path: '/category/:category_name',
 		component: CategoryView
+	},
+	{
+		path: '/reset_password/:token',
+		component: PasswordResetView
 	},
 	{
 		path: '/all_products/:page',
