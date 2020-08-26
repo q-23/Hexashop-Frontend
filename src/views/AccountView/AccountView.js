@@ -139,7 +139,7 @@ const AccountView = ({ match }) => {
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						<AccountPanel isViewTypeRegister={isViewTypeRegister}/>
-						<BoxHeaderContainer variant_down no_margin_top/>
+						<BoxHeaderContainer variant_down/>
 					</FlexContainer>
 				</FormFullWidth>
 			)}

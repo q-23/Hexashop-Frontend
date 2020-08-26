@@ -66,7 +66,7 @@ const LoginView = ({ history }) => {
 				>
 					<FlexContainer justify={'flex-start'} wrap={'wrap'}>
 						<LoginPanel/>
-						<BoxHeaderContainer variant_down/>
+						<BoxHeaderContainer variant_down no_margin_top/>
 					</FlexContainer>
 				</FormFullWidth>
 			)}

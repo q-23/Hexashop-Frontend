@@ -1,8 +1,8 @@
 import React, {useContext, useState} from "react";
 
+import { Image, AdditionalInfoLabel } from "./ProductPresentation.style";
 import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import QuantityInput from "components/QuantityInput/QuantityInput";
-import { Image, AdditionalInfoLabel } from "./ProductPresentation.style";
 import FlexContainer from "components/_Shared/FlexContainer";
 import { LIGHT_DARK } from 'assets/css_variables/colors';
 import Typography from "components/_Shared/Typography";
@@ -30,11 +30,10 @@ const ProductPresentation = ({ product = {}, form = {}, values = {} }) => {
 	const [lightboxOpen, setLightboxOpen] = useState(false);
 	const { brands, menuCategories } = useContext(MenuContext);
 
-	const currentBrand = brands && product.brand && brands.find(brand => brand._id === product.brand._id);
-
 	const currentCategory = menuCategories && menuCategories.find(category => category._id === product.category[0]._id);
 
-	console.log(currentCategory)
+	const currentBrand = brands && product.brand && brands.find(brand => brand._id === product.brand._id);
+
 	return (
 		<>
 			<BoxHeaderContainer>
