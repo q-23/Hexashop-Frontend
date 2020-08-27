@@ -269,3 +269,13 @@ L
 src/views/BrandView/index.js,2/9/29d10742988c510af3394d78991d66a26e9093fd
 P
  src/views/BrandView/BrandView.js,1/2/12cb709bf5304f9786e5fadbf63e9cb1fa6c7926
+T
+$src/views/PasswordResetView/index.js,5/7/57fe85388cb119e4e87eb8cb23f17e4ea2fe1024
+Z
+*src/components/PasswordResetPanel/index.js,d/4/d44f5904819e14a313acc18d076b5831010f5af0
+m
+=src/components/PasswordResetPanel/PasswordResetPanel.style.js,9/a/9a126962b9259a41545ef5b49833ceff50d0bf16
+g
+7src/components/PasswordResetPanel/PasswordResetPanel.js,8/f/8f0a61050e3c154f21edce24791fc325329c1510
+`
+0src/views/PasswordResetView/PasswordResetView.js,1/9/19dde19e4743e52522850b67a8f6e699231cb79e

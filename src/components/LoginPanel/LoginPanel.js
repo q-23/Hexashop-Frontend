@@ -4,14 +4,18 @@ import BoxHeaderContainer from "components/_Shared/BoxHeaderContainer";
 import FlexContainer from "components/_Shared/FlexContainer";
 import FlexItem from "components/_Shared/FlexItem";
 import BoxName from "components/_Shared/BoxName";
+import validations from "components/Validation";
 import Button from "components/_Shared/Button";
 import Input from "components/_Shared/Input";
+
 import {RegisterBox} from "components/LoginPanel/LoginPanel.style";
-import validations from "components/Validation";
-import { Link } from "react-router-dom";
-import { Field } from 'react-final-form';
 import {LoginImage} from "components/LoginPanel/LoginPanel.style";
+
+import { Field } from 'react-final-form';
+import { Link } from "react-router-dom";
+
 import img from 'assets/login.png';
+
 const LoginPanel = () => {
 
 	return (
@@ -53,6 +57,9 @@ const LoginPanel = () => {
 					<br/>
 					<RegisterBox>
 						or <Link to={'/register'}>Register</Link>
+						<br/>
+						<br/>
+						forgot password? <Link to={'/reset_password'}>Click here</Link>
 					</RegisterBox>
 				</FlexItem>
 			</FlexContainer>

@@ -30,6 +30,10 @@ export const routes = [
 		component: PasswordResetView
 	},
 	{
+		path: '/reset_password/',
+		component: PasswordResetView
+	},
+	{
 		path: '/all_products/:page',
 		component: AllProductsView
 	},
