@@ -109,6 +109,13 @@ const AccountView = ({ match }) => {
 		//	eslint-disable-next-line
 	}, []);
 
+	useEffect(() => {
+		if(!isViewTypeRegister && !auth.token) {
+			history.push('/login')
+		}
+	//	eslint-disable-next-line
+	}, [])
+
 	return(
 		<Form
 			onSubmit={accData => {

@@ -1,15 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const IMAGE_STYLES = css`
-	max-width: 250px; 
-	width: 100%;
-	height: auto;
-	transition: .2s ease-in-out;
-	cursor: pointer;
-	&:hover {
-		filter: saturate(100%);
-		transform: scale(1.02);
-	}
+
 `;
 
 export const FLEX_ITEM_STYLES = css`
@@ -31,7 +23,14 @@ export const Image = styled.div`
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
+	max-width: 250px; 
+	height: auto;
+	transition: opacity 1s ease-in-out;
+	filter: opacity(.7);
 	cursor: ${({pointer}) => pointer && 'pointer'};
+	&:hover {
+		filter: opacity(1);
+	}
 	${({miniature}) => miniature && `
 		cursor: pointer;
 		filter: saturation(.7);
